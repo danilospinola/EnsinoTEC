@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* { font-family: 'Poppins' ;}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    background-image: url('../img_forms/fundo-bg.jpg');
+    background-blend-mode: difference;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    background-size: cover;
+}
+
+form a{
+    color: #ed145c;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+form a:hover{
+    text-decoration: underline;
+}
+
+form span{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    color: #ed145c;
+    font-weight: 900;
+}
+
+form label{
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+    justify-content: center;
+
+    width: 550px;
+
+    margin: 30px;
+    margin-top: 100px;
+    margin-bottom: 260px;
+    padding: 16px;
+    padding-left: 1px;
+
+    background-color: #424242;
+    border-radius: 10px;
+
+    background-image: url('../img/geometric-shapes.png');
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0px;
+
+    transition: 0.3s;
+}
+
+form h2{
+    color: white;
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+#logoForm{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    width: 200px;
+}
+
+#imgUsuario{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    width: 120px;
+    height: 120px;
+}
+
+.form-linha, .form-coluna{
+    display: flex;
+    margin: 6px;
+
+    width: 100%;
+}
+
+.form-linha div, .form-coluna div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    margin: 10px;
+}
+
+.form-linha{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.form-coluna{
+    flex-direction: column;
+}
+
+/**/
+
+input{
+    width: 93%;
+    height: 30px;
+
+    background-color: #727272;
+
+    text-align: center;
+    outline: 2px solid transparent;
+    border-radius: 10px;
+    border: 1px solid transparent;
+
+    transition: 0.2s;
+}
+
+input:hover{
+    outline: 2px solid #ed145c;
+    border-color: transparent;
+}
+
+input:focus{
+    outline: 2px solid white;
+}
+
+/**/
+
+#divCheck label{
+    font-size: 13px;
+}
+
+#inputCheckSenha{
+    accent-color: #ed145c;
+    width: 16px;
+
+    margin-right: 6px;
+}
+
+#inputCheckSenha:hover, #inputCheckSenha:focus{
+    outline: none;
+    border-color: none;
+}
+
+/**/
+
+input[type=text], input[type=email], input[type=password]{ color: white; }
+
+input[type=submit]{
+    cursor: pointer;
+    width: 93%;
+    height: auto;
+    padding: 14px;
+    align-self: center;
+
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+
+    background-color: #ed145c;
+}
+
+input[type=submit]:hover{
+    outline-color: white;
+}
+
+/**/
+
+@media (max-width: 700px){
+    form{
+        width: auto;
+
+        background-position: 100%;
+    }
+}

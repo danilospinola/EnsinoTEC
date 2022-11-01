@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="@mathieuz">
+    <link rel="shortcut icon" href="img_forms/e-logo-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css_forms/header-e-footer-cad-login.css" type="text/css">
+    <link rel="stylesheet" href="css_forms/header-e-footer-mq-cad-login.css" type="text/css">
+    <link rel="stylesheet" href="css_forms/cad.css" type="text/css">
+    <title>Cadastre-se como Aluno | ENSINOTEC</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <img id="imgLogoNav" src="img_forms/ensinotec-logo-branco-transparente.png">
+
+            <span id="btnFecharMenu">×</span>
+        </div>
+        <div id="divNavLinks">>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Como Funciona?</a>
+            <a href="#">Conteúdos</a>
+            <a href="#">Suporte</a>
+     
+        </div>
+
+        <div id="divNavLoginCadastro">
+            <a href="#" id="btnNavLogin">
+                Login <br>
+                <span><em>Inicie sua sessão como aluno ou professor.</em></span>
+            </a>
+
+            <a href="#" id="btnNavCadastro">
+                Cadastre-se
+                <br>
+                <span><em>Crie uma conta. Simples, fácil e rápido.</em></span>
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div id="divLogoEMenu">
+        <img src="img_forms/menuhamburguer-preto.png" id="btnMenuHamburguer">
+
+        <a href="home.html">
+            <img id="logoEnsinotec" src="img_forms/ensinotec-logo-preto-transparente.png">
+            <img id="logoEnsinotec-mq" src="img_forms/ensinotec-e-preto.png">
+        </a>
+        </div>
+
+        <div id="divLinkLoginCadastro">
+            <a href="#" id="linkLogin">Login</a>
+        </div>
+    </header>
+
+    <form id="formCad">
+        <div class="form-coluna" style="justify-content: center; align-items: center;">
+            <img src="img_forms/ensinotec-logo-branco-transparente.png" id="logoForm">
+            <h2>Cadastre-se como Aluno</h2>
+        </div>
+
+        <div class="form-coluna">
+            <div>
+                <label for="nome">Nome Completo: <span>*</span></label>
+                <input type="text" id="inputNomeCompleto">
+            </div>
+
+            <div>
+                <label for="email">E-mail: <span>*</span></label>
+                <input type="email" id="inputEmail">
+            </div>
+
+            <div>
+                <label for="cpf">CPF: <span>*</span></label>
+                <input type="text" id="inputCpf">
+            </div>
+        </div>
+
+        <div class="form-linha">
+            <div>
+                <label for="ra">RA: <span>*</span></label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="ra">UF: <span>*</span></label>
+                <input type="text" maxlength="2" id="inputUf">
+            </div>
+        </div>
+
+        <div class="form-coluna">
+            <div>
+                <label for="telefone">Telefone: <span>*</span></label>
+                <input type="text" id="inputTelefone">
+            </div>
+        </div>
+
+        <div class="form-linha">
+            <div>
+                <label for="senha">Senha: <span>*</span></label>
+                <input type="password" id="inputSenha">
+            </div>
+
+            <div>
+                <label for="confirmarSenha">Confirme a Senha: <span>*</span></label>
+                <input type="password" id="inputConfirmarSenha">
+            </div>
+        </div>
+        <div class="form-coluna" style="margin-top: -25px; align-items: flex-start; margin-bottom: 15px;">
+            <div id="divCheck" style="flex-direction: row; align-items: center;">
+                <input type="checkbox" id="inputCheckSenha">
+                <label>Mostrar Senha</label>
+            </div>
+        </div>
+
+        <div class="form-coluna">
+            <input type="submit" id="btnCadastrar" value="Finalizar Cadastro">
+        </div>
+    </form>
+
+    <script src="js_forms/script.js"></script>
+    <script src="js_forms/formSenha.js" type="text/javascript"></script>
+</body>
+</html>

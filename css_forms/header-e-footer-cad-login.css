@@ -1,0 +1,296 @@
+/*Cor principal: Azul (#5271ff)*/
+/*Cor destaque: Verde-água (#00f0a0)*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+::selection{
+    color: white;
+    background-color: #ed145c;
+}
+
+body{
+    margin: 0px;
+    background-color: white;
+
+    height: 100%;
+}
+
+nav, nav div{
+    display: none;
+}
+
+header{
+    z-index: 700;
+
+    position: unset;
+    top: 0px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: transparent;
+
+    font-family: Poppins;
+    text-transform: uppercase;
+    font-weight: 900;
+
+    transition: 0.5s ease-in-out;
+}
+
+header a { font-size: 14px;}
+
+header #divLinksHeader, #divLinkLoginCadastro, #divLogoEMenu, #divBtnVoltarHome{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#divBtnVoltarHome{ 
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#btnSeta{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+header .link-header, #linkLogin, #linkCadastro{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    color: black;
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: 0.2s;
+}
+
+header .link-header::after{
+    content: '';
+    width: 0px;
+    height: 2px;
+    background-color: #ed145c;
+    display: block;
+    margin: 0px;
+    transition: 0.5s;
+}
+
+header .link-header:hover::after{
+    width: 100%;
+}
+
+
+header #linkCadastro{
+    background-color: #ED145C;
+    color: white;
+}
+
+header #linkCadastro:hover{
+    background-color: #e94d81;
+}
+
+header #linkCadastro:active{
+    transition: 0s;
+    background-color: white;
+    color: black;
+}
+
+header #linkLogin:hover{
+    color: white;
+    background-color: #ED145C;
+}
+
+header #botaoModoEscuroClaroFullScreen{
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+header #logoEnsinotec{
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+
+    width: 140px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+header #divBtnVoltarHome #imgSeta{
+    width: 40px;
+    height: 40px;
+}
+
+header #logoEnsinotec-mq{
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    display: none;
+}
+
+header #btnMenuHamburguer{
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    cursor: pointer;
+    display: none;
+
+    width: 25px;
+    height: 25px;
+    margin-left: 18px;
+    margin-right: 12px;
+
+    transition: ease-in-out 0.9s;
+}
+
+header #btnMenuHamburguer:hover{
+    transform: rotateZ(360deg);
+}
+
+
+header #logoEnsinotec a{
+    margin: 0px;
+    padding: 0px;
+    width: 0px;
+    height: 0px;
+}
+
+/**/
+
+footer{
+    background-color: black;
+    padding-top: 69px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 100px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer #footerLogo{
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 240px;
+}
+
+footer a{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    text-decoration: none;
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+footer a:hover{
+    transition: 0.4s;
+    color: #a0a0a0;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer div h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 25px;
+
+    font-family: Poppins;
+}
+
+#divContato{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 15px;
+}
+
+#divContato .iconContato{
+    width: 30px;
+
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.iconContato:hover{
+    background-color: #ed145c;
+}
+
+/**/
+
+nav{
+    display: none;
+}
+
+/**/
+
+header{
+    animation-name: none;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cores-gradiente{
+    0%{
+        background-color: #5271ff;
+    }
+    
+    20%{
+        background-color: #526cff;
+    }
+
+    40%{
+        background-color: #7552ff;
+    }
+
+    60%{
+        background-color: #a352ff;
+    }
+
+    80%{
+        background-color: #7552ff;
+    }
+
+    100%{
+        background-color: #526cff;
+    }
+} 
