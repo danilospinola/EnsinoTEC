@@ -80,10 +80,10 @@
         <div class="form-linha">
             <div>
                 <label for="ra">RA: <span>*</span></label>
-                <input type="text">
+                <input type="text" id = "inputRA">
             </div>
             <div>
-                <label for="ra">UF: <span>*</span></label>
+                <label for="uf">UF: <span>*</span></label>
                 <input type="text" maxlength="2" id="inputUf">
             </div>
         </div>
@@ -124,7 +124,7 @@
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
-        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+        import { getFirestore,doc,getdoc,setdoc,collection,addDoc,uptadeDoc,deleteDoc,deleteField } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
         import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
@@ -148,6 +148,20 @@
         
         // Initialize Cloud Firestore and get a reference to the service
         const db = getFirestore(app);
+        
+  //------------------Referenciação de variaveis com os inputs do html --------------------------
+        
+        
+        let nome = document.getElementById("inputNomeCompleto");
+        let CPF = document.getElementById("inputCpf");
+        let RA = document.getElementById("inputRA");
+        let UF = document.getElementById("inputUf");
+        let telefone = document.getElementById("inputTelefone");
+        
+        
+        let btn_cadastro = document.getElementById("inputNomeCompleto");
+        
+  //------------------Fim da referenciação de variaveis com os inputs do html --------------------------
 
         document.getElementById('btnCadastrar').addEventListener('click', function(){
             const email = document.getElementById("inputEmail").value
