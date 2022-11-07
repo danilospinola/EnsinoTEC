@@ -40,7 +40,7 @@ form, main{
     background-color: #424242;
     border-radius: 10px;
 
-    background-image: url('../img/geometric-shapes.png');
+    background-image: url('../img_forms/geometric-shapes.png');
     background-blend-mode: color-burn;
     background-repeat: no-repeat;
     background-attachment: fixed;

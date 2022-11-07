@@ -1,6 +1,12 @@
+
+//Inicializa aplicação e sincroniza com o Firebase.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
 
+//Importa principais métodos de autenticação
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+
+//Importa principais métodos de conexão com o Firestore.
+import { getFirestore, setDoc, addDoc, doc, collection } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC6pmwZQTnziu-aLa8yFeN0fXFikEdZjug",
@@ -12,10 +18,12 @@ const firebaseConfig = {
   measurementId: "G-0GHT9WC2DR"
 };
 
+//Variáveis de inicialização de módulos.
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
-/**/
+/**//**//**/
 
 //Criando usuário com Authentication + enviando informações pro banco.
 document.getElementById('btnCadastrar').addEventListener('click', function(){
@@ -30,16 +38,26 @@ document.getElementById('btnCadastrar').addEventListener('click', function(){
         let inputSenha = document.getElementById('inputSenha').value
         let inputConfirmarSenha = document.getElementById('inputConfirmarSenha').value
     
-    //Estrutura de autênticação de usuário a partir de email e senha.
-
+    //Estrutura de autenticação de usuário a partir de email e senha.
         createUserWithEmailAndPassword(auth, inputEmail, inputSenha)
         .then((userCredential) => {
-          const user = userCredential.user;
-          alert("Sucesso!")
+            const user = userCredential.user;
+            alert("Sucesso!")
+
+            //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
+            addDoc(collection(db, "Aluno"), {
+                inputNomeCompleto: `${inputNomeCompleto}`,
+                inputEmail: `${inputEmail}`,
+                inputCpf: `${inputCpf}`,
+                inputRa: `${inputRa}`,
+                inputUf: `${inputUf}`.toUpperCase(),
+                inputTelefone: `${inputTelefone}`
+            });
+
         })
         .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          alert("Erro!")
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert("Erro!")
         });
 })
