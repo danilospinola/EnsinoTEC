@@ -54,7 +54,7 @@
         </div>
     </header>
 
-    <form id="formCad">
+    <main id="formCad">
         <div class="form-coluna" style="justify-content: center; align-items: center;">
             <img src="img_forms/ensinotec-logo-branco-transparente.png" id="logoForm">
             <h2>Cadastre-se como Aluno</h2>
@@ -80,7 +80,7 @@
         <div class="form-linha">
             <div>
                 <label for="ra">RA: <span>*</span></label>
-                <input type="text" id = "inputRA">
+                <input type="text" id = "inputRa">
             </div>
             <div>
                 <label for="uf">UF: <span>*</span></label>
@@ -114,100 +114,12 @@
         </div>
 
         <div class="form-coluna">
-            <input type="submit" id="btnCadastrar" value="Finalizar Cadastro">
+            <button id="btnCadastrar">Finalizar Cadastro</button>
         </div>
-    </form>
+    </main>
 
     <script src="js_forms/script.js"></script>
     <script src="js_forms/formSenha.js" type="text/javascript"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
-        import { getFirestore} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";// ver se tem que pegar os documento do lado do getfirestore
-        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyC6pmwZQTnziu-aLa8yFeN0fXFikEdZjug",
-          authDomain: "ensino-tec.firebaseapp.com",
-          projectId: "ensino-tec",
-          storageBucket: "ensino-tec.appspot.com",
-          messagingSenderId: "467024829123",
-          appId: "1:467024829123:web:26b36f112377e27f592076",
-          measurementId: "G-0GHT9WC2DR"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const auth = getAuth(app);
-        
-        // Initialize Cloud Firestore and get a reference to the service
-        const db = getFirestore(app);
-        
-  //------------------Referenciação de variaveis com os inputs do html --------------------------
-        
-        
-        let nome = document.getElementById("inputNomeCompleto");
-        let CPF = document.getElementById("inputCpf");
-        let RA = document.getElementById("inputRA");
-        let UF = document.getElementById("inputUf");
-        let telefone = document.getElementById("inputTelefone");
-        
-        
-        let btn_cadastro = document.getElementById("btnCadastrar");
-        
-  //------------------Fim da referenciação de variaveis com os inputs do html --------------------------
-    async function AddDocument_AutoID(){
-        var ref = collection(db,"Usuario_aluno");
-        
-        const docRef = await addDoc(
-            ref, {
-                nomeEstudante: nome.value,
-                cpfEstudante: CPF.value,
-                raEstudante: RA.value,
-                ufEstudante:  UF.value,
-                telefoneEstudante: telefone.value
-            }
-        )
-        
-        .then(()=>{
-            alert("Dados adicionados");
-        })
-        .catch((error)=>{
-            alert("Operação com erro, erro:"+error);
-        });
-    }
-        
-        
-
-    btn_cadastro.addEventListener("click", AddDocument_AutoID);
-        
-        
-        
-  //-----------------------Criação do usuario com email e senha-----------------------------------------
-        document.getElementById('btnCadastrar').addEventListener('click', function(){
-            const email = document.getElementById("inputEmail").value
-            const senha = document.getElementById("inputSenha").value 
-
-            createUserWithEmailAndPassword(auth, email, senha)
-            .then((userCredential) => {
-                // Signed in 
-                const user = userCredential.user;
-                // ...
-                alert('Conta criada com sucesso')
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
-                alert('erro ao criar')
-            });
-        })
-      </script>
+    <script src="firebase/module.js" type="module"></script>
 </body>
 </html>
