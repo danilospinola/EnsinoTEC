@@ -66,14 +66,17 @@ main .form-linha, main .form-coluna{
     margin: 6px;
 
     width: 100%;
+    height: auto;
 }
 
 main .form-linha div, main .form-coluna div{
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: auto;
 
     margin: 10px;
+    margin-top: 20px;
 }
 
 main .form-linha{
