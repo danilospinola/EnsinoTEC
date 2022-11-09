@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css_forms/header-e-footer-cad-login.css" type="text/css">
     <link rel="stylesheet" href="css_forms/header-e-footer-mq-cad-login.css" type="text/css">
     <link rel="stylesheet" href="css_forms/cad.css" type="text/css">
+    <link rel="stylesheet" href="css_forms/verif-campos.css" type="text/css">
     <title>Cadastre-se como Professor | ENSINOTEC</title>
 </head>
 <body>
@@ -54,7 +55,7 @@
         </div>
     </header>
 
-    <form id="formCad">
+    <main id="formCadProf">
         <div class="form-coluna" style="justify-content: center; align-items: center;">
             <img src="img_forms/ensinotec-logo-branco-transparente.png" id="logoForm">
             <h2>Cadastre-se como Professor</h2>
@@ -63,58 +64,68 @@
         <div class="form-coluna">
             <div>
                 <label for="nome">Nome Completo: <span>*</span></label>
-                <input type="text" id="inputNomeCompleto">
+                <input type="text" id="inputNomeCompletoProf" class="inputs required" oninput="validarNome()" maxlength="200">
+                <span class="span-required">Nome deve ter no mínimo 3 caracteres.</span>
             </div>
 
             <div>
                 <label for="email">E-mail: <span>*</span></label>
-                <input type="email" id="inputEmail">
+                <input type="email" id="inputEmailProf" class="inputs required" oninput="validarEmail()" maxlength="150">
+                <span class="span-required">Digite um email válido.</span>
             </div>
 
             <div>
                 <label for="cpf">CPF: <span>*</span></label>
-                <input type="text" id="inputCpf">
+                <input type="text" id="inputCpfProf" class="inputs required" oninput="validarCPF()" maxlength="11">
+                <span class="span-required">Insira um CPF válido.</span>
             </div>
         </div>
 
         <div class="form-coluna">
             <div>
                 <label for="ra">NIF: <span>*</span></label>
-                <input type="text">
+                <input type="text" id="inputNif" class="inputs required" oninput="validarNIF()" maxlength="10">
+                <span class="span-required">Insira um NIF válido.</span>
             </div>
         </div>
 
         <div class="form-coluna">
             <div>
                 <label for="telefone">Telefone: <span>*</span></label>
-                <input type="text" id="inputTelefone">
+                <input type="text" id="inputTelefoneProf" class="inputs required" oninput="validarTel()" maxlength="11">
+                <span class="span-required">Insira um telefone válido. (Inclua o DDD)</span>
             </div>
         </div>
 
         <div class="form-linha">
             <div>
                 <label for="senha">Senha: <span>*</span></label>
-                <input type="password" id="inputSenha">
+                <input type="password" id="inputSenhaProf" class="inputs required" oninput="validarSenha()">
+                <span class="span-required">Insira uma senha.</span>
             </div>
 
             <div>
                 <label for="confirmarSenha">Confirme a Senha: <span>*</span></label>
-                <input type="password" id="inputConfirmarSenha">
+                <input type="password" id="inputConfirmarSenhaProf" class="inputs required" oninput="compararSenhas()">
+                <span class="span-required" style="font-size: 14px;">Senhas não são compatíveis.</span>
             </div>
         </div>
         <div class="form-coluna" style="margin-top: -25px; align-items: flex-start; margin-bottom: 15px;">
-            <div id="divCheck" style="flex-direction: row; align-items: center;">
+            <div id="divCheck" style="flex-direction: row; align-items: center; margin-top: 30px;">
                 <input type="checkbox" id="inputCheckSenha">
                 <label>Mostrar Senha</label>
             </div>
         </div>
 
         <div class="form-coluna">
-            <input type="submit" id="btnCadastrar" value="Finalizar Cadastro">
+            <button id="btnCadastrar">Finalizar Cadastro</button>
         </div>
-    </form>
+    </main>
 
     <script src="js_forms/script.js"></script>
-    <script src="js_forms/formSenha.js" type="text/javascript"></script>
+    <script src="js_forms/formSenhaProf.js" type="text/javascript"></script>
+    <script src="js_forms/verifCamposProf.js" type="text/javascript"></script>
+
+    <script src="firebase/module.js" type="module"></script>
 </body>
 </html>

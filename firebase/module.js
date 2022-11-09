@@ -1,13 +1,15 @@
+let htmlAtual = document.location.pathname
 
 //Inicializa aplicação e sincroniza com o Firebase.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
 
-//Importa principais métodos de autenticação
+//Importa principais métodos de autenticação.
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 //Importa principais métodos de conexão com o Firestore.
 import { getFirestore, setDoc, addDoc, doc, collection } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
+//Configurações do Projeto no Firebase.
 const firebaseConfig = {
   apiKey: "AIzaSyC6pmwZQTnziu-aLa8yFeN0fXFikEdZjug",
   authDomain: "ensino-tec.firebaseapp.com",
@@ -18,17 +20,21 @@ const firebaseConfig = {
   measurementId: "G-0GHT9WC2DR"
 };
 
-//Variáveis de inicialização de módulos.
+//Variáveis de inicialização de módulos importados.
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
 /**//**//**/
 
-//Criando usuário com Authentication + enviando informações pro banco.
-document.getElementById('btnCadastrar').addEventListener('click', function(){
+/* [!] CADASTRO USUÁRIO ALUNO */
 
-    //Capturando valores do input.
+//Criando usuário 'Aluno' com Authentication + enviando informações pro banco.
+document.getElementsByTagName("button")[0].addEventListener('click', function(){
+
+    //Capturando valores do input (cadastro Aluno).
+    if (htmlAtual == "/cad-aluno.html"){
+
         let inputNomeCompleto = document.getElementById('inputNomeCompleto').value
         let inputEmail = document.getElementById('inputEmail').value
         let inputCpf = document.getElementById('inputCpf').value
@@ -37,27 +43,67 @@ document.getElementById('btnCadastrar').addEventListener('click', function(){
         let inputTelefone = document.getElementById('inputTelefone').value
         let inputSenha = document.getElementById('inputSenha').value
         let inputConfirmarSenha = document.getElementById('inputConfirmarSenha').value
-    
-    //Estrutura de autenticação de usuário a partir de email e senha.
-        createUserWithEmailAndPassword(auth, inputEmail, inputSenha)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            alert("Sucesso!")
 
-            //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
-            addDoc(collection(db, "Aluno"), {
-                inputNomeCompleto: `${inputNomeCompleto}`,
-                inputEmail: `${inputEmail}`,
-                inputCpf: `${inputCpf}`,
-                inputRa: `${inputRa}`,
-                inputUf: `${inputUf}`.toUpperCase(),
-                inputTelefone: `${inputTelefone}`
+        if (inputNomeCompleto.length > 3 && inputEmail.length > 0 && inputCpf.length > 10 && inputRa.length > 10 && inputUf.length > 1 && inputTelefone.length > 10 && inputSenha.length > 7 && inputConfirmarSenha.length > 7 && inputSenha == inputConfirmarSenha){
+
+            createUserWithEmailAndPassword(auth, inputEmail, inputSenha)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                alert("Sucesso!")
+
+                //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
+                addDoc(collection(db, "Aluno"), {
+                    inputNomeCompleto: `${inputNomeCompleto}`,
+                    inputEmail: `${inputEmail}`,
+                    inputCpf: `${inputCpf}`,
+                    inputRa: `${inputRa}`,
+                    inputUf: `${inputUf}`.toUpperCase(),
+                    inputTelefone: `${inputTelefone}`
+                });
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                alert("Erro!")
             });
+        }
 
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            alert("Erro!")
-        });
+    } else if (htmlAtual == "/cad-prof.html"){
+
+        let inputNomeCompletoProf = document.getElementById('inputNomeCompletoProf').value
+        let inputEmailProf = document.getElementById('inputEmailProf').value
+        let inputCpfProf = document.getElementById('inputCpfProf').value
+        let inputNif = document.getElementById('inputNif').value
+        let inputTelefoneProf = document.getElementById('inputTelefoneProf').value
+        let inputSenhaProf = document.getElementById('inputSenhaProf').value
+        let inputConfirmarSenhaProf = document.getElementById('inputConfirmarSenhaProf').value
+
+        if (inputNomeCompletoProf.length > 3 && inputEmailProf.length > 0 && inputCpfProf.length > 10 && inputNif.length > 9 && inputTelefoneProf.length > 10 && inputSenhaProf.length > 7 && inputConfirmarSenhaProf.length > 7 && inputSenhaProf == inputConfirmarSenhaProf){
+
+            createUserWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                alert("Sucesso!")
+
+                //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
+                addDoc(collection(db, "Professor"), {
+                    inputNomeCompletoProf: `${inputNomeCompletoProf}`,
+                    inputEmailProf: `${inputEmailProf}`,
+                    inputCpfProf: `${inputCpfProf}`,
+                    inputNif: `${inputNif}`,
+                    inputTelefoneProf: `${inputTelefoneProf}`
+                });
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                alert("Erro!")
+            });
+        }
+
+    }
 })
