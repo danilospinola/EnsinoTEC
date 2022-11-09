@@ -1,4 +1,5 @@
 let htmlAtual = document.location.pathname
+console.log(htmlAtual)
 
 //Inicializa aplicação e sincroniza com o Firebase.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
