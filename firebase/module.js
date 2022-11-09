@@ -34,7 +34,7 @@ const db = getFirestore(app);
 document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
     //Capturando valores do input (cadastro Aluno).
-    if (htmlAtual == "/cad-aluno.html"){
+    if (htmlAtual == "/EnsinoTEC/cad-aluno.html"){
 
         let inputNomeCompleto = document.getElementById('inputNomeCompleto').value
         let inputEmail = document.getElementById('inputEmail').value
@@ -71,7 +71,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             });
         }
 
-    } else if (htmlAtual == "/cad-prof.html"){
+    } else if (htmlAtual == "/EnsinoTEC/cad-prof.html"){
 
         let inputNomeCompletoProf = document.getElementById('inputNomeCompletoProf').value
         let inputEmailProf = document.getElementById('inputEmailProf').value
