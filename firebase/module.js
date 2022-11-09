@@ -45,7 +45,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         let inputSenha = document.getElementById('inputSenha').value
         let inputConfirmarSenha = document.getElementById('inputConfirmarSenha').value
 
-        if (inputNomeCompleto.length > 3 && inputEmail.length > 0 && inputCpf.length > 10 && inputRa.length > 10 && inputUf.length > 1 && inputTelefone.length > 10 && inputSenha.length > 7 && inputConfirmarSenha.length > 7 && inputSenha == inputConfirmarSenha){
+        if (inputNomeCompleto.length > 3 && inputEmail.length > 0 && inputCpf.length > 10 && inputRa.length < 10 && inputUf.length > 1 && inputTelefone.length > 10 && inputSenha.length > 7 && inputConfirmarSenha.length > 7 && inputSenha == inputConfirmarSenha){
 
             createUserWithEmailAndPassword(auth, inputEmail, inputSenha)
             .then((userCredential) => {
