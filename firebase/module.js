@@ -28,7 +28,7 @@ const db = getFirestore(app);
 
 /**//**//**/
 
-/* [!] CADASTRO USUÁRIO ALUNO */
+/* [!] CADASTRO USUÁRIO ALUNO */ 
 
 //Criando usuário 'Aluno' com Authentication + enviando informações pro banco.
 document.getElementsByTagName("button")[0].addEventListener('click', function(){
