@@ -113,13 +113,15 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, senha)
         .then((userCredential) => {
-            // Signed in 
+
             const user = userCredential.user;
-            // ...
+            alert("Sucesso!")
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            
+            alert("Erro!")
         });
     }
 })
