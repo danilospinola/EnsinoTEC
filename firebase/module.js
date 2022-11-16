@@ -108,8 +108,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         
         let email = document.getElementById('inputEmaiil').value
         let senha = document.getElementById('inputSenha').value
-
-        if (email.length > 0 && senha.length > 7){
             const auth = getAuth();
             signInWithEmailAndPassword(auth, email, senha)
             .then((userCredential) => {
@@ -122,6 +120,5 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 const errorMessage = error.message;
                 alert("Erro!")
             });
-        }
     }
 })
