@@ -1,0 +1,132 @@
+body{
+  margin: 0;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ed145c96;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ed145c;
+  }
+  
+
+/**/
+
+
+
+.card{
+    background-color: rgba(228, 226, 226, 0.514);
+    border-radius: 20px;
+    margin: 15px;
+    align-items: center;
+    margin-top: -500px;
+    margin-left: 120px;
+}
+
+
+
+.cardimg{
+  border-radius: 20px 20px 0px 0px ;
+}
+
+.btn {
+
+	background-color:#ed145c;
+	border-radius:14px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+  margin-left: 90px;
+}
+.btn {
+	  color: #fff;
+    background: #ed145c;
+    transition: 0.3s ease;
+    
+}
+.btn:hover {
+	color: #ed145c;
+    background: #fff;
+}
+
+.titulocard{
+  font-size: 20px;
+  height: 0px; 
+  margin-top: 8px; 
+  margin-left: 5px;
+}
+
+
+/* Menu lateral */
+
+.nav{
+  width: 100px;
+  height: 525px;
+ 
+}
+.menu-lateral {
+	grid-area: menu;
+	overflow: hidden;
+	width: 100px;
+  height:900px;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.menu-lateral a {
+	color: #000000;
+  padding-top: 30px;
+  padding-left: 25px;
+  padding-right: 20px;
+	display: block;
+	transition: background-color 0.3s ease-in-out;
+  width: 35px;
+
+}
+
+.menu-lateral a:hover,
+.menu-lateral a:focus,
+.menu-lateral a:active {
+	background-color: #e5e5e5;
+
+}
+
+.menu-lateral a.active {
+	background-color: #e5e5e5;
+}
+
+.menu-lateral a i {
+	color: #ed145c;
+	margin-bottom: 50px;
+  margin-right: 0px;
+	width: 200px;
+  height: 0px;
+ 
+
+}
+
+.menu-lateral a.active i {
+	color: #ff0000;
+}
+
+.menu-lateral hr {
+	border: 1px solid #dfdfdf;
+	margin: 20px 0;
+  width: 90px;
+}
+  
