@@ -1,0 +1,281 @@
+
+
+@media (max-width: 1140px){
+    nav{
+        z-index: 900;
+
+        display: none;
+        flex-direction: column;
+
+        position: fixed;
+        padding: 5px;
+        width: 370px;
+        height: 100%;
+
+        background-color: #424242;
+        box-shadow: -5px 0px 60px black;
+        transition: ease-in-out 0.2s;
+
+        text-transform: uppercase;
+
+        background-image: url('../img/geometric-gray-shapes.png');
+        background-size: 250%;
+        background-position: -10px 100px;
+        background-repeat: no-repeat;
+        background-blend-mode: color-burn;
+
+        animation-name: transicao-suave;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.3s;
+    }
+
+    nav div{
+        display: flex;
+    }
+
+    nav #divNavLinks{
+        flex-direction: column;
+        
+        margin-top: 30px;
+    }
+
+    nav #divNavLinks a, nav div a{
+        flex-direction: column;
+
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+
+        color: white;
+
+        font-size: 20px;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+
+        transition: 0.2s;
+    }
+
+    nav #divNavLinks a:hover{
+        background-color: white;
+        color: black;
+    }
+
+    nav #divNavLoginCadastro{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        margin-top: 30px;
+    }
+
+    nav #divNavLoginCadastro span{
+        font-size: 12px;
+        font-weight: 100;
+        text-transform: none;
+    }
+
+    nav #btnNavLogin, #btnNavCadastro{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        transition: 0.2s;
+    }
+
+    nav #btnNavLogin{
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+    }
+
+    #btnNavLogin:hover{
+        background-color: black;
+        color: white;
+    }
+
+    nav #btnNavCadastro{
+        background-color: #ED145C;
+        border-radius: 10px;
+    }
+
+    #btnNavCadastro:hover{
+        background-color: rgb(255, 122, 193);
+    }
+
+    /**/
+
+    nav #divAcessibilidade{
+        position: fixed;
+        bottom: 5px;
+    }
+
+    #btnModoEscuroClaro{
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+    }
+
+    #botaoModoEscuroClaroFullScreen{
+        display: none;
+    }
+
+    
+    /**/
+
+    nav #imgLogoNav{
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        width: 200px;
+    }
+
+    nav #btnFecharMenu{
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        user-select: none;
+
+        cursor: pointer;
+
+        position: relative;
+        left: 125px;
+
+        padding: 8px 14px 8px 14px;
+        
+        color: white;
+        border: 1.5px solid white;
+        border-radius: 6px;
+
+        font-weight: 900;
+        font-size: 25px;
+
+        transition: 0.2s;
+    }
+
+    nav #btnFecharMenu:hover{
+        background-color: #ffffff;
+        color: #424242;
+    }
+
+    /**/
+
+    header{
+        position: sticky;
+        top: 0px;
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    
+        background-color: transparent;
+    
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        font-weight: 900;
+    
+        transition: 0.5s ease-in-out;
+    }
+
+    header .link-header{
+        display: none;
+    }
+
+    header #linkLogin, #linkCadastro{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+    
+        transition: 0.2s;
+    }
+
+    header #logoEnsinotec{
+        display: none;
+    }
+
+    header #logoEnsinotec-mq{
+        display: block;
+
+        width: 35px;
+        height: 35px;
+        margin-left: 16px;
+    }
+    
+    header #btnMenuHamburguer{
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        cursor: pointer;
+        display: block;
+    
+        width: 35px;
+        height: 35px;
+        margin-left: 10px;
+        margin-right: 6px;
+    
+        transition: ease-in-out 0.9s;
+    }
+
+    /**/
+
+    footer{
+        flex-direction: column;
+        justify-content: center;
+
+        padding-left: 30px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+    }
+
+    footer div{
+        margin-bottom: 40px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #divContato{
+        align-items: flex-start;
+        align-self: flex-start;
+    }
+
+    footer a{
+        font-size: 20px;
+    }
+
+    /**/
+    /**/
+    /**/
+}
+
+@keyframes transicao-suave{
+    0%{
+        opacity: -100%;
+    }
+
+    20%{
+        opacity: -80%;
+    }
+
+    30%{
+        opacity: -60%;
+    }
+
+    40%{
+        opacity: -40%;
+    }
+
+    20%{
+        opacity: -20%;
+    }
+
+    0%{
+        opacity: 0%;
+    }
+}
