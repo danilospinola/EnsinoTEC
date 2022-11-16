@@ -109,7 +109,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         let email = document.getElementById("inputEmaiil").value
         let senha = document.getElementById("inputSenha").value
 
-        if (inputEmaiil.length > 0 && inputSenha.length > 0){
+        if (inputEmaiil.length > 0 && inputSenha.length > 7){
             const auth = getAuth();
             signInWithEmailAndPassword(auth, email, senha)
             .then((userCredential) => {
