@@ -106,8 +106,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         }
     } else if (htmlAtual == "/EnsinoTEC/login-prof.html"){
         
-        let email = document.getElementById("inputEmaiil").value
-        let senha = document.getElementById("inputSenha").value
+        let email = document.getElementById('inputEmaiil').value
+        let senha = document.getElementById('inputSenha').value
 
         if (inputEmaiil.length > 0 && inputSenha.length > 7){
             const auth = getAuth();
