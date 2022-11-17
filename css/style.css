@@ -81,6 +81,7 @@ p{
 h1{
     font-size: 50px;
     color: #ed145c;
+
 }
 
 h2{
@@ -131,6 +132,7 @@ h2{
 #icons{ 
     text-align: center;
     padding: 8vw;
+  
 }
 
 #icons .icons-img{
@@ -1051,7 +1053,7 @@ footer div h1{
     font-family: Poppins;
 }
 
-.container {
+  .container {
     display: flex;
     height:55vh;
     align-items: center;
@@ -1062,6 +1064,8 @@ footer div h1{
   
   .div-transform {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
   }
   
@@ -1149,5 +1153,6 @@ footer div h1{
   .subtitle{
     font-size: 35px;
     margin-top: 70px;
+    margin-bottom: 20px;
   }
 

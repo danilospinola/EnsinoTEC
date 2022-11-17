@@ -71,6 +71,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             });
         }
 
+    /* [!] CADASTRO USUÁRIO Professor */ 
+
     } else if (htmlAtual == "/EnsinoTEC/cad-prof.html"){
 
 
@@ -107,11 +109,34 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 alert("Erro!")
             });
         }
+    
+
+    /* [!] Login USUÁRIO Professor */ 
+
     } else if (htmlAtual == "/EnsinoTEC/login-prof.html"){
 
 
         let email = document.getElementById('inputEmail').value
         let senha = document.getElementById('inputSenha').value
+
+            signInWithEmailAndPassword(auth, email, senha)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                alert("Sucesso!")
+                window.location.href = "/EnsinoTEC/PaginaInicial.html"
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage)
+            });
+        
+    } else if (htmlAtual == "/EnsinoTEC/login-aluno.html"){
+
+
+        let email = document.getElementById('inputEmail').value
+        let senha = document.getElementById('inputSenha').value
+
             signInWithEmailAndPassword(auth, email, senha)
             .then((userCredential) => {
                 const user = userCredential.user;

@@ -1,0 +1,29 @@
+@media (max-width: 730px){
+    .subtitle{
+        font-size: 35px;
+        margin-top: 70px;
+        margin-bottom: 460px;
+    }
+
+    .div-transform{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 120px;
+    }
+
+    .card{
+        margin: 0px;
+        margin-bottom: 100px;
+    }
+
+    .icons-img{
+        flex-wrap: wrap;
+       
+
+    }
+
+    .como-funciona{
+        margin-top: 200px;
+    }
+}
