@@ -24,7 +24,7 @@ function removerErro(index){
 }
 
 function validarNome(){ // função que valida o nome
-    if(campos[0].value.length < 4)
+    if(campos[0].value.length < 2)
     {
         chamarErro(0);
     }
