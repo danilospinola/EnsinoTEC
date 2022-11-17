@@ -34,8 +34,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
     //Capturando valores do input (cadastro Aluno).
     if (htmlAtual == "/EnsinoTEC/cad-aluno.html"){
-        alert("teste")
-
 
 
         let inputNomeCompleto = document.getElementById('inputNomeCompleto').value
@@ -52,7 +50,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             createUserWithEmailAndPassword(auth, inputEmail, inputSenha)
             .then((userCredential) => {
                 const user = userCredential.user;
-                alert("Sucesso!")
+                alert("Sucesso!");
 
                 //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
                 addDoc(collection(db, "Aluno"), {
@@ -74,8 +72,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         }
 
     } else if (htmlAtual == "/EnsinoTEC/cad-prof.html"){
-        alert("teste")
-
 
 
 
@@ -112,8 +108,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             });
         }
     } else if (htmlAtual == "/EnsinoTEC/login-prof.html"){
-        alert("teste")
-
 
 
         let email = document.getElementById('inputEmail').value
