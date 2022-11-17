@@ -372,7 +372,7 @@ button:hover .button-text {
 
 .popup-button,
 .popup .close-popup-button {
-    background-color: #ee404c;
+    background-color: #ed145c;
     border: none;
     padding: 8px 30px;
     border-radius: 16px;
@@ -397,11 +397,15 @@ button:hover .button-text {
 
 .popup {
     position: absolute;
-    background-color: #333;
+    background-color: rgb(255, 255, 255);
+    border-width: 1px; 
+  border-style: solid; 
+  border-color:  #ed145c; 
     padding: 30px 50px;
     border-radius: 8px;
     text-align: center;
-    width: 400px;
+    width: 500px;
+    height: 300px;
     box-sizing: border-box;
     transition: all .4s;
     z-index: -1;
@@ -413,6 +417,8 @@ button:hover .button-text {
     z-index: 999;
     transform: scale(1);
     opacity: 1;
+    margin-left: 700px;
+    margin-top: -500px;
 }
 
 .popup img {
@@ -420,10 +426,10 @@ button:hover .button-text {
 }
 
 .popup h2.title {
-    color: #ee404c;
+    color: #ed145c;
 }
 
 .popup p.desc {
-    color: #FFF;
+    color: rgb(0, 0, 0);
 }
 
