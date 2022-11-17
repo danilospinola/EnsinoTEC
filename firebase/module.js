@@ -129,5 +129,21 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 const errorMessage = error.message;
                 alert("Erro!")
             });
+    } else if (htmlAtual == "/EnsinoTEC/login-aluno.html"){
+
+
+        let email = document.getElementById('inputEmail').value
+        let senha = document.getElementById('inputSenha').value
+
+            signInWithEmailAndPassword(auth, email, senha)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                alert("Sucesso!")
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert("Erro!")
+            });
     }
 })
