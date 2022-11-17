@@ -81,6 +81,7 @@ p{
 h1{
     font-size: 50px;
     color: #ed145c;
+
 }
 
 h2{
@@ -131,6 +132,7 @@ h2{
 #icons{ 
     text-align: center;
     padding: 8vw;
+  
 }
 
 #icons .icons-img{
@@ -1050,3 +1052,107 @@ footer div h1{
 
     font-family: Poppins;
 }
+
+  .container {
+    display: flex;
+    height:55vh;
+    align-items: center;
+    justify-content: center;
+    perspective: 90rem;
+    perspective-origin: 30% 60%;
+  }
+  
+  .div-transform {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+  
+  .card {
+
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 20px 10px;
+    width: 350px;
+    transition: 0.5s ease;
+    overflow: hidden;
+    transform: translate(0);
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+  }
+  
+  .card h2 {
+    text-transform: capitalize;
+  }
+  
+  .card h4 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 48px;
+  }
+  
+  .card-1 {
+    background-size: cover;
+    transform: scale(1.02);
+    margin-right: 40px;
+  }
+  
+  .card-1:hover {
+    transform: scale(1.11);
+    box-shadow: -7px 4px 28px -3px #b527cf;
+  }
+  
+  .card-1::before {
+    background: linear-gradient(90deg, #b527cf 0%, #ed145c 100%);
+  }
+  
+  .card-2 {
+    background-size: cover;
+    transform: scale(1.01);
+    margin-right: 31px;
+  }
+  
+  .card-2:hover {
+    transform: scale(1.1);
+    box-shadow: -7px 4px 28px -3px #3bd9d9;
+  }
+  
+  .card-2::before {
+    background: linear-gradient(90deg, #b527cf 0%, #ed145c 100%);
+  }
+  
+  .card-3 {
+    background-size: cover;
+  }
+  
+  .card-3:hover {
+    transform: scale(1.08);
+    box-shadow: -7px 4px 28px -3px #ed145c;
+  }
+  
+  .card-3::before {
+    background: linear-gradient(90deg, #b527cf 0%, #ed145c 100%);
+  }
+  
+  .topcards{
+    text-align: center;
+     margin-top: 90px;
+     padding-bottom: 0;
+  }
+
+  .subtitle{
+    font-size: 35px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+
