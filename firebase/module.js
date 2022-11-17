@@ -115,10 +115,9 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         alert("teste")
 
 
-        
+
         let email = document.getElementById('inputEmail').value
         let senha = document.getElementById('inputSenha').value
-            const auth = getAuth();
             signInWithEmailAndPassword(auth, email, senha)
             .then((userCredential) => {
                 const user = userCredential.user;
