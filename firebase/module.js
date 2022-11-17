@@ -124,7 +124,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             .then((userCredential) => {
                 const user = userCredential.user;
                 alert("Sucesso!")
-                window.location.href = "/EnsinoTEC/PaginaInicial.html";
+                window.location.href = "/EnsinoTEC/PaginaInicial.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
