@@ -105,15 +105,14 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             });
         }
     } else if (htmlAtual == "/EnsinoTEC/login-prof.html"){
-        
-        let email = document.getElementById('inputEmaiil').value
+        alert("teste")
+        let email = document.getElementById('inputEmail').value
         let senha = document.getElementById('inputSenha').value
             const auth = getAuth();
             signInWithEmailAndPassword(auth, email, senha)
             .then((userCredential) => {
                 const user = userCredential.user;
                 alert("Sucesso!")
-                window.location.href = '../EnsinoTEC/PaginaInicial.html';
             })
             .catch((error) => {
                 const errorCode = error.code;
