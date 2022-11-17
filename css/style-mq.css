@@ -1,4 +1,5 @@
 @media (max-width: 730px){
+
     .subtitle{
         font-size: 35px;
         margin-top: 70px;
@@ -26,4 +27,13 @@
     .como-funciona{
         margin-top: 200px;
     }
+
+    #contact .form{
+        display: none;
+    }
+
+    .contato{
+        justify-content: center;
+    }
+    
 }
