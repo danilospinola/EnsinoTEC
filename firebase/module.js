@@ -34,6 +34,9 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
     //Capturando valores do input (cadastro Aluno).
     if (htmlAtual == "/EnsinoTEC/cad-aluno.html"){
+        alert("teste")
+
+
 
         let inputNomeCompleto = document.getElementById('inputNomeCompleto').value
         let inputEmail = document.getElementById('inputEmail').value
@@ -71,6 +74,10 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         }
 
     } else if (htmlAtual == "/EnsinoTEC/cad-prof.html"){
+        alert("teste")
+
+
+
 
         let inputNomeCompletoProf = document.getElementById('inputNomeCompletoProf').value
         let inputEmailProf = document.getElementById('inputEmailProf').value
@@ -106,6 +113,9 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         }
     } else if (htmlAtual == "/EnsinoTEC/login-prof.html"){
         alert("teste")
+
+
+        
         let email = document.getElementById('inputEmail').value
         let senha = document.getElementById('inputSenha').value
             const auth = getAuth();
