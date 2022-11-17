@@ -119,7 +119,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         let email = document.getElementById('inputEmail').value
         let senha = document.getElementById('inputSenha').value
 
-        if (email.length >3 && senha > 7){
             signInWithEmailAndPassword(auth, email, senha)
             .then((userCredential) => {
                 const user = userCredential.user;
@@ -129,9 +128,9 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert("Erro!")
+                alert(errorMessage)
             });
-        }
+        
     } else if (htmlAtual == "/EnsinoTEC/login-aluno.html"){
 
 
