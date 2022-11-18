@@ -108,7 +108,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
             })
 
-            // Tratando exceptions
+            // Tratando exceptions cadastro
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
@@ -135,9 +135,14 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user
+
+                const docRef = doc(db, "Professor", user.uid);
+                if (docRef != true){alert("Usuario aluno identificado, logando como aluno...")}
+
                 alert("Sucesso!")
                 window.location.href = "/EnsinoTEC/calendario.html"
             })
+            //Exceptions do login
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
@@ -146,6 +151,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 }else if (errorCode == "auth/wrong-password") {
                     alert("Email ou senha incorreta!")}else {alert(errorCode)}
             });
+
         
     } else if (htmlAtual == "/EnsinoTEC/login-aluno.html"){
 
