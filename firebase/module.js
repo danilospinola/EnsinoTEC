@@ -137,7 +137,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         let email = document.getElementById('inputEmail').value
         let senha = document.getElementById('inputSenha').value
 
-        firebase.auth().signInWithEmailAndPassword(email, senha)
+        firebase.auth(app).signInWithEmailAndPassword(email, senha)
         .then((userCredential) => {
           // Signed in
           var user = userCredential.user;
