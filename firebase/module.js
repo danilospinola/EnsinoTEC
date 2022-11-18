@@ -137,15 +137,16 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         let email = document.getElementById('inputEmail').value
         let senha = document.getElementById('inputSenha').value
 
-            signInWithEmailAndPassword(auth, email, senha)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                alert("Sucesso!")
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert("Erro!")
-            });
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Signed in
+          var user = userCredential.user;
+          alert("Sucesso")
+        })
+        .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          alert(errorMessage)
+        });
     }
 })
