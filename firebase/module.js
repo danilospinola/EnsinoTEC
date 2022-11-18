@@ -102,11 +102,15 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 });
 
             })
+
+            // Tratando exceptions
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 if (errorCode == "auth/email-already-in-use"){
                     alert("Email já em uso");
+                    signInWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
+                    window.location.href = "/EnsinoTEC/calendario.html"
                 }else{
                     alert(errorCode)
                 }
@@ -122,6 +126,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         let email = document.getElementById('inputEmail').value
         let password = document.getElementById('inputSenha').value
 
+                //Logando na conta do usuário professor
             signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user
@@ -140,6 +145,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         let email = document.getElementById('inputEmail').value
         let password = document.getElementById('inputSenha').value
 
+        //Logando na conta do usuário aluno
             signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user
@@ -149,12 +155,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                if (errorCode == "auth/email-already-in-use"){
-                    alert("Email já em uso");
-                }else{
-                    alert(errorCode)
-                }
-                
+                alert(errorCode)      
             });
             
             
