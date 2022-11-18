@@ -140,10 +140,12 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         firebase.auth(app).signInWithEmailAndPassword(email, senha)
         .then((userCredential) => {
           // Signed in
+          alert("Sucesso")
           var user = userCredential.user;
           alert("Sucesso")
         })
         .catch((error) => {
+        alert(errorMessage)
           var errorCode = error.code;
           var errorMessage = error.message;
           alert(errorMessage)
