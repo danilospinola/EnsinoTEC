@@ -13,17 +13,17 @@ body{
     background-size: cover;
 }
 
-form a{
+form a,main a{
     color: #ed145c;
     font-weight: 900;
     text-decoration: none;
 }
 
-form a:hover{
+form a:hover, main a:hover{
     text-decoration: underline;
 }
 
-form span{
+form span, main span{
     user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
@@ -31,11 +31,11 @@ form span{
     font-weight: 900;
 }
 
-form label{
+form label, main label{
     color: white;
 }
 
-form{
+form,main{
     display: flex;
     flex-direction: column;
 
@@ -62,7 +62,7 @@ form{
     transition: 0.3s;
 }
 
-form h2{
+form h2, main h2{
     color: white;
     text-transform: uppercase;
 
@@ -200,7 +200,7 @@ button:hover{
 }
 
 @media (max-width: 700px){
-    form{
+    form,main{
         width: auto;
 
         background-position: 100%;
