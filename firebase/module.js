@@ -150,7 +150,9 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 if (errorCode == "auth/user-not-found"){
                     alert("Usuário não existente, por favor realize o cadastro.")
                 }else if (errorCode == "auth/wrong-password") {
-                    alert("Email ou senha incorreta!")}else {alert(errorCode)}
+                    alert("Email ou senha incorreta!")}
+                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
+                else {alert(errorCode)}
             });
 
         
@@ -173,7 +175,9 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 if (errorCode == "auth/user-not-found"){
                     alert("Usuário não existente, por favor realize o cadastro.")
                 }else if (errorCode == "auth/wrong-password") {
-                    alert("Email ou senha incorreta!")} else {alert(errorCode)}
+                alert("Email ou senha incorreta!")}
+                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
+                else {alert(errorCode)}
             });
             
             
