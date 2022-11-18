@@ -146,7 +146,12 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(errorCode);
+                if (errorCode == "auth/email-already-in-use"){
+                    alert("Email já em uso");
+                }else{
+                    alert(errorCode)
+                }
+                
             });
             
             
