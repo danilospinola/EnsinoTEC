@@ -137,6 +137,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 const user = userCredential.user
 
                 const docRef = doc(db, "Professor", user.uid);
+                console.log(docRef);
                 if (docRef != true){alert("Usuario aluno identificado, logando como aluno...")}
 
                 alert("Sucesso!")
