@@ -106,7 +106,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 const errorCode = error.code;
                 const errorMessage = error.message;
 
-                alert("Erro!")
+                alert(errorCode)
             });
         }
     
@@ -123,7 +123,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             .then((userCredential) => {
                 const user = userCredential.user
                 alert("Sucesso!")
-                window.location.href = "/EnsinoTEC/PaginaInicial.html"
+                window.location.href = "/EnsinoTEC/calendario.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -135,20 +135,20 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
 
         let email = document.getElementById('inputEmail').value
-        let senha = document.getElementById('inputSenha').value
+        let password = document.getElementById('inputSenha').value
 
-        firebase.auth(app).signInWithEmailAndPassword(email, senha)
-        .then((userCredential) => {
-          // Signed in
-          alert("Sucesso")
-          var user = userCredential.user;
-          alert("Sucesso")
-        })
-        .catch((error) => {
-        alert(errorMessage)
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          alert(errorMessage)
-        });
+            signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user
+                alert("Sucesso!")
+                window.location.href = "/EnsinoTEC/calendario.html"
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorCode);
+            });
+            
+            
     }
 })
