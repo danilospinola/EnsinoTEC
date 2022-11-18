@@ -4,7 +4,7 @@ let htmlAtual = document.location.pathname
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
 
 //Importa principais métodos de autenticação.
-import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 //Importa principais métodos de conexão com o Firestore.
 import { getFirestore, setDoc, addDoc, doc, collection } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
