@@ -116,14 +116,14 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
     } else if (htmlAtual == "/EnsinoTEC/login-prof.html"){
 
 
-        let email = document.getElementById('inputEmail').value;
-        let senha = document.getElementById('inputSenha').value;
+        let email = document.getElementById('inputEmail').value
+        let password = document.getElementById('inputSenha').value
 
-            signInWithEmailAndPassword(auth, email, senha)
+            signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
-                alert("Sucesso!");
-                window.location.href = "/EnsinoTEC/PaginaInicial.html";
+                const user = userCredential.user
+                alert("Sucesso!")
+                window.location.href = "/EnsinoTEC/PaginaInicial.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -137,15 +137,18 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
         let email = document.getElementById('inputEmail').value
         let senha = document.getElementById('inputSenha').value
 
-            signInWithEmailAndPassword(auth, email, senha)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                alert("Sucesso!")
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert("Erro!")
-            });
+        firebase.auth(app).signInWithEmailAndPassword(email, senha)
+        .then((userCredential) => {
+          // Signed in
+          alert("Sucesso")
+          var user = userCredential.user;
+          alert("Sucesso")
+        })
+        .catch((error) => {
+        alert(errorMessage)
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          alert(errorMessage)
+        });
     }
 })
