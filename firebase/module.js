@@ -4,7 +4,7 @@ let htmlAtual = document.location.pathname
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
 
 //Importa principais métodos de autenticação.
-import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "firebase/auth";
 
 //Importa principais métodos de conexão com o Firestore.
 import { getFirestore, setDoc, addDoc, doc, collection } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
@@ -116,14 +116,14 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
     } else if (htmlAtual == "/EnsinoTEC/login-prof.html"){
 
 
-        let email = document.getElementById('inputEmail').value;
-        let senha = document.getElementById('inputSenha').value;
+        let email = document.getElementById('inputEmail').value
+        let senha = document.getElementById('inputSenha').value
 
             signInWithEmailAndPassword(auth, email, senha)
             .then((userCredential) => {
-                const user = userCredential.user;
-                alert("Sucesso!");
-                window.location.href = "/EnsinoTEC/PaginaInicial.html";
+                const user = userCredential.user
+                alert("Sucesso!")
+                window.location.href = "/EnsinoTEC/PaginaInicial.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -148,4 +148,4 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 alert("Erro!")
             });
     }
-});
+})
