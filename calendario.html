@@ -281,13 +281,37 @@
                         <span class="circle" aria-hidden="true">
                           <span class="icon arrow"></span>
                         </span>
-                        <span class="button-text">Atribuir </span>
+                        <span class="button-text" type="submit" onclick="handlePopup(true)">Atribuir </span>
                       </button>
                 </div>
             </ul>
         </div>
         </div>
     </div>
+    
+        <div class="popup" id="popup">
+
+            <h2 class="title">EnsinoTec</h2>
+
+            <p class="desc">Ocorreu um erro na execução do processo.</p>
+
+            <button class="close-popup-button" type="submit" onclick="handlePopup(false)">
+                Fechar
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        
+const popup = document.getElementById('popup');
+
+function handlePopup(open) {
+	popup.classList[open ? 'add' : 'remove']('opened');
+}
+    </script>
+
+    
 
 
 

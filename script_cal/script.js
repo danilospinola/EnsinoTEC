@@ -1,3 +1,4 @@
+
 var app = {
 	settings: {
 		container: $('.calendar'),
