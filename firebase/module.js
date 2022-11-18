@@ -117,9 +117,9 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
 
         let email = document.getElementById('inputEmail').value
-        let senha = document.getElementById('inputSenha').value
+        let password = document.getElementById('inputSenha').value
 
-            signInWithEmailAndPassword(auth, email, senha)
+            signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user
                 alert("Sucesso!")
