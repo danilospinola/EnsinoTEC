@@ -59,7 +59,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputCpf: `${inputCpf}`,
                     inputRa: `${inputRa}`,
                     inputUf: `${inputUf}`.toUpperCase(),
-                    inputTelefone: `${inputTelefone}`
+                    inputTelefone: `${inputTelefone}`,
+                    idUsuario: `${user.uid}`
                 });
 
             })
