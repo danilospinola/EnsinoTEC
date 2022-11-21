@@ -141,12 +141,12 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
                 alert(Q)
 
-                if (Q == false ){
-                    alert("Aluno identificado, fazendo o redirecionamento para a pagina de aluno...");
-                    window.location.href = "/EnsinoTEC/calendario.html"}
-                else{
-                    alert("Sucesso!")
-                    window.location.href = "/EnsinoTEC/calendario.html"};
+                // if (Q == false ){
+                //     alert("Aluno identificado, fazendo o redirecionamento para a pagina de aluno...");
+                //     window.location.href = "/EnsinoTEC/calendario.html"}
+                // else{
+                //     alert("Sucesso!")
+                //     window.location.href = "/EnsinoTEC/calendario.html"};
 
             })
             //Exceptions do login
