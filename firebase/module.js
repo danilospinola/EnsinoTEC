@@ -138,7 +138,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             .then((userCredential) => {
                 const user = userCredential.user
                 Q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid))
-                
+
                 alert(Q)
 
                 if (Q == false ){
@@ -157,8 +157,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     alert("Usuário não existente, por favor realize o cadastro.")
                 }else if (errorCode == "auth/wrong-password") {
                     alert("Email ou senha incorreta!")}
-                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
-                else {alert(errorCode)}
+                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu, tente novamente mais tarde")}
+                else {alert(errorCode, "Ops um erro ocorreu")}
             });
 
 
