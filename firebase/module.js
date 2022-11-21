@@ -59,15 +59,21 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputCpf: `${inputCpf}`,
                     inputRa: `${inputRa}`,
                     inputUf: `${inputUf}`.toUpperCase(),
-                    inputTelefone: `${inputTelefone}`
+                    inputTelefone: `${inputTelefone}`,
+                    idUsuario: `${user.uid}`
                 });
 
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-
-                alert("Erro!")
+                if (errorCode == "auth/email-already-in-use"){
+                    alert("Email já em uso");
+                    signInWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
+                    window.location.href = "/EnsinoTEC/calendario.html"
+                }else{
+                    alert(errorCode)
+                }
             });
         }
 
@@ -98,15 +104,23 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputEmailProf: `${inputEmailProf}`,
                     inputCpfProf: `${inputCpfProf}`,
                     inputNif: `${inputNif}`,
-                    inputTelefoneProf: `${inputTelefoneProf}`
+                    inputTelefoneProf: `${inputTelefoneProf}`,
+                    idUsuario: `${user.uid}`
                 });
 
             })
+
+            // Tratando exceptions cadastro
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-
-                alert("Erro!")
+                if (errorCode == "auth/email-already-in-use"){
+                    alert("Email já em uso");
+                    signInWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
+                    window.location.href = "/EnsinoTEC/calendario.html"
+                }else{
+                    alert(errorCode)
+                }
             });
         }
     
@@ -117,35 +131,56 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
 
         let email = document.getElementById('inputEmail').value
-        let senha = document.getElementById('inputSenha').value
+        let password = document.getElementById('inputSenha').value
 
-            signInWithEmailAndPassword(auth, email, senha)
+                //Logando na conta do usuário professor
+            signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
+                const user = userCredential.user
+
+
                 alert("Sucesso!")
-                window.location.href = "/EnsinoTEC/PaginaInicial.html"
+                window.location.href = "/EnsinoTEC/calendario.html"
             })
+            //Exceptions do login
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(errorMessage)
+                if (errorCode == "auth/user-not-found"){
+                    alert("Usuário não existente, por favor realize o cadastro.")
+                }else if (errorCode == "auth/wrong-password") {
+                    alert("Email ou senha incorreta!")}
+                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
+                else {alert(errorCode)}
             });
+
+
+
         
     } else if (htmlAtual == "/EnsinoTEC/login-aluno.html"){
 
 
         let email = document.getElementById('inputEmail').value
-        let senha = document.getElementById('inputSenha').value
+        let password = document.getElementById('inputSenha').value
 
-            signInWithEmailAndPassword(auth, email, senha)
+        //Logando na conta do usuário aluno
+            signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
+                const user = userCredential.user
                 alert("Sucesso!")
+                window.location.href = "/EnsinoTEC/calendario.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert("Erro!")
+                if (errorCode == "auth/user-not-found"){
+                    alert("Usuário não existente, por favor realize o cadastro.")
+                }else if (errorCode == "auth/wrong-password") {
+                alert("Email ou senha incorreta!")}
+                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
+                else {alert(errorCode)}
             });
+            
+            
     }
 })

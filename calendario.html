@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calendário</title>
     <link rel="stylesheet" href="css_cal/style.css">
+    <link rel="stylesheet" href="temp-css/temp-css.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="script_cal/script.js"></script>
+    <link rel="shortcut icon" href="temp-img/e-logo-icon.ico" type="image/x-icon">
 </head>
 <body>
 
+    <!--
     <nav class="nav">
         <div class="menu-lateral">
         <a href="javascript:void(0);">
@@ -62,18 +65,136 @@
         </a>
         </div>
     </nav>
-   
+-->
+
+<nav id="menuLateral">
+    <section>
+        <div>
+            <a href="#">
+            <img src="temp-img/agenda.png" class="navIcones">
+
+            <label>Agenda</label>
+            </a>
+        </div>
+
+        <div>
+            <a href="#">
+            <img src="temp-img/desempenho.png" class="navIcones">
+
+            <label>Desempenho</label>
+            </a>
+        </div>
+
+        <div>
+            <a href="#">
+            <img src="temp-img/turma.png" class="navIcones">
+
+            <label>Turmas</label>
+            </a>
+        </div>
+
+        <div>
+            <a href="#">
+            <img src="temp-img/atividades.png" class="navIcones">
+
+            <label>Atividades</label>
+            </a>
+        </div>
+
+        <div>
+            <a href="#">
+            <img src="temp-img/chat.png" class="navIcones">
+
+            <label>Conversas</label>
+            </a>
+        </div>
+    </section>
+
+    <section class="sec-acessibilidade">
+        <div>
+            <img src="temp-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+
+            <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+        </div>
+    </section>
+</nav>
+
+<main>
+
+    <header>
+        <div id="divLogo">
+            <img src="temp-img/menu.png" id="menuHamburguer">
+            <img src="temp-img/ensinotec-logo.png" id="imgLogo">
+            <img src="temp-img/e-logo.png" id="imgLogoMq">
+        </div>
+        <div id="divUsuario">
+            <img src="temp-img/entrarNaSala.png" id="btnEntrarNaSala" title="Clique para entrar em uma sala">
+
+            <img src="temp-img/notif.png" id="btnNotificacao" title="Notificões">
+
+            <img src="temp-img/perfil.png" id="imgPerfilUsuario" title="Você">
+        </div>
+    </header>
+
+    <nav id="menuLateralMq">
+        <section>
+            <div>
+                <a href="#">
+                <img src="temp-img/agenda.png" class="navIcones">
+
+                <label>Agenda</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/desempenho.png" class="navIcones">
+
+                <label>Desempenho</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/turma.png" class="navIcones">
+
+                <label>Turmas</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/atividades.png" class="navIcones">
+
+                <label>Atividades</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/chat.png" class="navIcones">
+
+                <label>Conversas</label>
+                </a>
+            </div>
+        </section>
+
+        <section class="sec-acessibilidade" id="sec-acessibilidade-mq" style="align-self: center;">
+            <div>
+                <img src="temp-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+
+                <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+            </div>
+        </section>
+    </nav>
 
 <div class="mexer">
    
     <div id="calendar-wrap">
         
-        <header>
-   
             <h1>Dezembro 2022</h1>    
-   
+      
   
-        </header>
        
         <div id="calendar">
             <ul class="weekdays">
@@ -138,9 +259,9 @@
                             Feriado
                         </div>  					
                 </li>
-                <li class="day">
+                <li class="day" >
                     <div class="date" id="9">9</div>   
-                    <div class="event1">
+                    <div class="event1" >
                         <div class="event-desc">
                            Emenda de Feriado
                         </div>   					
@@ -223,9 +344,9 @@
                 <li class="day">
                     <div class="date" id="25">25</div>  
                     <div class="event3">
-                        <div class="event-desc">
+                        <a href="https://youtu.be/4tig26Grfgo"><div class="event-desc">
                             Natal
-                        </div>   					
+                        </div></a> 					
                 </li>
                 <li class="day">
                     <div class="date" id="26">26</div>    					
@@ -293,7 +414,13 @@
 
             <h2 class="title">EnsinoTec</h2>
 
-            <p class="desc">Ocorreu um erro na execução do processo.</p>
+            <label for="fname">Nome do Evento</label>
+            <input class="input" type="text" id="fname" name="fname">
+            <br><br>
+            <label for="fname">Data do Evento</label>
+            <input class="input" type="number" id="fname" name="fname">
+            <br><br>
+
 
             <button class="close-popup-button" type="submit" onclick="handlePopup(false)">
                 Fechar
@@ -313,7 +440,7 @@ function handlePopup(open) {
 
     
 
-
+<script src="js/temp-js.js"></script>
 
 
 </body>

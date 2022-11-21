@@ -2,14 +2,13 @@
 body {
     font-family: Tahoma;
   }
-  
-  header {
-    text-align: center;
 
-  }
+
   
   #calendar {
     width: 100%;
+    margin-top: 34%;
+   
   }
   
   #calendar a {
@@ -37,7 +36,7 @@ body {
   
   #calendar ul.weekdays {
     height: 40px;
-    width: 93.9%;
+    width: 94.5%;
     margin-left: 10px;
     background: #ed145c;
     margin-top: -15px;
@@ -399,8 +398,8 @@ button:hover .button-text {
     position: absolute;
     background-color: rgb(255, 255, 255);
     border-width: 1px; 
-  border-style: solid; 
-  border-color:  #ed145c; 
+    border-style: solid; 
+    border-color:  #ed145c; 
     padding: 30px 50px;
     border-radius: 8px;
     text-align: center;
@@ -409,7 +408,7 @@ button:hover .button-text {
     box-sizing: border-box;
     transition: all .4s;
     z-index: -1;
-    transform: scale(.4);
+    transform: scale(.0);
     opacity: 0;
 }
 
@@ -433,3 +432,8 @@ button:hover .button-text {
     color: rgb(0, 0, 0);
 }
 
+
+.input{
+ border: 2px solid #ed145c;
+ border-radius: 10px;
+}
