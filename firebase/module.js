@@ -103,7 +103,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputEmailProf: `${inputEmailProf}`,
                     inputCpfProf: `${inputCpfProf}`,
                     inputNif: `${inputNif}`,
-                    inputTelefoneProf: `${inputTelefoneProf}`
+                    inputTelefoneProf: `${inputTelefoneProf}`,
+                    idUsuario: `${user.uid}`
                 });
 
             })
@@ -136,9 +137,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             .then((userCredential) => {
                 const user = userCredential.user
 
-                const docRef = doc(db, "Professor", user.uid);
-                console.log(docRef);
-                if (docRef == false){alert("Usuario aluno identificado, logando como aluno...")}
 
                 alert("Sucesso!")
                 window.location.href = "/EnsinoTEC/calendario.html"
@@ -154,6 +152,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
                 else {alert(errorCode)}
             });
+
+
 
         
     } else if (htmlAtual == "/EnsinoTEC/login-aluno.html"){
