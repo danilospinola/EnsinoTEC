@@ -96,9 +96,10 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             .then((userCredential) => {
                 const user = userCredential.user;
                 alert("Sucesso!")
+                var uid = firebase.auth.currentUser.uid;
 
                 //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
-                addDoc(collection(db, "Professor"), {
+                addDoc(collection(db, "Professor", ), {
                     inputNomeCompletoProf: `${inputNomeCompletoProf}`,
                     inputEmailProf: `${inputEmailProf}`,
                     inputCpfProf: `${inputCpfProf}`,
@@ -138,7 +139,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
                 const docRef = doc(db, "Professor", user.uid);
                 console.log(docRef);
-                if (docRef != true){alert("Usuario aluno identificado, logando como aluno...")}
+                if (docRef == false){alert("Usuario aluno identificado, logando como aluno...")}
 
                 alert("Sucesso!")
                 window.location.href = "/EnsinoTEC/calendario.html"
