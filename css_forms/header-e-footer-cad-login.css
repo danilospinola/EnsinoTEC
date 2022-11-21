@@ -19,6 +19,44 @@ nav, nav div{
     display: none;
 }
 
+#divNavLoginCadastro .linksTituloNav{
+    cursor: default;
+
+    margin-left: 10px;
+    margin-bottom: 14px;
+
+    color: white;
+    font-size: 18px;
+}
+
+.caixaLinksHover{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+    background-color: #a0a0a056;
+
+    transition: 0.2s;
+}
+
+.caixaLinksHover:hover{
+    background-color: #a0a0a0bb;
+}
+
+#divNavLoginCadastro .linkComoAluno, #divNavLoginCadastro .linkComoProf{
+    margin: 0px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.linkComoAluno:hover, .linkComoProf:hover{
+    background-color: #ed145cb9;
+}
+
 header{
     z-index: 700;
 
@@ -33,7 +71,7 @@ header{
 
     background-color: transparent;
 
-    font-family: Poppins;
+    font-family: 'Poppins';
     text-transform: uppercase;
     font-weight: 900;
 
@@ -200,7 +238,7 @@ footer a{
     margin-bottom: 10px;
     
     text-decoration: none;
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-weight: 900;
     font-size: 18px;
 
@@ -226,7 +264,7 @@ footer div h1{
     font-weight: 900;
     font-size: 25px;
 
-    font-family: Poppins;
+    font-family: 'Poppins';
 }
 
 #divContato{

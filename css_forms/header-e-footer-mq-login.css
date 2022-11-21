@@ -28,7 +28,7 @@
     }
 
     nav div{
-        display: flex;
+        display: none;
     }
 
     nav #divNavLinks{

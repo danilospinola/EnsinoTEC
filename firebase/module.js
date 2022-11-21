@@ -7,7 +7,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebas
 import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 //Importa principais métodos de conexão com o Firestore.
-import { getFirestore, setDoc, addDoc, doc, collection } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+import { getFirestore, getDoc,doc, getDocs, addDoc, collection,query, where } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 //Configurações do Projeto no Firebase.
 const firebaseConfig = {
@@ -62,7 +62,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefone: `${inputTelefone}`,
                     idUsuario: `${user.uid}`
                 });
-
+                window.location.href = "/EnsinoTEC/calendario.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -107,7 +107,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefoneProf: `${inputTelefoneProf}`,
                     idUsuario: `${user.uid}`
                 });
-
+                window.location.href = "/EnsinoTEC/calendario.html"
             })
 
             // Tratando exceptions cadastro
@@ -135,12 +135,19 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
                 //Logando na conta do usuário professor
             signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+            .then(async (userCredential) => {
                 const user = userCredential.user
 
+                const q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
 
-                alert("Sucesso!")
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
                 window.location.href = "/EnsinoTEC/calendario.html"
+                });
+
+
             })
             //Exceptions do login
             .catch((error) => {
@@ -150,8 +157,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     alert("Usuário não existente, por favor realize o cadastro.")
                 }else if (errorCode == "auth/wrong-password") {
                     alert("Email ou senha incorreta!")}
-                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
-                else {alert(errorCode)}
+                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu, tente novamente mais tarde")}
+                else {alert(errorCode, "Ops um erro ocorreu")}
             });
 
 
@@ -165,10 +172,18 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
         //Logando na conta do usuário aluno
             signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+            .then(async (userCredential) => {
                 const user = userCredential.user
-                alert("Sucesso!")
+
+                const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
+
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
                 window.location.href = "/EnsinoTEC/calendario.html"
+                });
+
             })
             .catch((error) => {
                 const errorCode = error.code;
