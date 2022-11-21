@@ -135,10 +135,15 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
                 //Logando na conta do usuário professor
             signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+            .then(async (userCredential) => {
                 const user = userCredential.user
                 const   Q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
                 alert(Q)
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                });
                 // if (Q == false ){
                 //     alert("Aluno identificado, fazendo o redirecionamento para a pagina de aluno...");
                 //     window.location.href = "/EnsinoTEC/calendario.html"}
