@@ -172,10 +172,18 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
         //Logando na conta do usuário aluno
             signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+            .then(async (userCredential) => {
                 const user = userCredential.user
-                alert("Sucesso!")
+
+                const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
+
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
                 window.location.href = "/EnsinoTEC/calendario.html"
+                });
+
             })
             .catch((error) => {
                 const errorCode = error.code;
