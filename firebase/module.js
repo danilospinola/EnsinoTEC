@@ -7,7 +7,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebas
 import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 //Importa principais métodos de conexão com o Firestore.
-import { getFirestore, addDoc, collection,query, where } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+import { getFirestore, getDocs, addDoc, collection,query, where } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 //Configurações do Projeto no Firebase.
 const firebaseConfig = {
@@ -137,10 +137,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user
-                Q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
+                const   Q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
 
-                alert(Q);
-                window.location.href = "/EnsinoTEC/calendario.html";
                 // if (Q == false ){
                 //     alert("Aluno identificado, fazendo o redirecionamento para a pagina de aluno...");
                 //     window.location.href = "/EnsinoTEC/calendario.html"}
