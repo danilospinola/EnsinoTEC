@@ -99,7 +99,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 var uid = firebase.auth.currentUser.uid;
 
                 //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
-                addDoc(collection(db, "Professor", ), {
+                addDoc(collection(db, "Professor", uid), {
                     inputNomeCompletoProf: `${inputNomeCompletoProf}`,
                     inputEmailProf: `${inputEmailProf}`,
                     inputCpfProf: `${inputCpfProf}`,
