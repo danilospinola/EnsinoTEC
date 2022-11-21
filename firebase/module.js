@@ -62,7 +62,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefone: `${inputTelefone}`,
                     idUsuario: `${user.uid}`
                 });
-
+                window.location.href = "/EnsinoTEC/calendario.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -107,7 +107,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefoneProf: `${inputTelefoneProf}`,
                     idUsuario: `${user.uid}`
                 });
-
+                window.location.href = "/EnsinoTEC/calendario.html"
             })
 
             // Tratando exceptions cadastro
