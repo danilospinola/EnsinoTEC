@@ -140,7 +140,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 Q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid))
 
                 alert(Q)
-
+                window.location.href = "/EnsinoTEC/calendario.html"
                 // if (Q == false ){
                 //     alert("Aluno identificado, fazendo o redirecionamento para a pagina de aluno...");
                 //     window.location.href = "/EnsinoTEC/calendario.html"}
