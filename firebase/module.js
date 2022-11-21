@@ -137,7 +137,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user
-                Q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid))
+                Q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
 
                 alert(Q)
                 window.location.href = "/EnsinoTEC/calendario.html"
