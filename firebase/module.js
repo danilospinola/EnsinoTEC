@@ -7,7 +7,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebas
 import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 //Importa principais métodos de conexão com o Firestore.
-import { getFirestore, getDocs, addDoc, collection,query, where } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+import { getFirestore, getDoc,doc, getDocs, addDoc, collection,query, where } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 //Configurações do Projeto no Firebase.
 const firebaseConfig = {
@@ -137,19 +137,15 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             signInWithEmailAndPassword(auth, email, password)
             .then(async (userCredential) => {
                 const user = userCredential.user
-                const   Q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
-                alert(Q)
+
+                const q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
+
                 const querySnapshot = await getDocs(q);
                 querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
                 });
-                // if (Q == false ){
-                //     alert("Aluno identificado, fazendo o redirecionamento para a pagina de aluno...");
-                //     window.location.href = "/EnsinoTEC/calendario.html"}
-                // else{
-                //     alert("Sucesso!")
-                //     window.location.href = "/EnsinoTEC/calendario.html"};
+
 
             })
             //Exceptions do login
