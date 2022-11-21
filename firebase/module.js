@@ -59,7 +59,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputCpf: `${inputCpf}`,
                     inputRa: `${inputRa}`,
                     inputUf: `${inputUf}`.toUpperCase(),
-                    inputTelefone: `${inputTelefone}`
+                    inputTelefone: `${inputTelefone}`,
+                    idUsuario: `${user.uid}`
                 });
 
             })
@@ -103,12 +104,13 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputEmailProf: `${inputEmailProf}`,
                     inputCpfProf: `${inputCpfProf}`,
                     inputNif: `${inputNif}`,
-                    inputTelefoneProf: `${inputTelefoneProf}`
+                    inputTelefoneProf: `${inputTelefoneProf}`,
+                    idUsuario: `${user.uid}`
                 });
 
             })
 
-            // Tratando exceptions
+            // Tratando exceptions cadastro
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
@@ -135,17 +137,25 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user
+
+
                 alert("Sucesso!")
                 window.location.href = "/EnsinoTEC/calendario.html"
             })
+            //Exceptions do login
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 if (errorCode == "auth/user-not-found"){
                     alert("Usuário não existente, por favor realize o cadastro.")
                 }else if (errorCode == "auth/wrong-password") {
-                    alert("Email ou senha incorreta!")}else {alert(errorCode)}
+                    alert("Email ou senha incorreta!")}
+                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
+                else {alert(errorCode)}
             });
+
+
+
         
     } else if (htmlAtual == "/EnsinoTEC/login-aluno.html"){
 
@@ -166,7 +176,9 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 if (errorCode == "auth/user-not-found"){
                     alert("Usuário não existente, por favor realize o cadastro.")
                 }else if (errorCode == "auth/wrong-password") {
-                    alert("Email ou senha incorreta!")} else {alert(errorCode)}
+                alert("Email ou senha incorreta!")}
+                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
+                else {alert(errorCode)}
             });
             
             
