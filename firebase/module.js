@@ -7,7 +7,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebas
 import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 //Importa principais métodos de conexão com o Firestore.
-import { getFirestore, setDoc, addDoc, doc, collection } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+import { getFirestore, getDoc,doc, getDocs, addDoc, collection,query, where } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
 
 //Configurações do Projeto no Firebase.
 const firebaseConfig = {
@@ -62,7 +62,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefone: `${inputTelefone}`,
                     idUsuario: `${user.uid}`
                 });
-
+                window.location.href = "/EnsinoTEC/grupos.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -70,7 +70,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 if (errorCode == "auth/email-already-in-use"){
                     alert("Email já em uso");
                     signInWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
-                    window.location.href = "/EnsinoTEC/calendario.html"
+                    window.location.href = "/EnsinoTEC/grupos.html"
                 }else{
                     alert(errorCode)
                 }
@@ -107,7 +107,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefoneProf: `${inputTelefoneProf}`,
                     idUsuario: `${user.uid}`
                 });
-
+                window.location.href = "/EnsinoTEC/grupos.html"
             })
 
             // Tratando exceptions cadastro
@@ -117,7 +117,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 if (errorCode == "auth/email-already-in-use"){
                     alert("Email já em uso");
                     signInWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
-                    window.location.href = "/EnsinoTEC/calendario.html"
+                    window.location.href = "/EnsinoTEC/gruposProfessor.html"
                 }else{
                     alert(errorCode)
                 }
@@ -135,12 +135,29 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
                 //Logando na conta do usuário professor
             signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+            .then(async (userCredential) => {
                 const user = userCredential.user
 
+                const q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
 
-                alert("Sucesso!")
-                window.location.href = "/EnsinoTEC/calendario.html"
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                window.location.href = "/EnsinoTEC/gruposProfessor.html"
+                });
+
+                const qy = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
+
+                const querySnapshot2 = await getDocs(qy);
+                querySnapshot2.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                alert("Aluno identificado... redirecionando página")
+                window.location.href = "/EnsinoTEC/grupos.html"
+                });
+
+
             })
             //Exceptions do login
             .catch((error) => {
@@ -150,8 +167,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     alert("Usuário não existente, por favor realize o cadastro.")
                 }else if (errorCode == "auth/wrong-password") {
                     alert("Email ou senha incorreta!")}
-                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu")}
-                else {alert(errorCode)}
+                else if(errorCode == "auth/internal-error"){alert("Ops um erro ocorreu, tente novamente mais tarde")}
+                else {alert(errorCode, "Ops um erro ocorreu")}
             });
 
 
@@ -165,10 +182,28 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
         //Logando na conta do usuário aluno
             signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+            .then(async (userCredential) => {
                 const user = userCredential.user
-                alert("Sucesso!")
-                window.location.href = "/EnsinoTEC/calendario.html"
+
+                const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
+
+                const querySnapshot = await getDocs(q);
+                querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                window.location.href = "/EnsinoTEC/grupos.html"
+                });
+
+                const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
+
+                const querySnapshot2 = await getDocs(qy);
+                querySnapshot2.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                alert("Professor identificado... redirecionando página")
+                window.location.href = "/EnsinoTEC/gruposProfessor.html"
+                });
+
             })
             .catch((error) => {
                 const errorCode = error.code;

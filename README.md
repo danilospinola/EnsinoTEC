@@ -6,6 +6,7 @@ Trabalho realizado para projeto final de semestre, no ano de 2022 na institui√ß√
 <h2><a href="https://danilospinola.github.io/EnsinoTEC/login-aluno.html">Login Aluno</a></h2>
 <h2><a href="https://danilospinola.github.io/EnsinoTEC/login-prof.html">Login Professor</a></h2>
 <h2><a href="https://danilospinola.github.io/EnsinoTEC/index.html">Home</a></h2>
+<h2><a href="https://danilospinola.github.io/EnsinoTEC/grupos.html">Grupos</a></h2>
 
 <br><br>
 

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="temp-css/temp-css.css">
+    <link rel="stylesheet" href="css_cal/style.css">
+    <link rel="shortcut icon" href="temp-img/e-logo-icon.ico" type="image/x-icon">
+    <title>Calendar</title>
+</head>
+<body>
+    <nav id="menuLateral">
+        <section>
+            <div>
+                <a href="#" style="background-color:#ed145c9d;">
+                <img src="temp-img/agenda.png" class="navIcones">
+
+                <label>Agenda</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/desempenho.png" class="navIcones">
+
+                <label>Desempenho</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/turma.png" class="navIcones">
+
+                <label>Grupos</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/atividades.png" class="navIcones">
+
+                <label>Atividades</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/chat.png" class="navIcones">
+
+                <label>Conversas</label>
+                </a>
+            </div>
+        </section>
+
+        <section class="sec-acessibilidade">
+            <div>
+                <img src="temp-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+
+                <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+            </div>
+        </section>
+    </nav>
+
+    <main>
+    
+        <header>
+            <div id="divLogo">
+                <img src="temp-img/menu.png" id="menuHamburguer">
+                <img src="temp-img/ensinotec-logo.png" id="imgLogo">
+                <img src="temp-img/e-logo.png" id="imgLogoMq">
+            </div>
+            <div id="divUsuario">
+                <img src="temp-img/entrarNaSala.png" id="btnEntrarNaSala" title="Entrar em um grupo">
+
+                <img src="temp-img/notif.png" id="btnNotificacao" title="Notificações">
+
+                <img src="temp-img/perfil.png" id="imgPerfilUsuario" title="Você">
+
+                <!-- Janelas -->
+
+                <div id="janelaEntrarGrupo" class="janelaHeader">
+                    <label id="secaoEntrarGrupo">Entrar em um Grupo</label>
+
+                    <label id="secaoInsiraOCodigo">Insira o código do grupo:</label>
+
+                    <input type="text" maxlength="8" id="inputCodigoGrupo">
+
+                    <button id="btnEntrarGrupo">Entrar no Grupo</button>
+                </div>
+
+                <div id="janelaNotif" class="janelaHeader">
+                    <label id="secaoNotif">Notificações</label>
+
+                    <label id="secaoNotifNovas">Novas</label>
+                    <div class="divNotificacoes">
+                        <img src="temp-img/img-notif-5.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Mayara Ferreira atribuiu uma nova atividade</h4>
+
+                            <p id="descricaoNotificacao">Disponível em <b>Desenvolvimento de Sistemas &gt; PWFE</b>.</p>
+                        </div>
+                    </div>
+
+                    <div class="divNotificacoes">
+                        <img src="temp-img/img-notif-3.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Matheus te mencionou em um comentário</h4>
+
+                            <p id="descricaoNotificacao">Em uma postagem iniciada em <b>Microsoft DP900</b>.</p>
+                        </div>
+                    </div>
+
+                    <div class="divNotificacoes">
+                        <img src="temp-img/img-notif-4.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Projeto Final, @Usuario1616 e outras pessoas...</h4>
+
+                            <p id="descricaoNotificacao">Estão respondendo suas mensagens.</p>
+                        </div>
+                    </div>
+
+                    <label id="secaoNotifAntigas">Antigas</label>
+                    <div class="divNotificacoes">
+                        <img src="temp-img/img-notif.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Bem vindo(a) ao EnsinoTEC!</h4>
+
+                            <p id="descricaoNotificacao">Nós da equipe EnsinoTEC desejamos boas-vindas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="janelaPerfil" class="janelaHeader">
+                    <div>
+                        <img src="temp-img/perfil.png" id="imgPerfilJanelaPerfil">
+                    </div>
+                    <div>
+                        <label id="nomeUsuario">Usuário</label>
+
+                        <label id="emailUsuario">email@ensinotec.com</label>
+                    </div>
+                    <div>
+                        <a href="#" id="verPerfil">Acessar Perfil</a>
+                    </div>
+                    <div>
+                        <button id="btnEncerrarSessao">Encerrar Sessão</a>
+                    </div>
+                </div>
+
+                <!-- Janelas -->
+            </div>
+        </header>
+
+        <nav id="menuLateralMq">
+            <section>
+                <div>
+                    <a href="#">
+                    <img src="temp-img/agenda.png" class="navIcones">
+    
+                    <label>Agenda</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="temp-img/desempenho.png" class="navIcones">
+    
+                    <label>Desempenho</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="temp-img/turma.png" class="navIcones">
+    
+                    <label>Grupos</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="temp-img/atividades.png" class="navIcones">
+    
+                    <label>Atividades</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="temp-img/chat.png" class="navIcones">
+    
+                    <label>Conversas</label>
+                    </a>
+                </div>
+            </section>
+
+            <section class="sec-acessibilidade" id="sec-acessibilidade-mq" style="align-self: center;">
+                <div>
+                    <img src="temp-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+    
+                    <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+                </div>
+            </section>
+        </nav>
+
+        <!--[!] Conteúdo-->
+        <div class="mexer">
+   
+            <div id="calendar-wrap">
+                
+                    <h1>Dezembro 2022</h1>    
+              
+          
+               
+                <div id="calendar">
+                    <ul class="weekdays">
+                        <li>Domingo</li>
+                        <li>Segunda</li>
+                        <li>Terça</li>
+                        <li>Quarta</li>
+                        <li>Quinta</li>
+                        <li>Sexta</li>
+                        <li>Sábado</li>
+                        
+                    </ul>
+        
+                   
+        
+                    <ul class="days">
+                        <li class="day other-month">
+                            <div class="date1">28</div>    					
+                        </li>
+                        <li class="day other-month">
+                            <div class="date1">29</div>    					
+                        </li>
+                        <li class="day other-month">
+                            <div class="date1">30</div>    					
+                        </li>
+                        <li class="day other-month">
+                            <div class="date1">31</div>    					
+                        </li>
+                     
+        
+                     
+        
+                        <li class="day">
+                            <div class="date" id="1">1</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="2">2</div>    					
+                        </li>
+                    </ul>
+        
+                     
+                    <ul class="days">
+                        <li class="day">
+                            <div class="date" id="3">3</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="4">4</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="5">5</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="6">6</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="7">7</div>     					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="8">8</div>
+                            <div class="event1">
+                                <div class="event-desc">
+                                    Feriado
+                                </div>  					
+                        </li>
+                        <li class="day" >
+                            <div class="date" id="9">9</div>   
+                            <div class="event1" >
+                                <div class="event-desc">
+                                   Emenda de Feriado
+                                </div>   					
+                        </li>
+                    </ul>
+        
+                     
+        
+                    <ul class="days">
+                        <li class="day">
+                            <div class="date" id="10">10</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="11">11</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="12">12</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="13">13</div>   
+                            <div class="event">
+                                <div class="event-desc">
+                                    Apresentação
+                                </div>
+                                
+                                           
+                        </li>
+                        <li class="day">
+                            <div class="date" id="14">14</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="15">15</div> 
+                                                 
+                        </li>
+                        <li class="day">
+                            <div class="date" id="16">16</div>  
+                            <div class="event2">
+                                <div class="event-desc">
+                                   Ferias
+                                </div>   					
+                        </li>
+                    </ul>
+        
+                   
+        
+                    <ul class="days">
+                        <li class="day">
+                            <div class="date" id="17">17</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="18">18</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="19">19</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="20">20</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="21">21</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="22">22</div>   					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="23">23</div>    					
+                        </li>
+                    </ul>
+        
+                           
+        
+                    <ul class="days">
+                        <li class="day">
+                            <div class="date" id="24">24</div>   
+                            <div class="event3">
+                                <div class="event-desc">
+                                    Véspera de Natal
+                                </div>   					 					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="25">25</div>  
+                            <div class="event3">
+                                <a href="https://youtu.be/4tig26Grfgo"><div class="event-desc">
+                                    Natal
+                                </div></a> 					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="26">26</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="27">27</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="28">28</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="29">29</div>    					
+                        </li>
+                        <li class="day">
+                            <div class="date" id="30">30</div>    					
+                        </li>
+                    </ul>
+        
+                    
+        
+                    <ul class="days">
+                        <li class="day">
+                            <div class="date">31</div>    
+                            <div class="event4">
+                                <div class="event-desc">
+                                    Véspera de Ano Novo
+                                </div>  
+                        </li>
+                        <li class="day other-month">
+                            <div class="date1">1</div> 
+                            <div class="event4">
+                                <div class="event-desc">
+                                    Ano Novo
+                                </div>  						
+                        </li>
+                        <li class="day other-month">
+                            <div class="date1">2</div>    					
+                        </li>
+                        <li class="day other-month">
+                            <div class="date1">3</div>    					
+                        </li>
+                        <li class="day other-month">
+                            <div class="date1">4</div>    					
+                        </li>
+                        <li class="day other-month">
+                            <div class="date1">5</div>    					
+                        </li>
+                        <li class="day other-month">
+                            <div class="date1">6</div>    					
+                        </li>
+                        <div class="day other-month1">
+                            <button class="learn-more">
+                                <span class="circle" aria-hidden="true">
+                                  <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text" type="submit" onclick="handlePopup(true)">Atribuir </span>
+                              </button>
+                        </div>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            
+                <div class="popup" id="popup">
+        
+                    <h2 class="title">EnsinoTec</h2>
+        
+                    <label for="fname">Nome do Evento</label>
+                    <input class="input" type="text" id="fname" name="fname">
+                    <br><br>
+                    <label for="fname">Data do Evento</label>
+                    <input class="input" type="number" id="fname" name="fname">
+                    <br><br>
+        
+        
+                    <button class="close-popup-button" type="submit" onclick="handlePopup(false)">
+                        Fechar
+                    </button>
+                </div>
+        
+            </div>
+        
+            <script>
+                
+        const popup = document.getElementById('popup');
+        
+        function handlePopup(open) {
+            popup.classList[open ? 'add' : 'remove']('opened');
+        }
+            </script>
+    </main>
+
+    <script src="js/temp-js.js"></script>
+</body>
+</html>
