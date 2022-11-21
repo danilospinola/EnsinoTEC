@@ -1,0 +1,40 @@
+
+#button {
+    border-radius: 40px;
+    border: 0;
+    height: 40px;
+    padding: 0 30px;
+    background-color: #ed145c;
+    color: white;
+  }
+
+  .section1 {
+    margin-bottom: 20px;
+    padding: 20px 50px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 1000px;
+    margin-left: 300px;
+    border-width: 1px; 
+    border-style: solid; 
+    border-color:  #ed145c; 
+  }
+  
+  .h3o {
+    color: #000000;
+    }
+  
+  .mmm {
+    background-color: #ed145c;
+    border: 0;
+    border-radius: 20px;
+    height: 50px;
+    padding: 0 30px;
+    color: white;
+    margin-left: 950px;
+    margin-top: 100px;
+  }
+
+  h1{
+    text-align: center;
+  }
