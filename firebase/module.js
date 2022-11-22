@@ -106,8 +106,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputNif: `${inputNif}`,
                     inputTelefoneProf: `${inputTelefoneProf}`,
                     idUsuario: `${user.uid}`
-                })
-                window.location.href = "/EnsinoTEC/grupos.html";
+                });
+                window.location.href = "/EnsinoTEC/grupos.html"
             })
 
             // Tratando exceptions cadastro
