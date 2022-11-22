@@ -10,4 +10,4 @@ Trabalho realizado para projeto final de semestre, no ano de 2022 na instituiç�
 
 <br><br>
 
-<h2><a href="https://danilospinola.github.io/EnsinoTEC/calendario.html">Calendário</a></h2>
+<h2><a href="https://danilospinola.github.io/EnsinoTEC/calendar.html">Calendário</a></h2>
