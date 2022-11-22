@@ -51,7 +51,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             .then((userCredential) => {
                 const user = userCredential.user;
                 alert("Sucesso!")
-
                 //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
                 addDoc(collection(db, "Aluno"), {
                     inputNomeCompleto: `${inputNomeCompleto}`,
@@ -62,7 +61,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefone: `${inputTelefone}`,
                     idUsuario: `${user.uid}`
                 });
-                window.location.href = "/EnsinoTEC/grupos.html"
+
             })
             .catch((error) => {
                 const errorCode = error.code;
