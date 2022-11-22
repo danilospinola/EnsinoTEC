@@ -137,13 +137,14 @@ nav section div a:hover{
 /**/
 
 header{
+    z-index: 3;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
     background-color: white;
-    box-shadow: 35px -35px 50px black;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.144);
 }
 
 header div{
@@ -235,6 +236,229 @@ main #navMenuHamburguer{
 
 /**/
 
+.janelaHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 30px;
+
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.301);
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+.janelaHeader button{
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+}
+
+.janelaHeader label{
+    font-weight: 900;
+}
+
+.janelaHeader div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+/**/
+
+#janelaPerfil, #janelaNotif, #janelaEntrarGrupo{
+    display: none;
+
+    top: 70px;
+    right: 10px;
+}
+
+#janelaPerfil label{
+    margin: 0px;
+}
+
+#janelaPerfil #emailUsuario{
+    cursor: text;
+    font-weight: 100;
+}
+
+#janelaPerfil #imgPerfilJanelaPerfil{
+    cursor: default;
+
+    width: 75px;
+    height: 75px;
+}
+
+#janelaPerfil #verPerfil{
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border: 2px solid #ED145B;
+    border-radius: 50px;
+
+    color: #ED145B;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+#janelaPerfil #btnEncerrarSessao{
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    border: none;
+    border-radius: 50px;
+
+    color: #424242;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+#verPerfil:hover{
+    background-color: #ED145B;
+    color: white!important;
+    font-weight: 900;
+}
+
+#janelaPerfil #btnEncerrarSessao:hover{
+    background-color: rgb(234, 234, 234);
+    box-shadow: 0px 3px 50px rgba(0, 0, 0, 0.112);
+}
+
+/**/
+
+#janelaNotif{
+    padding: 20px;
+}
+
+#janelaNotif #secaoNotif{
+    margin-bottom: -10px;
+}
+
+#janelaNotif .divNotificacoes{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    margin: 0px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    transition: 0.2s;
+}
+
+#janelaNotif .divNotificacoes:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+.divNotificacoes h4, p{
+    margin: 3px;
+    align-self: start;
+    margin-left: 23px;
+}
+
+.divNotificacoes p{
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+.divNotificacoes div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.divNotificacoes img{
+    width: 80px;
+    height: 80px;
+
+    border-radius: 100%;
+}
+
+#secaoNotifNovas, #secaoNotifAntigas{
+    align-self: flex-start;
+    font-weight: 100;
+    text-transform: uppercase;
+
+    margin-top: 30px;
+    margin-left: -12px;
+    font-size: 12px;
+}
+
+/**/
+
+#janelaEntrarGrupo #secaoEntrarGrupo{
+    margin-bottom: 20px;
+}
+
+#secaoInsiraOCodigo{
+    font-weight: 100;
+}
+
+#inputCodigoGrupo{
+    width: 250px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    border-radius: 5px;
+    border: 1px solid gray;
+
+    font-family: monospace;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: gray;
+}
+
+#inputCodigoGrupo:focus{
+    border-color: transparent;
+    outline: 2px solid #ED145B;
+}
+
+#btnEntrarGrupo{
+    cursor: pointer;
+
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+
+    width: 100%;
+
+    border: none;
+    border-radius: 10px;
+    background-color: #ED145B;
+
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Poppins';
+
+    transition: 0.2s;
+}
+
+#btnEntrarGrupo:hover{
+    background-color: #f05589;
+}
+
 @media (max-width: 720px) {
     nav{
         display: none;
@@ -267,7 +491,6 @@ main #navMenuHamburguer{
         width: 100%;
         align-items: flex-start;
         padding: 0;
-
         background-image: none;
     }
 
