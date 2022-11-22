@@ -95,7 +95,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 
             createUserWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
             .then((userCredential) => {
-                const user = userCredential.user;
+                const user = userCredential.user
                 alert("Sucesso!")
 
                 //Estrutura de criação de coleção de dados + armazenamento no firestore (uma vez que a autenticação e cadastro foram bem-sucedidos)
