@@ -1,3 +1,18 @@
+*{
+    font-family: 'poppins';
+}
+
+hr{
+    width: 1610px;
+    height: 0px;
+    color: rgb(128, 128, 128);
+    margin-top: 10px;
+    margin-left: 20px ;
+}
+
+body{
+    margin: 0;
+}
 .secgrupos{
     margin: 0;
 }
@@ -6,7 +21,10 @@
     background-color: #ed145c;
     border-radius: 20px;
     margin: 20px;
+    width: 17.9rem; height: 19rem;
 }
+
+
 
 .cardimg{
   border-radius: 20px 20px 0px 0px ;
@@ -15,7 +33,7 @@
 .btn {
 
 	background-color:#ed145c;
-	border-radius:14px;
+	border-radius:15px;
 	border:1px solid #ffffff;
 	display:inline-block;
 	cursor:pointer;
@@ -25,24 +43,70 @@
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
-    margin-left: 90px;
-}
-.btn {
-	  color: #fff;
-    background: #ed145c;
+    margin-left: 95px;
+    color: #fff;
     transition: 0.3s ease;
+    margin-top: 10px;
     
 }
+
 .btn:hover {
 	color: #ed145c;
     background: #fff;
 }
 
+
+
 .titulocard{
-  font-size: 20px;
+  font-size: 17px;
   height: 0px; 
   margin-top: 8px; 
   margin-left: 5px;
   text-align: center;
   color: #fff;
 }
+
+.tabgrupos{
+    flex-wrap: wrap;
+    margin: 0 auto;
+    
+}
+
+
+
+.titulogrupos{
+    color: rgba(126,125,125,0.781);
+    margin-left: 20px;
+    font-size: 35px;
+}
+
+.active{
+    background-color: #ed145c9d;
+}
+
+
+.cardinativo{
+    background-color: #ed145ca4;
+    border-radius: 20px;
+    margin: 20px;
+    height: 1000px;
+    width: 17.9rem; 
+    height: 16.5rem;
+    
+}
+
+.cardimginativo{
+    border-radius: 20px 20px 0px 0px ;
+    opacity: 0.5;
+  }
+
+  .titulocardinativo{
+    font-size: 17px;
+    height: 0px; 
+    margin-top: 8px; 
+    margin-left: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+  
+  }
+  
