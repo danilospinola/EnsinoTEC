@@ -176,17 +176,18 @@
   }
   
   .chatlist .block.unread .details .listHead .time {
-    color: #06d755;
+    color: #ed145c;
   }
   
   .message_p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  
   }
   
   .message_p b {
-    background: #06d755;
+    background: #ed145c;
     color: #fff;
     min-width: 20px;
     height: 20px;
@@ -198,7 +199,7 @@
   }
   
   .message_p p {
-    color: #aaa;
+    color: rgb(0, 0, 0);
     display: -webkit-box;
     -webkit-line-clamp: 1;
     font-size: 0.9em;
