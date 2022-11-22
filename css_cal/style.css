@@ -395,7 +395,7 @@ button:hover .button-text {
 }
 
 .popup {
-    position: absolute;
+
     background-color: rgb(255, 255, 255);
     border-width: 1px; 
     border-style: solid; 

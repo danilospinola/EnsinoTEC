@@ -288,6 +288,7 @@ button, a {
 }
 .projects-section-header .time {
   font-size: 20px;
+
 }
 
 .projects-status {
@@ -463,6 +464,7 @@ button, a {
 .message-line.time {
   text-align: right;
   margin-bottom: 0;
+  
 }
 
 .project-boxes {

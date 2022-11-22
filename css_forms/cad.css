@@ -89,6 +89,27 @@ main .form-coluna{
     flex-direction: column;
 }
 
+main #linksAcessibilidadeForm{
+    padding: 10px;
+    padding-top: 0px;
+    padding-left: 25px;
+}
+
+main .textoRedirecionarUsuario{
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.textoRedirecionarUsuario a{
+    text-decoration: none;
+    color: #ed145c;
+}
+
+.textoRedirecionarUsuario a:hover{
+    font-weight: 900;
+}
+
 /**/
 
 input{
