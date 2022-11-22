@@ -62,7 +62,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefone: `${inputTelefone}`,
                     idUsuario: `${user.uid}`
                 });
-                window.location.href = "/EnsinoTEC/calendario.html"
+                window.location.href = "/EnsinoTEC/grupos.html"
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -70,7 +70,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 if (errorCode == "auth/email-already-in-use"){
                     alert("Email já em uso");
                     signInWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
-                    window.location.href = "/EnsinoTEC/calendario.html"
+                    window.location.href = "/EnsinoTEC/grupos.html"
                 }else{
                     alert(errorCode)
                 }
@@ -107,7 +107,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefoneProf: `${inputTelefoneProf}`,
                     idUsuario: `${user.uid}`
                 });
-                window.location.href = "/EnsinoTEC/calendario.html"
+                window.location.href = "/EnsinoTEC/grupos.html"
             })
 
             // Tratando exceptions cadastro
@@ -117,7 +117,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 if (errorCode == "auth/email-already-in-use"){
                     alert("Email já em uso");
                     signInWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
-                    window.location.href = "/EnsinoTEC/calendario.html"
+                    window.location.href = "/EnsinoTEC/gruposProfessor.html"
                 }else{
                     alert(errorCode)
                 }
@@ -144,7 +144,17 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
-                window.location.href = "/EnsinoTEC/calendario.html"
+                window.location.href = "/EnsinoTEC/gruposProfessor.html"
+                });
+
+                const qy = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
+
+                const querySnapshot2 = await getDocs(qy);
+                querySnapshot2.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                alert("Aluno identificado... redirecionando página")
+                window.location.href = "/EnsinoTEC/grupos.html"
                 });
 
 
@@ -181,7 +191,17 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
-                window.location.href = "/EnsinoTEC/calendario.html"
+                window.location.href = "/EnsinoTEC/grupos.html"
+                });
+
+                const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
+
+                const querySnapshot2 = await getDocs(qy);
+                querySnapshot2.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                alert("Professor identificado... redirecionando página")
+                window.location.href = "/EnsinoTEC/gruposProfessor.html"
                 });
 
             })
