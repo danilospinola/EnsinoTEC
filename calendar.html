@@ -415,7 +415,7 @@
                             <div class="date1">6</div>    					
                         </li>
                         <div class="day other-month1">
-                            <button class="popup-button" onclick="handlePopup(true)">
+                            <button class="learn-more">
                                 <span class="circle" aria-hidden="true">
                                   <span class="icon arrow"></span>
                                 </span>
@@ -452,6 +452,7 @@
         
         function handlePopup(open) {
             popup.classList[open ? 'add' : 'remove']('opened');
+            console.log("PopUP abriu/fechou")
         }
 
     </script>
