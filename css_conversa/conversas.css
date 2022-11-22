@@ -14,7 +14,7 @@
     position: relative;
     flex: 30%;
     background: #fff;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 0, 0, 0.2);
   }
   
   .container .rightSide {
@@ -176,17 +176,18 @@
   }
   
   .chatlist .block.unread .details .listHead .time {
-    color: #06d755;
+    color: #ed145c;
   }
   
   .message_p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  
   }
   
   .message_p b {
-    background: #06d755;
+    background: #ed145c;
     color: #fff;
     min-width: 20px;
     height: 20px;
@@ -198,7 +199,7 @@
   }
   
   .message_p p {
-    color: #aaa;
+    color: rgb(0, 0, 0);
     display: -webkit-box;
     -webkit-line-clamp: 1;
     font-size: 0.9em;
@@ -232,7 +233,8 @@
     height: calc(85% - 120px);
     padding: 50px;
     overflow-y: auto;
-    background-color: rgb(0, 0, 0);
+    
+    background-image: url("../img/wallpaper.png");
   }
   
   .message {
@@ -248,7 +250,8 @@
     text-align: right;
     max-width: 65%;
     padding: 12px;
-    background: #dcf8c8;
+    background: #ed145c9d;
+    color: white;
     border-radius: 10px;
     font-size: 0.9em;
   }
@@ -262,8 +265,8 @@
     height: 20px;
     background: linear-gradient(
       135deg,
-      #dcf8c6 0%,
-      #dcf8c6 50%,
+      #ed145c9d 0%,
+      #ed145c9d 50%,
       transparent 50%,
       transparent
     );
@@ -285,7 +288,8 @@
   }
   
   .friend_msg p {
-    background: #fff;
+    background: #ffffff;
+    color: black;
     text-align: left;
   }
   
@@ -298,8 +302,8 @@
     height: 20px;
     background: linear-gradient(
       225deg,
-      #fff 0%,
-      #fff 50%,
+      #ffffff 0%,
+      #ffffff 50%,
       transparent 50%,
       transparent
     );
