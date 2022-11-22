@@ -61,9 +61,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefone: `${inputTelefone}`,
                     idUsuario: `${user.uid}`
                 });
-                setTimeout(() => {
-                    window.location.href = "/EnsinoTEC/grupos.html"
-                }, 2000);
+
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -108,7 +106,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefoneProf: `${inputTelefoneProf}`,
                     idUsuario: `${user.uid}`
                 });
-                window.location.href = "/EnsinoTEC/grupos.html"
             })
 
             // Tratando exceptions cadastro
