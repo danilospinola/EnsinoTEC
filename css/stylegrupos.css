@@ -1,0 +1,76 @@
+*{
+    font-family: 'poppins';
+}
+
+hr{
+    color: grey;
+    width: 1610px;
+    height: 0px;
+
+}
+
+
+
+.secgrupos{
+    margin: 0;
+}
+
+.titulosgrupos{
+    color: grey;
+    font-size: 30px;
+    margin-left: 20px;
+    height: 10px;
+}
+
+.card{
+    background-color: #ed145c;
+    border-radius: 20px;
+    margin: 20px;
+    width: 17.9rem; 
+    height: 19rem;
+    transition: 0.3s ease;
+    
+    
+    
+
+}
+
+.cardimg{
+  border-radius: 20px 20px 0px 0px ;
+}
+
+.btn {
+	background-color:#ed145c;
+	border-radius:14px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    margin-left: 95px;
+    transition: 0.3s ease;
+}
+
+
+.btn:hover {
+	color: #ed145c;
+    background: #fff;
+}
+
+.titulocard{
+  font-size: 15px;
+  height: 0px; 
+  margin-top: 8px; 
+  margin-left: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+
+.active{
+    background-color: #ed145c9d;
+}
