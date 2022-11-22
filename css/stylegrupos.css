@@ -9,7 +9,9 @@ hr{
 
 }
 
-
+.active{
+    background-color: #ed145c9d;
+}
 
 .secgrupos{
     margin: 0;
@@ -30,9 +32,6 @@ hr{
     height: 19rem;
     transition: 0.3s ease;
     
-    
-    
-
 }
 
 .cardimg{
@@ -71,6 +70,3 @@ hr{
 }
 
 
-.active{
-    background-color: #ed145c9d;
-}
