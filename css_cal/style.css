@@ -417,7 +417,6 @@ button:hover .button-text {
     transform: scale(1);
     opacity: 1;
     margin-left: 700px;
-    margin-top: -500px;
 }
 
 .popup img {
