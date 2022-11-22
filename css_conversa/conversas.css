@@ -176,7 +176,7 @@
   }
   
   .chatlist .block.unread .details .listHead .time {
-    color: #ed145c;
+    color: #000000;
   }
   
   .message_p {
@@ -233,7 +233,9 @@
     height: calc(85% - 120px);
     padding: 50px;
     overflow-y: auto;
-    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     background-image: url("../img/wallpaper.png");
   }
   
@@ -312,7 +314,7 @@
   .chat_input {
     position: relative;
     width: 106.5%;
-    height: 60px;
+    height: 59.5px;
     background: #f0f0f0;
     padding: 15px;
     display: flex;

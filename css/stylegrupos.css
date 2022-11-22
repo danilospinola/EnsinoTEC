@@ -5,9 +5,10 @@
 hr{
     color: grey;
     width: 1610px;
-    height: 1px;
-    margin-bottom: 0px;
+    height: 0px;
+
 }
+
 
 
 .secgrupos{
@@ -28,8 +29,10 @@ hr{
     width: 17.9rem; 
     height: 19rem;
     transition: 0.3s ease;
-
     
+    
+    
+
 }
 
 .cardimg{
@@ -59,10 +62,15 @@ hr{
 }
 
 .titulocard{
-  font-size: 20px;
+  font-size: 15px;
   height: 0px; 
   margin-top: 8px; 
   margin-left: 5px;
   text-align: center;
   color: #fff;
+}
+
+
+.active{
+    background-color: #ed145c9d;
 }
