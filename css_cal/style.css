@@ -395,7 +395,7 @@ button:hover .button-text {
 }
 
 .popup {
-    position: absolute;
+
     background-color: rgb(255, 255, 255);
     border-width: 1px; 
     border-style: solid; 
@@ -417,6 +417,7 @@ button:hover .button-text {
     transform: scale(1);
     opacity: 1;
     margin-left: 700px;
+    margin-top: -500px;
 }
 
 .popup img {
