@@ -122,7 +122,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     alert(errorCode)
                 }
             });
-        }
+        };
     
 
     /* [!] Login USUÁRIO Professor */ 
