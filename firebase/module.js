@@ -4,7 +4,7 @@ let htmlAtual = document.location.pathname
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
 
 //Importa principais métodos de autenticação.
-import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
+import { getAuth,onAuthStateChanged, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 //Importa principais métodos de conexão com o Firestore.
 import { getFirestore, getDoc,doc, getDocs, addDoc, collection,query, where } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
@@ -106,7 +106,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     inputTelefoneProf: `${inputTelefoneProf}`,
                     idUsuario: `${user.uid}`
                 });
-                window.location.href = "/EnsinoTEC/grupos.html"
             })
 
             // Tratando exceptions cadastro
@@ -216,5 +215,20 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             });
             
             
-    }
-})
+    } 
+}) 
+if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+          // User is signed in, see docs for a list of available properties
+          // https://firebase.google.com/docs/reference/js/firebase.User
+          const uid = user.uid;
+          alert(uid)
+        } else {
+          alert("Realize o Login")
+        }
+    });
+}
+
+
