@@ -219,8 +219,6 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 }) 
 if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
 
-    imagemA = document.getElementById("inputUpload").value
-
     onAuthStateChanged(auth, (user) => {
         if (user) {
           // User is signed in, see docs for a list of available properties
