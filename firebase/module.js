@@ -215,5 +215,11 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             });
             
             
-    }
-})
+    } 
+}) 
+if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
+
+    
+}
+
+
