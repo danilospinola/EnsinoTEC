@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+::selection{
+    color: white;
+    background-color: #ED145B;
+}
+
+html{
+    height: 100%;
+}
+
+/**/
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+/**/
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+
+    top: 0px;
+    padding: 15px;
+    background-color: white;
+
+    box-shadow: 35px -35px 50px black;
+}
+header a{
+    margin: 0px;
+
+    text-decoration: none;
+}
+
+header div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header #imgLogo{
+    cursor: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+
+    width: 160px;
+}
+
+header #btnNotificacao{
+    margin-left: 40px;
+    margin-right: 40px;
+
+    width: 30px;
+    height: 30px;
+}
+
+header #imgPerfilUsuario{
+    width: 40px;
+    height: 40px;
+}
+
+header #spanNavegacao{
+    cursor: default;
+    margin-left: 20px;
+
+    font-family: 'Poppins';
+    text-transform: capitalize
+    ;
+    color: #ED145B;
+}
+
+header #spanNavegacao a{
+    color: #ED145B;
+}
+
+#imgPerfilUsuario:hover, #btnNotificacao:hover{
+    filter: brightness(1.3);
+}
