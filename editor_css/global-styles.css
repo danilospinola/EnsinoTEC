@@ -1,0 +1,97 @@
+:root {
+  --thm: #404040;
+  --thm-dark-1: #2b2b2b;
+  --text-area: #686868;
+  --font-v1: sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--thm);
+}
+
+/*
+----------
+Navigation
+----------
+*/
+.nav-bar {
+  padding: 0.5rem;
+  background-color: var(--thm);
+}
+/* Left Side */
+.left-side a {
+  text-decoration: none;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+/* Right Side */
+.left-side a,
+.right-side div p {
+  color: #fff;
+  font-family: var(--font-v1);
+  letter-spacing: 1.3px;
+}
+.user-profile {
+  /* Background Image */
+  background: url(../img/garoto.png);
+  background-size: cover;
+
+  /* Profile Properties */
+  height: 50px;
+  width: 50px;
+  border-radius: 5pc;
+  margin: 0 10px 0 20px;
+}
+
+/* 
+------
+Editor
+------ 
+*/
+
+#editor {
+  display: flex;
+  justify-content: space-between;
+}
+#editor div {
+  width: -webkit-fill-available;
+  box-shadow: 7px 9px 13px #0000003b;
+}
+#editor div:nth-child(2) {
+  margin: 0 10px;
+}
+#editor div h2 {
+  background: var(--thm-dark-1);
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+  padding: 5px 10px;
+  font-family: var(--font-v1);
+  letter-spacing: 3px;
+}
+#editor div textarea {
+  /* Color Formatting */
+  color: #fff;
+  background-color: var(--text-area);
+  border: none;
+  outline: none;
+
+  /* Size */
+  height: 30vh;
+  width: -webkit-fill-available;
+  resize: none;
+  padding: 10px;
+}
+
+/* 
+------
+Output
+------
+ */
+#output iframe {
+  background: #fff;
+  border: none;
+  width: -webkit-fill-available;
+  height: 70vh;
+}

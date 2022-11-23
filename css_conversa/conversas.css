@@ -1,5 +1,6 @@
-
-  
+*{
+  font-family: 'poppins';
+}
   .container {
     position: relative;
     width: 1550px;

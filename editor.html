@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDITOR DE CÓDIGO ONLINE</title>
+    <link rel="stylesheet" href="editor_css/custom-styles.css">
+    <link rel="stylesheet" href="editor_css/global-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css"/> 
+  </head>
+  <body>
+
+    
+    <!-- NavBar -->
+    <div class="nav-bar row full-width space-between verti-center">
+      <div class="left-side">
+        <a class="navbar-brand" href="#">EDITOR DE CÓDIGO ONLINE</a>
+      </div>
+      <div class="right-side">
+        <div class="row verti-center">
+          <p><span id="time-based-welcome">OLÁ</span>, ALUNO</p>
+          <div class="user-profile"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Live Code editor -->
+    <div id="editor">
+      <div>
+        <h2>HTML</h2>
+        <textarea
+          name="html"
+          id="html"
+          oninput="previewData()"
+          class="language-html"
+        ></textarea>
+      </div>
+      <div>
+        <h2>CSS</h2>
+        <textarea name="css" id="css" oninput="previewData()"></textarea>
+      </div>
+      <div>
+        <h2>JS</h2>
+        <textarea name="js" id="js" oninput="previewData()"></textarea>
+      </div>
+    </div>
+
+    <!-- Live Code output -->
+    <div id="output">
+      <iframe id="output-frame"></iframe>
+    </div>
+
+    <script>
+      function previewData() {
+        var HTML = document.getElementById("html").value,
+          CSS = document.getElementById("css").value,
+          JS = document.getElementById("js").value,
+          iframe = document.getElementById("output-frame");
+
+        iframe.src =
+          "data:text/html;charset=utf-8," +
+          encodeURI(
+            HTML + "<style>" + CSS + "</style>" + "<script>" + JS + "<\/script>"
+          );
+      }
+    </script>
+  </body>
+
+  <!-- Syntax Highligher -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+
+  <!-- Custom Scripts -->
+  <script src="js/editor.js"></script>
+  <!-- <script>
+    document.addEventListener("keydown", (e) => {
+      if (e.ctrlKey && e.key === "s") {
+        // Prevent the Save dialog to open
+        e.preventDefault();
+
+        // Trigger the formatter
+        console.log("CTRL + S");
+        // Format HTML
+        HTML = document.getElementById("html");
+        HTML.addEventListener("input", function () {
+          HTML.value = formatHTML(HTML.value);
+        });
+
+        // Format CSS
+        CSS = document.getElementById("css");
+        CSS.addEventListener("input", function () {
+          CSS.value = formatCSS(CSS.value);
+        });
+
+        // Format JS
+        JS = document.getElementById("js");
+        JS.addEventListener("input", function () {
+          JS.value = formatJS(JS.value);
+        });
+      }
+    });
+  </script> -->
+  <script>
+    // Greetings
+    var time = new Date().getHours();
+    var greeting;
+    if (time < 12) {
+      greeting = "Bom Dia";
+    } else if (time < 18) {
+      greeting = "Boa Tarde";
+    } else {
+      greeting = "Boa Noite";
+    }
+    document.getElementById("time-based-welcome").innerHTML = greeting;
+  </script>
+</html>
