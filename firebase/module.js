@@ -142,7 +142,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
-                window.location.href = "/EnsinoTEC/gruposProfessor.html"
+                window.location.href = "/EnsinoTEC/perfil-aluno.html"
                 });
 
                 const qy = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
@@ -152,7 +152,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
                 alert("Aluno identificado... redirecionando página")
-                window.location.href = "/EnsinoTEC/grupos.html"
+                window.location.href = "/EnsinoTEC/perfil-aluno.html"
                 });
 
 
@@ -189,7 +189,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
-                window.location.href = "/EnsinoTEC/grupos.html"
+                window.location.href = "/EnsinoTEC/perfil-aluno.html"
                 });
 
                 const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
