@@ -219,6 +219,9 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 }) 
 if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
 
+        const user = auth.currentUser;
+
+
         if (user !== null) {
 
             const uid = user.uid;
