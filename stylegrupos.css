@@ -8,7 +8,9 @@ hr{
     height: 0px;
 
 }
-
+body{
+margin:0;
+}
 .active{
     background-color: #ed145c9d;
 }
