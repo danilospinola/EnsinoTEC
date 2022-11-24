@@ -199,7 +199,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
                 alert("Professor identificado... redirecionando página")
-                window.location.href = "/EnsinoTEC/gruposProfessor.html"
+                window.location.href = "/EnsinoTEC/perfil-aluno.html"
                 });
 
             })
@@ -219,27 +219,18 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 }) 
 if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
 
-        const user = auth.currentUser;
 
-
-        if (user !== null) {
-
-            const uid = user.uid;
-            alert(uid)
-            // The user object has basic properties such as display name, email, etc.
-            const nome = user.nome;
-            const email = user.email;
-            
-            console.log("  Email: " + profile.email);
-            console.log("  Email: " + user.email);
-
-            // The user's ID, unique to the Firebase project. Do NOT use
-            // this value to authenticate with your backend server, if
-            // you have one. Use User.getToken() instead.
-          } else {
-          alert("Realize o Login")
-          window.location.href = "/EnsinoTEC/login-aluno.html"
-        }
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+              const uid = user.uid;
+              alert(uid)
+            } else {
+                alert("Realize o Login")
+                window.location.href = "/EnsinoTEC/login-aluno.html"
+            }
+          })
     };
 
 
