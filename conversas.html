@@ -395,12 +395,12 @@
     </main>
     <script>        
     function adicionar(){
-        let coversa = document.getElementById('chat').value
+        let conversa = document.getElementById('chat')
         let mensagem = document.getElementById('mensagem').value
 
 
-        $(coversa).append(` <div class="message my_msg"><p> ${mensagem}<br><span>12:18</span></p></div>`);
-
+        $("chatbox").append(` <div class="message my_msg"><p> ${mensagem}<br><span>12:18</span></p></div>`);
+        console.log()
 
     }
     </script>
