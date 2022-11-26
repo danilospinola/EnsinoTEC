@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="temp-css/temp-css.css">
     <link rel="stylesheet" href="css_conversa/conversas.css">
     <link rel="shortcut icon" href="temp-img/e-logo-icon.ico" type="image/x-icon">
-   
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <title>Conversas</title>
 </head>
 <body>
@@ -341,7 +341,7 @@
                 </div>
     
                 <!-- CHAT-BOX -->
-                <div class="chatbox">
+                <div class="chatbox" id="chat">
                     <div class="message my_msg">
                        
                         <p>Oi<br><span>12:18</span></p>
@@ -382,8 +382,8 @@
                 <div class="chat_input">
                     <ion-icon name="happy-outline"></ion-icon>
                     <!-- <ion-icon name="happy-outline"></ion-icon> -->
-                    <input type="text" placeholder="Digite a Mensagem">
-                    <ion-icon name="mic"></ion-icon>
+                    <input type="text" placeholder="Digite a Mensagem" id="mensagem">
+                    <ion-icon name="mic" onclick="adicionar()"></ion-icon>
                 </div>
             </div>
         </div>
@@ -393,7 +393,17 @@
         <!--[!] Conteúdo-->
 
     </main>
+    <script>        
+    function adicionar(){
+        let coversa = document.getElementById('chat').value
+        let mensagem = document.getElementById('mensagem').value
 
+
+        $(coversa).append(` <div class="message my_msg"><p> ${mensagem}<br><span>12:18</span></p></div>`);
+
+
+    }
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/temp-js.js"></script>
