@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="perfil-css/temp-css.css" type="text/css">
+    <link rel="stylesheet" href="perfil-css/perfil-aluno.css" type="text/css">
+    <link rel="stylesheet" href="perfil-css/perfil-prof.css">
+    <link rel="shortcut icon" href="perfil-img/e-logo-icon.ico" type="image/x-icon">
+    <title>Você | ENSINOTEC</title>
+</head>
+<body>
+    <nav id="menuLateral">
+        <section>
+            <div>
+                <a href="#">
+                <img src="perfil-img/agenda.png" class="navIcones">
+
+                <label>Agenda</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="perfil-img/desempenho.png" class="navIcones">
+
+                <label>Desempenho</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="perfil-img/turma.png" class="navIcones">
+
+                <label>Grupos</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="perfil-img/atividades.png" class="navIcones">
+
+                <label>Atividades</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="perfil-img/chat.png" class="navIcones">
+
+                <label>Conversas</label>
+                </a>
+            </div>
+        </section>
+
+        <section class="sec-acessibilidade">
+            <div>
+                <img src="perfil-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+
+                <img src="perfil-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+            </div>
+        </section>
+    </nav>
+
+    <main>
+    
+        <header>
+            <div id="divLogo">
+                <img src="perfil-img/menu.png" id="menuHamburguer">
+                <img src="perfil-img/ensinotec-logo.png" id="imgLogo">
+                <img src="perfil-img/e-logo.png" id="imgLogoMq">
+            </div>
+            <div id="divUsuario">
+                <img src="perfil-img/entrarNaSala.png" id="btnEntrarNaSala" title="Entrar em um grupo">
+
+                <img src="perfil-img/notif.png" id="btnNotificacao" title="Notificações">
+
+                <img src="perfil-img/perfil.png" id="imgPerfilUsuario" title="Você">
+
+                <!-- Janelas -->
+
+                <div id="janelaEntrarGrupo" class="janelaHeader">
+                    <label id="secaoEntrarGrupo">Entrar em um Grupo</label>
+
+                    <label id="secaoInsiraOCodigo">Insira o código do grupo:</label>
+
+                    <input type="text" maxlength="8" id="inputCodigoGrupo">
+
+                    <button id="btnEntrarGrupo">Entrar no Grupo</button>
+                </div>
+
+                <div id="janelaNotif" class="janelaHeader">
+                    <label id="secaoNotif">Notificações</label>
+
+                    <label id="secaoNotifNovas">Novas</label>
+                    <div class="divNotificacoes">
+                        <img src="perfil-img/img-notif-5.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Mayara Ferreira atribuiu uma nova atividade</h4>
+
+                            <p id="descricaoNotificacao">Disponível em <b>Desenvolvimento de Sistemas &gt; PWFE</b>.</p>
+                        </div>
+                    </div>
+
+                    <div class="divNotificacoes">
+                        <img src="perfil-img/img-notif-3.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Matheus te mencionou em um comentário</h4>
+
+                            <p id="descricaoNotificacao">Em uma postagem iniciada em <b>Microsoft DP900</b>.</p>
+                        </div>
+                    </div>
+
+                    <div class="divNotificacoes">
+                        <img src="perfil-img/img-notif-4.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Projeto Final, @Usuario1616 e outras pessoas...</h4>
+
+                            <p id="descricaoNotificacao">Estão respondendo suas mensagens.</p>
+                        </div>
+                    </div>
+
+                    <label id="secaoNotifAntigas">Antigas</label>
+                    <div class="divNotificacoes">
+                        <img src="perfil-img/img-notif.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Bem vindo(a) ao EnsinoTEC!</h4>
+
+                            <p id="descricaoNotificacao">Nós da equipe EnsinoTEC desejamos boas-vindas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="janelaPerfil" class="janelaHeader">
+                    <div>
+                        <img src="perfil-img/perfil.png" id="imgPerfilJanelaPerfil">
+                    </div>
+                    <div>
+                        <label id="nomeUsuario">Usuário</label>
+
+                        <label id="emailUsuario">email@ensinotec.com</label>
+                    </div>
+                    <div>
+                        <a href="perfil.html" id="verPerfil">Acessar Perfil</a>
+                    </div>
+                    <div>
+                        <button id="btnEncerrarSessao">Encerrar Sessão</a>
+                    </div>
+                </div>
+
+                <!-- Janelas -->
+            </div>
+        </header>
+
+        <nav id="menuLateralMq">
+            <section>
+                <div>
+                    <a href="#">
+                    <img src="perfil-img/agenda.png" class="navIcones">
+    
+                    <label>Agenda</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="perfil-img/desempenho.png" class="navIcones">
+    
+                    <label>Desempenho</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="perfil-img/turma.png" class="navIcones">
+    
+                    <label>Grupos</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="perfil-img/atividades.png" class="navIcones">
+    
+                    <label>Atividades</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="perfil-img/chat.png" class="navIcones">
+    
+                    <label>Conversas</label>
+                    </a>
+                </div>
+            </section>
+
+            <section class="sec-acessibilidade" id="sec-acessibilidade-mq" style="align-self: center;">
+                <div>
+                    <img src="perfil-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+    
+                    <img src="perfil-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+                </div>
+            </section>
+        </nav>
+
+        <!--[!] Conteúdo-->
+        <section id="main-sec">
+            <section class="main-sec-tabela">
+
+                <div class="sec-tabela-esq" id="areaInfoUsuario">
+
+                    <label for="inputUpload" id="alterarFotoPerfil" title="Alterar Foto">
+                        <img for="alterarFotoPerfil" src="perfil-img/icone-camera.png">
+                        <input type="file" accept="image/*" id="inputUpload">
+                    </label>
+
+                    <img src="perfil-img/perfil.png" id="imagemPerfil">
+
+                    <span id="nomeCompleto">Usuário</span>
+                    <span id="nomeDeUsuario">@Usuario123</span>
+
+                    <div id="divAreaInfo">
+                        <div title="Organização">
+                            <img src="perfil-img/organizacao.png" class="imgIcones">
+                            <label class="tituloInfo">SENAI Manuel Garcia Filho</label>
+                        </div>
+                        <div title="Localização">
+                            <img src="perfil-img/local.png" class="imgIcones">
+                            <label class="tituloInfo">Diadema, São Paulo</label>
+                        </div>
+                        <div title="Contato">
+                            <img src="perfil-img/email.png" class="imgIcones">
+                            <label class="tituloInfo">email@ensinotec.com</label>
+                        </div>
+                    </div>
+
+                    <a href="#" id="linkEditarInfo">Editar Informações</a>
+                </div>
+            </section>
+            <section class="main-sec-tabela">
+
+                <div class="sec-tabela-dir">
+
+                    <h3 class="titulo-sec" style="margin-left: 10px; margin-top: 10px;">Grupo Principal:</h3>
+                    <section id="sec-prof-grupos" class="sec-professor">
+
+                        <div class="prof-grupo">
+                            <span class="nomeGrupo"><span>Desenvolvimento de Sistemas</span> <img src="perfil-img/config.png" class="configGrupos" title="Configurações de Grupo"></span>
+                            <div class="detalhesGrupo">
+                                <section class="infoGrupo">
+
+                                    <div class="numeroInfo">
+                                        <img src="perfil-img/turma.png" class="imgTurma">
+                                        <div class="numeroAlunos">
+                                            <span class="textoUsuarios"><span class="hoverUsuario">Ana</span>, <span class="hoverUsuario">Matheus</span>, <span class="hoverUsuario">Marcos</span> e <span class="hoverUsuario">outros 37 alunos</span> participam deste grupo.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="numeroInfo">
+                                        <img src="perfil-img/educador.png" class="imgTurma">
+                                        <div class="numeroAlunos">
+                                            <span class="textoUsuarios">Você, <span class="hoverUsuario">Ailton</span> e <span class="hoverUsuario">outros 2 educadores</span> gerenciam este grupo.</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="numeroInfo">
+                                        <img src="perfil-img/estrela.png" class="imgTurma">
+                                        <div class="numeroAlunos">
+                                            <span class="textoUsuarios"><span class="hoverUsuario">João Silva</span>, <span class="hoverUsuario">Júlia Campos</span>, e <span class="hoverUsuario">outros 3 alunos</span> são representantes de classe.</span>
+                                        </div>
+                                    </div>
+
+                                </section>
+
+                                <h3 class="h3-grupo" style="margin-top: 80px;">Desempenho de Grupo</h3>
+                                <section class="infoGrupo" style="margin-bottom: 80px;">
+                                    <div class="infoClassific">
+                                        <span>Ruim</span>
+                                        <span>|</span>
+                                        <span>Médio</span>
+                                        <span>|</span>
+                                        <span>Bom</span>
+                                    </div>
+                                    <div class="corpoBarra">
+                                        <div class="barraDesempenho" style="width: 67.3%; background-color: rgb(179, 255, 0)"></div>
+                                    </div>
+                                    <div class="statusDesempenho">
+                                        <span class="infoDesempenho">- Cerca de 67.3% dos alunos entregam atividades dentro do prazo.</span>
+                                        <span class="infoDesempenho">- 48.6% dos alunos criam e comentam postagens.</span>
+                                        <span class="infoDesempenho">- 80% dos alunos participam das reuniões online.</span>
+                                    </div>
+                                </section>
+
+                                <section class="infoGrupo">
+                                    <span class="nomeSubgrupo">PWFE - Programação Web Front-end <img src="perfil-img/config.png" class="configGrupos" title="Configurações de Subgrupo"></span>
+                                    <div class="detalhesSubgrupo">
+                                        
+                                        <section class="subgrupoInfo"  title="Ver publicação">
+                                            <div class="infoAtualizacoes">
+                                                <img src="perfil-img/relogio.png">
+                                                <span class="ultimaAtualizacao"><em>Última atualização há 1 dia atrás...</em></span>
+                                            </div>
+                                        </section>
+
+                                        <section class="sec-subgrupo">
+                                            <h3 class="titulo-sec-subgrupo">Atividades atribuídas recentemente</h3>
+
+                                            <div class="corpo-div-ativ">
+                                                <div class="header-div-ativ" title="Clique para expandir">
+                                                    <div>
+                                                        <img src="perfil-img/atividades.png" class="imgAtiv">
+
+                                                        <span class="tituloAtiv">Somativa Javascript</span>
+                                                    </div>
+                                                    <div>
+                                                        <img src="perfil-img/editar.png" class="imgEditar" title="Editar Atividade">
+                                                    </div>
+                                                </div>
+                                                <div class="div-ativ-detalhes">
+                                                    <span class="descricaoAtiv">Crie uma página de vídeos com players interativos utilizando funções do JavaScript.</span>
+
+                                                    <span class="dataAtiv"><em>Data de Entrega: 13/05/2022</em></span>
+                                                    <div class="infoEntregues">
+                                                        <span class="ativEntregues">Entregues: <span class="hoverEntregues" title="Todas as entregas correspondentes à esta atividade.">12/40</span></span>
+
+                                                        <img src="perfil-img/verificado.png" class="verif">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="corpo-div-ativ" style="margin-top: 20px;">
+                                                <div class="header-div-ativ" title="Clique para expandir">
+                                                    <div>
+                                                        <img src="perfil-img/atividades.png" class="imgAtiv">
+
+                                                        <span class="tituloAtiv">Criar Wireframe do Site</span>
+                                                    </div>
+                                                    <div>
+                                                        <img src="perfil-img/editar.png" class="imgEditar" title="Editar Atividade">
+                                                    </div>
+                                                </div>
+                                                <div class="div-ativ-detalhes">
+                                                    <span class="descricaoAtiv">Crie o Wireframe do seu site.</span>
+
+                                                    <span class="dataAtiv"><em>Data de Entrega: 20/10/2022</em></span>
+                                                    <div class="infoEntregues">
+                                                        <span class="ativEntregues">Entregues: <span class="hoverEntregues" title="Todas as entregas correspondentes à esta atividade.">32/40</span></span>
+
+                                                        <img src="perfil-img/verificado.png" class="verif">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="corpo-div-ativ" style="margin-top: 20px;">
+                                                <div class="header-div-ativ" title="Clique para expandir">
+                                                    <div>
+                                                        <img src="perfil-img/atividades.png" class="imgAtiv">
+
+                                                        <span class="tituloAtiv">Exercícios com JavaScript</span>
+                                                    </div>
+                                                    <div>
+                                                        <img src="perfil-img/editar.png" class="imgEditar" title="Editar Atividade">
+                                                    </div>
+                                                </div>
+                                                <div class="div-ativ-detalhes">
+                                                    <span class="descricaoAtiv">Resolva os exercícios do documento em anexo.</span>
+
+                                                    <span class="dataAtiv"><em>Data de Entrega: 27/08/2022</em></span>
+                                                    <div class="infoEntregues">
+                                                        <span class="ativEntregues">Entregues: <span class="hoverEntregues" title="Todas as entregas correspondentes à esta atividade.">18/40</span></span>
+
+                                                        <img src="perfil-img/verificado.png" class="verif">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+
+                                        <a href="#" class="linkVerAtividades">Ver todas as atividades de PWFE</a>
+                                    </div>
+                                </section>
+
+                                <section class="infoGrupo" style="margin-top: 80px;">
+                                    <span class="nomeSubgrupo" style="background-color: #be14ed;">BD - Banco de Dados <img src="perfil-img/config.png" class="configGrupos" title="Configurações de Subgrupo"></span>
+                                    <div class="detalhesSubgrupo" style="border: 1px solid #be14ed;">
+                                        
+                                        <section class="subgrupoInfo"  title="Ver publicação">
+                                            <div class="infoAtualizacoes">
+                                                <img src="perfil-img/relogio.png">
+                                                <span class="ultimaAtualizacao"><em>Última atualização há 3 dias atrás...</em></span>
+                                            </div>
+                                        </section>
+
+                                        <section class="sec-subgrupo">
+                                            <h3 class="titulo-sec-subgrupo">Atividades atribuídas recentemente</h3>
+
+                                            <div class="corpo-div-ativ">
+                                                <div class="header-div-ativ" title="Clique para expandir">
+                                                    <div>
+                                                        <img src="perfil-img/atividades.png" class="imgAtiv">
+
+                                                        <span class="tituloAtiv">Exercício MySQL</span>
+                                                    </div>
+                                                    <div>
+                                                        <img src="perfil-img/editar.png" class="imgEditar" title="Editar Atividade">
+                                                    </div>
+                                                </div>
+                                                <div class="div-ativ-detalhes">
+                                                    <span class="descricaoAtiv">Crie um banco de dados no MySQL Workbench do enunciado em anexo.</span>
+
+                                                    <span class="dataAtiv"><em>Data de Entrega: 03/07/2022</em></span>
+                                                    <div class="infoEntregues">
+                                                        <span class="ativEntregues">Entregues: <span class="hoverEntregues" title="Todas as entregas correspondentes à esta atividade.">37/40</span></span>
+
+                                                        <img src="perfil-img/verificado.png" class="verif">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </section>
+
+                                        <a href="#" class="linkVerAtividades">Ver todas as atividades de BD</a>
+                                    </div>
+                                </section>
+
+                                <div class="divCorpoLink" style="margin-top: 50px;">
+                                    <img src="perfil-img/turma.png" class="imgDivCorpoLink">
+                                    <span class="descLink">Ver todos os subgrupos</span>
+                                </div>
+
+                                <div class="divCorpoLink">
+                                    <img src="perfil-img/agenda.png" class="imgDivCorpoLink">
+                                    <span class="descLink">Ver todas as datas relacionadas a este grupo</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <h3 class="titulo-sec" style="margin-left: 10px; margin-top: 40px;">Outros Grupos:</h3>
+                    <section id="sec-prof-grupos" class="sec-professor">
+
+                        <div class="prof-grupo" style="cursor: pointer;">
+                            <span class="nomeGrupo" style="width: 95%; align-self: center; border-radius: 10px; background-color: rgb(54 187 174);"><span>Microsoft DP900</span> <img src="perfil-img/seta.png" class="configGrupos" title="Visualizar Grupo"></span>
+                        </div>
+
+                        <div class="prof-grupo" style="cursor: pointer; margin-top: 15px;">
+                            <span class="nomeGrupo" style="width: 95%; align-self: center; border-radius: 10px; background-color: orangered;"><span>AWS Cloud</span> <img src="perfil-img/seta.png" class="configGrupos" title="Visualizar Grupo"></span>
+                        </div>
+
+                        <div class="prof-grupo" style="cursor: pointer; margin-top: 15px;">
+                            <span class="nomeGrupo" style="width: 95%; align-self: center; border-radius: 10px; background-color: rgb(0, 119, 255);"><span>Google Cloud</span> <img src="perfil-img/seta.png" class="configGrupos" title="Visualizar Grupo"></span>
+                        </div>
+                    </section>
+
+                </div>
+
+            </section>
+        </section>
+        <!--[!] Conteúdo-->
+
+    </main>
+
+    <script src="perfil-js/temp-js.js"></script>
+    <script src="perfil-js/gerarUsername.js"></script>
+</body>
+</html>
