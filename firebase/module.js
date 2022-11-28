@@ -113,9 +113,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 if (errorCode == "auth/email-already-in-use"){
-                    alert("Email já em uso");
-                    signInWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
-                    window.location.href = "/EnsinoTEC/gruposProfessor.html"
+                    alert("Email já em uso, faça login para continuar");
+                    window.location.href = "/EnsinoTEC/login-prof.html"
                 }else{
                     alert(errorCode)
                 }
