@@ -231,7 +231,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
                 alert("Realize o Login")
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
-          })
+          });
     };
 
 
