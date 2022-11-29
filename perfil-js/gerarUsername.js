@@ -1,4 +1,5 @@
-let nomeCompleto = toString(document.getElementById('nomeCompleto').value)
+let nomeCompleto = String(document.getElementById('nomeCompleto').innerText)
+
 let nomeDeUsuario = document.getElementById('nomeDeUsuario')
 
-nomeDeUsuario.innerHTML = "@" + `${nomeCompleto.substring(1, 3)}43814zQewr2Q`
+nomeDeUsuario.innerHTML = "@" + `${nomeCompleto.substring(0, 4)}213ZqWp09`

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="perfil-css/temp-css.css" type="text/css">
-    <link rel="stylesheet" href="perfil-css/perfil.css" type="text/css">
+    <link rel="stylesheet" href="perfil-css/perfil-aluno.css" type="text/css">
     <link rel="shortcut icon" href="perfil-img/e-logo-icon.ico" type="image/x-icon">
     <title>Você | ENSINOTEC</title>
 </head>
@@ -217,7 +217,7 @@
 
                     <img src="perfil-img/perfil.png" id="imagemPerfil">
 
-                    <span id="nomeCompleto">Usuário</span>
+                    <span id="nomeCompleto"></span>
                     <span id="nomeDeUsuario">@Usuario123</span>
 
                     <div id="divAreaInfo">
@@ -242,7 +242,7 @@
 
                 <div class="sec-tabela-dir">
 
-                    <h3 id="tituloSeusGrupos" class="tituloSecoes">Seus Grupos:</h3>
+                    <h3 id="tituloSeusGrupos" class="tituloSecoes" style="margin-top: 10px;">Seus Grupos:</h3>
                     <div id="secaoSeusGrupos">
                         <a href="#">
                             <div style="border-color: #ED145B">
@@ -284,6 +284,7 @@
                                 <div class="progresso" style="background-image: linear-gradient(to right, orangered, orange);"></div>
                                 <span class="porcentagemConcl"></span>
                             </div>
+                            <span class="numPorcentagem">40%</span>
 
                             <div class="detalhesAtividade">
                                 <span class="spanDetalhes">Grupo de Atividade: <span>Desenvolvimento de Sistemas > IDM</span></span>
@@ -300,6 +301,7 @@
                                 <div class="progresso" style="background-image: linear-gradient(to right, rgb(187, 255, 0), rgb(0, 255, 115)); width: 76%;"></div>
                                 <span class="porcentagemConcl"></span>
                             </div>
+                            <span class="numPorcentagem">72%</span>
 
                             <div class="detalhesAtividade">
                                 <span class="spanDetalhes">Grupo de Atividade: <span>Desenvolvimento de Sistemas > PWFE</span></span>
@@ -316,6 +318,7 @@
                                 <div class="progresso" style="background-image: linear-gradient(to right, rgb(255, 217, 0), rgb(251, 255, 0)); width: 46%;"></div>
                                 <span class="porcentagemConcl"></span>
                             </div>
+                            <span class="numPorcentagem">47%</span>
 
                             <div class="detalhesAtividade">
                                 <span class="spanDetalhes">Grupo de Atividade: <span>Desenvolvimento de Sistemas > BD</span></span>
@@ -324,6 +327,120 @@
                         </div>
                         </a>
 
+                    </div>
+
+                    <h3 class="tituloSecoes">Atividades:</h3>
+                    <div id="secaoAtividades" class="secoes-tabela-dir">
+
+                        <div id="divFiltro">
+                            <img src="perfil-img/filtro.png" id="btnFiltro" title="Filtrar" tabindex="0">
+
+                            <section id="sectionFiltroOpcoes">
+                                <option style="background-color: #ED145B; color: white;" id="opcAtribuidas" name="opcFiltro">Atribuídas</option>
+                                <option id="opcConcluidas" name="opcFiltro">Concluídas</option>
+                            </section>
+                        </div>
+
+                        <div id="div-atividades" class="class-div-atividades">
+
+                            <a href="#">
+                            <section title="Ver detalhes">
+                                <img src="perfil-img/atividades.png">
+                                <div>
+                                    <h3 class="tituloDaAtividade">Formativa Python</h3>
+                                    <span class="descricaoAtividade">Realizar e entregar as resoluções dos exercícios propostos.</span>
+                                    <span class="dataAtividade"><em>Data de Entrega: 13/07/2022</em></span>
+                                </div>
+                            </section>
+                            </a>
+
+                            <a href="#">
+                            <section title="Ver detalhes">
+                                <img src="perfil-img/atividades.png">
+                                <div>
+                                    <h3 class="tituloDaAtividade">Modelagem Conceitual, Lógica e Física</h3>
+                                    <span class="descricaoAtividade">Faça a modelagem de dados do exercício em anexo.</span>
+                                    <span class="dataAtividade"><em>Data de Entrega: 22/03/2022</em></span>
+                                </div>
+                            </section>
+                            </a>
+
+                            <a href="#">
+                            <section title="Ver detalhes">
+                                <img src="perfil-img/atividades.png">
+                                <div>
+                                    <h3 class="tituloDaAtividade">Fluxograma</h3>
+                                    <span class="descricaoAtividade">Crie um fluxograma da resolução dos exercícios anteriores.</span>
+                                    <span class="dataAtividade"><em>Data de Entrega: 11/10/2022</em></span>
+                                </div>
+                            </section>
+                            </a>
+
+                        </div>
+
+                        <div id="div-atividades-concluidas" class="class-div-atividades" style="display: none;">
+
+                            <a href="#">
+                            <section title="Ver detalhes">
+                                <img src="perfil-img/concluido.png">
+                                <div>
+                                    <h3 class="tituloDaAtividade">Wireframe</h3>
+                                    <span class="descricaoAtividade">Construa o Wireframe do seu site.</span>
+                                    <span class="dataAtividade"><em>Entregue</em></span>
+                                </div>
+                            </section>
+                            </a>
+
+                            <a href="#">
+                            <section title="Ver detalhes">
+                                <img src="perfil-img/concluido.png">
+                                <div>
+                                    <h3 class="tituloDaAtividade">Documentação do Projeto</h3>
+                                    <span class="descricaoAtividade">Criar e documentar o manual de uso da aplicação do projeto.</span>
+                                    <span class="dataAtividade"><em>Entregue</em></span>
+                                </div>
+                            </section>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <h3 class="tituloSecoes" style="margin-bottom: 5px;">Datas próximas:</h3>
+                    <div id="secaoDatas" class="secoes-tabela-dir">
+
+                        <a href="#">
+                        <section title="Ver detalhes">
+                            <img src="perfil-img/agenda.png">
+                            <div>
+                                <h3 class="tituloData">07/12/2022</h3>
+
+                                <span class="descData">Data de entrega do projeto.</span>
+                            </div>
+                        </section>
+                        </a>
+
+                        <a href="#">
+                        <section title="Ver detalhes">
+                            <img src="perfil-img/agenda.png">
+                            <div>
+                                <h3 class="tituloData">13/12/2022</h3>
+
+                                <span class="descData">Apresentação do Projeto.</span>
+                            </div>
+                        </section>
+                        </a>
+
+                        <a href="#">
+                        <section title="Ver detalhes">
+                            <img src="perfil-img/agenda.png">
+                            <div>
+                                <h3 class="tituloData">17/12/2022</h3>
+
+                                <span class="descData">Férias.</span>
+                            </div>
+                        </section>
+                        </a>
                     </div>
                 </div>
 
@@ -335,6 +452,7 @@
 
     <script src="perfil-js/temp-js.js"></script>
     <script src="perfil-js/gerarUsername.js"></script>
+    <script src="perfil-js/filtroAtividades.js"></script>
     <script src="firebase/module.js" type="module"></script>
 
 </body>

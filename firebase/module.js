@@ -113,9 +113,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 if (errorCode == "auth/email-already-in-use"){
-                    alert("Email já em uso");
-                    signInWithEmailAndPassword(auth, inputEmailProf, inputSenhaProf)
-                    window.location.href = "/EnsinoTEC/gruposProfessor.html"
+                    alert("Email já em uso, faça login para continuar");
+                    window.location.href = "/EnsinoTEC/login-prof.html"
                 }else{
                     alert(errorCode)
                 }
@@ -142,7 +141,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
-                window.location.href = "/EnsinoTEC/gruposProfessor.html"
+                window.location.href = "/EnsinoTEC/perfil-aluno.html"
                 });
 
                 const qy = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
@@ -152,7 +151,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
                 alert("Aluno identificado... redirecionando página")
-                window.location.href = "/EnsinoTEC/grupos.html"
+                window.location.href = "/EnsinoTEC/perfil-aluno.html"
                 });
 
 
@@ -189,7 +188,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
-                window.location.href = "/EnsinoTEC/grupos.html"
+                window.location.href = "/EnsinoTEC/perfil-aluno.html"
                 });
 
                 const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
@@ -199,7 +198,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
                 alert("Professor identificado... redirecionando página")
-                window.location.href = "/EnsinoTEC/gruposProfessor.html"
+                window.location.href = "/EnsinoTEC/perfil-aluno.html"
                 });
 
             })
@@ -219,16 +218,27 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 }) 
 if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
 
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-          // User is signed in, see docs for a list of available properties
-          // https://firebase.google.com/docs/reference/js/firebase.User
-          const uid = user.uid;
-          alert(uid)
-        } else {
-          alert("Realize o Login")
-        }
-    });
-}
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+              const uid = user.uid;
+              alert(uid)
+
+              const q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
+
+              const querySnapshot = await getDocs(q);
+              querySnapshot.forEach((doc) => {
+              // doc.data() is never undefined for query doc snapshots
+             let nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome 
+             document.getElementById("nomeCompleto").innerHTML = nome  
+                });
+            } else {
+                alert("Realize o Login")
+                window.location.href = "/EnsinoTEC/login-aluno.html"
+            }
+          });
+    };
+
 
 

@@ -1,0 +1,549 @@
+#main-sec{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    margin: 20px;
+
+    background-color: rgb(255, 255, 255);
+}
+
+#main-sec #areaInfoUsuario{
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    top: 0px;
+    
+    border-radius: 10px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.381);
+    background-color: white;
+}
+
+#areaInfoUsuario #linkEditarInfo{
+    width: 300px;
+    padding: 15px;
+
+    border-radius: 10px;
+    background-color: #ED145B;
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+#areaInfoUsuario #linkEditarInfo:hover{
+    color: white!important;
+    background-color: #f0578a;
+}
+
+#divAreaInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+}
+
+#divAreaInfo div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+#divAreaInfo div .imgIcones{
+    width: 25px;
+    margin-right: 15px;
+}
+
+#divAreaInfo .tituloInfo{
+    font-family: 'Poppins';
+    font-size: 14px;
+    font-weight: 100;
+}
+
+#divAreaInfo .tituloInfo:hover{
+    font-weight: 900;
+}
+
+/**/
+
+    #alterarFotoPerfil input{
+        display: none;
+    }
+
+    #alterarFotoPerfil img{
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+
+        cursor: pointer;
+
+        position: absolute;
+        translate: 90px 205px;
+
+        margin: 0px;
+        width: 60px;
+
+        border-radius: 100%;
+        box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.381);
+
+        transition: 0.3s;
+    }
+
+    #alterarFotoPerfil img:hover{
+        filter: brightness(1.9);
+    }
+/**/
+
+#main-sec #imagemPerfil{
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 100%;
+    box-shadow: -0px 2px 15px rgba(0, 0, 0, 0.221);
+}
+
+#nomeCompleto{
+    margin: 0px;
+    margin-top: 15px;
+
+    font-family: 'Poppins';
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+#nomeDeUsuario{
+    cursor: pointer;
+    margin-top: -5px;
+    font-family: 'Poppins';
+    color: #ED145B;
+}
+
+#nomeDeUsuario:hover{
+    font-weight: 900;
+}
+
+.main-sec-tabela{
+    display: flex;
+    flex-direction: row;
+}
+
+#main-sec .sec-tabela-esq div{
+    width: 100%;
+}
+
+#main-sec .main-sec-tabela{
+    display: flex;
+    flex-direction: column;
+}
+
+.sec-tabela-esq, .sec-tabela-dir{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec-tabela-dir{
+    font-family: 'Poppins';
+
+    margin: 10px;
+    padding: 10px;
+    
+    border-radius: 10px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.381);
+    background-color: white;
+}
+
+.sec-tabela-dir a{
+    text-decoration: none;
+    color: black;
+}
+
+/**/
+
+.sec-tabela-dir .tituloSecoes{
+    align-self: flex-start;
+    font-weight: 100;
+
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: -5px;
+}
+
+.sec-tabela-dir #secaoSeusGrupos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 40px;
+
+    width: 100%;
+}
+
+.sec-tabela-dir #secaoDesempenho, .secoes-tabela-dir{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding: 10px;
+    padding-left: 0px;
+    margin-bottom: 30px;
+
+    width: 100%;
+}
+
+.secoes-tabela-dir{
+    margin-left: 40px;
+}
+
+#secaoSeusGrupos div{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 20px;
+    margin-top: 15px;
+    padding: 10px;
+    
+    border: 1px solid #ED145B;
+    border-radius: 10px;
+    border-left: 30px solid #ED145B;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.274);
+    background-color: white;
+
+    transition: 0.2s;
+}
+
+#secaoSeusGrupos #visualizarMaisGrupos{
+    border: none;
+    border-radius: 20px;
+}
+
+#secaoSeusGrupos a{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: #ED145B;
+}
+
+#secaoSeusGrupos div:hover{
+    transform: scale(1.02);
+}
+
+#secaoSeusGrupos .tituloGrupo{
+    text-transform: uppercase;
+}
+
+/**/
+
+#secaoDesempenho{
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+#secaoDesempenho a{
+    text-decoration: none;
+    margin: 0px;
+}
+
+.divDesempenho{
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    width: 95%;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.divDesempenho:hover{
+    background-color: rgba(212, 212, 212, 0.575);
+    transform: scale(1.005);
+}
+
+.barraDeProgresso{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 30px;
+}
+
+.progresso{
+    margin: 0px;
+    padding: 10px;
+    width: 30%;
+
+    background-color: #ED145B;
+    border-radius: 30px;
+}
+
+.tituloAtividade{
+    font-size: 18px;
+    color: rgb(85, 85, 85);
+
+    text-transform: uppercase;
+}
+
+.detalhesAtividade{
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 14px;
+    color: rgb(85, 85, 85);
+}
+
+.spanDetalhes span{
+    font-weight: 900;
+}
+
+.numPorcentagem{
+    align-self: flex-end;
+
+    margin-top: -20px;
+}
+
+/**/
+
+#divFiltro{
+    margin-bottom: -3px;
+}
+
+#btnFiltro{
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+
+    cursor: pointer;
+    width: 20px;
+    margin-left: -5px;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+#btnFiltro:focus, #btnFiltro:hover{ /*Se o parâmetro tabindex existir na tag HTML*/
+    background-color: rgb(215, 215, 215);
+}
+
+#sectionFiltroOpcoes{
+    display: none;
+    flex-direction: column;
+
+    z-index: 1;
+    position: relative;
+    top: 5px;
+
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: -91%;
+    width: min-content;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.301);
+    background-color: white;
+}
+
+#sectionFiltroOpcoes option{
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+/**/
+
+#div-atividades section, #div-atividades-concluidas section{
+    cursor: pointer;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: row;
+    width: 95%;
+
+    margin-bottom: 20px;
+
+    transition: 0.2s;
+}
+
+#div-atividades section:hover, #div-atividades-concluidas section:hover{
+    transform: scale(1.02);
+}
+
+#div-atividades section img{
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+
+    object-fit: contain;
+    background-color: rgb(95, 41, 255);
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#div-atividades section div{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    border: 1px solid rgb(95, 41, 255);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.tituloDaAtividade{
+    margin: 0px;
+    margin-bottom: 6px;
+
+    font-weight: 100;
+    text-transform: uppercase;
+    color: rgb(95, 41, 255);
+}
+
+.descricaoAtividade, .dataAtividade{
+    color: rgb(140, 140, 140);
+    margin-top: -8px;
+}
+
+.dataAtividade{
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+
+#div-atividades-concluidas section img{
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+
+    object-fit: contain;
+    width: 45px;
+    background-color: rgb(37, 224, 40);
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#div-atividades-concluidas section div{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    border: 1px solid rgb(37, 224, 40);
+    border-radius: 0px 10px 10px 0px;
+}
+
+#div-atividades-concluidas .tituloDaAtividade{
+    margin: 0px;
+    margin-bottom: 6px;
+
+    font-weight: 100;
+    text-transform: uppercase;
+    color: rgb(37, 224, 40);
+}
+
+.class-div-atividades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/**/
+/**/
+/**/
+
+#secaoDatas a{
+    margin: -8px;
+    text-decoration: none;
+    color: black;
+}
+
+#secaoDatas{
+    display: flex;
+    flex-direction: column;
+}
+
+#secaoDatas section{
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 95%;
+    margin-bottom: 10px;
+
+    transition: 0.2s;
+}
+
+#secaoDatas section:hover{
+    transform: scale(1.008);
+}
+
+#secaoDatas img{
+    width: 40px;
+    height: 40px;
+    padding: 18px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: #ED145B;
+
+    object-fit: contain;
+}
+
+#secaoDatas section div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 100%;
+
+    border: 1px solid #ED145B;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#secaoDatas h3{
+    margin: 0px;
+    color: #ED145B;
+}
+
+#secaoDatas span{
+    color: rgb(140, 140, 140);
+}
