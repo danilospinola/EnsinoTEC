@@ -141,7 +141,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                 querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id, " => ", doc.data());
-                window.location.href = "/EnsinoTEC/perfil-aluno.html"
+                window.location.href = "/EnsinoTEC/perfil-prof.html"
                 });
 
                 const qy = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
@@ -216,22 +216,73 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
             
     } 
 }) 
-if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
+if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
 
         onAuthStateChanged(auth, async (user) => {
             if (user) {
               // User is signed in, see docs for a list of available properties
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
-              alert(uid)
 
               const q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
 
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
               // doc.data() is never undefined for query doc snapshots
-             let nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome 
-             document.getElementById("nomeCompleto").innerHTML = nome  
+             let nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome
+             let email = doc.data().inputEmailProf 
+             document.getElementById("nomeCompleto").innerHTML = nome    
+             document.getElementById("nomeUsuario").innerHTML = nome    
+             document.getElementById("email").innerHTML = email    
+             document.getElementById("emailUsuario").innerHTML = email    
+                });
+            } else {
+                alert("Realize o Login")
+                window.location.href = "/EnsinoTEC/login-aluno.html"
+            }
+          });
+        }else if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
+
+
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+              const uid = user.uid;
+
+              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
+
+              const querySnapshot = await getDocs(q);
+              querySnapshot.forEach((doc) => {
+              // doc.data() is never undefined for query doc snapshots
+             let nome = doc.data().inputNomeCompleto //Pegando o nome do Aluno e colocando na variavel nome
+             let email = doc.data().inputEmail
+             document.getElementById("nomeCompleto").innerHTML = nome    
+             document.getElementById("nomeUsuario").innerHTML = nome    
+             document.getElementById("email").innerHTML = email    
+             document.getElementById("emailUsuario").innerHTML = email    
+                });
+            } else {
+                alert("Realize o Login")
+                window.location.href = "/EnsinoTEC/login-aluno.html"
+            }
+          });
+        }else if(htmlAtual == "/EnsinoTEC/calendar_aluno.html"){
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+              // User is signed in, see docs for a list of available properties
+              // https://firebase.google.com/docs/reference/js/firebase.User
+              const uid = user.uid;
+
+              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
+
+              const querySnapshot = await getDocs(q);
+              querySnapshot.forEach((doc) => {
+              // doc.data() is never undefined for query doc snapshots
+             let nome = doc.data().inputNomeCompleto //Pegando o nome do Aluno e colocando na variavel nome
+             let email = doc.data().inputEmail
+             document.getElementById("nomeUsuario").innerHTML = nome    
+             document.getElementById("emailUsuario").innerHTML = email    
                 });
             } else {
                 alert("Realize o Login")
