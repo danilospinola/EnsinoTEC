@@ -219,14 +219,22 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
 
 
-        onAuthStateChanged(auth, (user) => {
+        onAuthStateChanged(auth, async (user) => {
             if (user) {
               // User is signed in, see docs for a list of available properties
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
               alert(uid)
-              nome = user.inputNomeCompleto
-              alert(nome)
+
+              const q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
+
+              const querySnapshot = await getDocs(q);
+              querySnapshot.forEach((doc) => {
+              // doc.data() is never undefined for query doc snapshots
+              console.log(doc.id, " => ", doc.data());
+              window.location.href = "/EnsinoTEC/perfil-aluno.html"
+              });
+
             } else {
                 alert("Realize o Login")
                 window.location.href = "/EnsinoTEC/login-aluno.html"
