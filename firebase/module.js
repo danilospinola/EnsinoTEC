@@ -233,7 +233,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
               // doc.data() is never undefined for query doc snapshots
               nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome 
                 });
-             document.getElementById('nomeUsuario').value = nome  
+             document.getElementById("nomeCompleto").value = nome  
             } else {
                 alert("Realize o Login")
                 window.location.href = "/EnsinoTEC/login-aluno.html"
