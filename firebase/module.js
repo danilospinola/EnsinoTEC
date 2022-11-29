@@ -217,7 +217,7 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
     } 
 }) 
 if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
-
+    nome = ""
 
         onAuthStateChanged(auth, async (user) => {
             if (user) {
