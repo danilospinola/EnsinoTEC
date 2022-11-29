@@ -225,7 +225,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
               alert(uid)
-              nome = user.nome
+              nome = user.inputNomeCompleto
               alert(nome)
             } else {
                 alert("Realize o Login")
