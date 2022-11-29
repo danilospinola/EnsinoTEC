@@ -9,6 +9,7 @@ body{
     height: 100%;
 }
 
+
 .container{
     margin: 0 ;
 }
@@ -28,6 +29,7 @@ body{
     height: 7rem;
     margin: 0 auto;
     margin-top: 30px;
+    padding-top: 0;
   
 }
 
@@ -39,13 +41,18 @@ body{
     color: #ed145c; 
 }
 
+.fa-sharp{
+    font-size: 25px;
+    margin-bottom: 8px;
+    margin-right: 35px;
+    
+}
+
 .aluno{
     display: inline-flex;
     position: relative;
     font-size: 15px;
     font-weight: bold;
-   
-
     margin-left: 10px;
     margin-top: 0px;  
 }
@@ -55,4 +62,27 @@ body{
     margin-top: 15px;
 }
 
+.tempo{
+    margin-top: 5px;
+    font-size: 13px;
+    opacity: 0.8;
+}
 
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ed145c96;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ed145c;
+  }
+  
