@@ -30,6 +30,7 @@ body{
     margin: 0 auto;
     margin-top: 30px;
     padding-top: 0;
+    background-color: white;
   
 }
 
@@ -69,7 +70,15 @@ body{
 }
 
 
-
+.tudo{
+    border: 4px solid #ed145c;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 950px;
+    margin-top: 40px;
+    height: 1060px;
+    background-color: rgba(128, 128, 128, 0.123);
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -86,3 +95,34 @@ body{
     background: #ed145c;
   }
   
+
+  .segundoHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(219, 217, 217); 
+    padding: 20px;
+    
+    
+    
+    
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .txtsegundoheader{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    
+    
+  }
+
+
+  .active2{
+    color: #ed145c;
+    
+  }
