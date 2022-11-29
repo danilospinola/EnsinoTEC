@@ -231,7 +231,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
               // doc.data() is never undefined for query doc snapshots
-              nome = doc.data().inputNomeCompletoProf; //Pegando o nome do professor e colocando na variavel nome
+              nome == doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome
               });
 
              document.getElementById('nomeUsuario').value = nome
