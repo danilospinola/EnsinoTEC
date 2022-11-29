@@ -230,8 +230,12 @@ if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
               // doc.data() is never undefined for query doc snapshots
-             let nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome 
-             document.getElementById("nomeCompleto").innerHTML = nome  
+             let nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome
+             let email = doc.data().inputEmailProf 
+             document.getElementById("nomeCompleto").innerHTML = nome    
+             document.getElementById("nomeUsuario").innerHTML = nome    
+             document.getElementById("email").innerHTML = email    
+             document.getElementById("emailUsuario").innerHTML = email    
                 });
             } else {
                 alert("Realize o Login")
