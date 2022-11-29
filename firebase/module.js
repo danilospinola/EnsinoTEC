@@ -340,19 +340,19 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
 
-              const q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
+              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
 
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
               // doc.data() is never undefined for query doc snapshots
-             let nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome
-             let email = doc.data().inputEmailProf 
+             let nome = doc.data().inputNomeCompleto //Pegando o nome do Aluno e colocando na variavel nome
+             let email = doc.data().inputEmail
              document.getElementById("nomeUsuario").innerHTML = nome    
              document.getElementById("emailUsuario").innerHTML = email    
                 });
             } else {
                 alert("Realize o Login")
-                window.location.href = "/EnsinoTEC/login-prof.html"
+                window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
     }else if(htmlAtual == "/EnsinoTEC/grupos.html"){
