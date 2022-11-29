@@ -232,7 +232,6 @@ if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
               querySnapshot.forEach((doc) => {
               // doc.data() is never undefined for query doc snapshots
               console.log(doc.id, " => ", doc.data());
-              window.location.href = "/EnsinoTEC/perfil-aluno.html"
               });
 
             } else {
