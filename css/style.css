@@ -899,6 +899,7 @@ header{
 }
 
 .courses{
+    background: url(../img/coursebg.png);
 	background-size: cover;
 	background-position: center;
 }

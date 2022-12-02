@@ -196,8 +196,8 @@ body {
 .nav{
   width: 100px;
   height: 525px;
- 
 }
+
 .menu-lateral {
 	grid-area: menu;
 	overflow: hidden;
