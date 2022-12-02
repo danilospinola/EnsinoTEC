@@ -136,3 +136,18 @@ hr{
     color: rgb(255, 255, 255);
     margin-top: 15px;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ed145c96;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ed145c;
+  }

@@ -7,7 +7,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebas
 import { getAuth,onAuthStateChanged, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js";
 
 //Importa principais métodos de conexão com o Firestore.
-import { getFirestore, getDoc,doc, getDocs, addDoc, collection,query, where } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+import { getFirestore, getDocs, addDoc, collection,query, where } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore.js";
+
+import { getStorage, ref, uploadBytes  } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js";
 
 //Configurações do Projeto no Firebase.
 const firebaseConfig = {
@@ -24,6 +26,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const storage = getStorage(app);
 
 /**//**//**/
 
@@ -241,7 +244,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
-        }else if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
+        }else if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
 
 
         onAuthStateChanged(auth, async (user) => {
@@ -267,6 +270,13 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          const storageRef = ref(storage, 'img/');
+          
+        uploadBytes(storageRef, file).then((snapshot) => {
+            console.log('Uploaded a blob or file!');
+        });
+          
         }else if(htmlAtual == "/EnsinoTEC/calendar_aluno.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {

@@ -872,3 +872,18 @@ button, a {
   height: 45px; 
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ed145c96;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ed145c;
+}
+

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/mural.css">
     <link rel="stylesheet" href="temp-css/temp-css.css">
+    <link rel="shortcut icon" href="temp-img/e-logo-icon.ico" type="image/x-icon">
     
     <title>Mural</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -268,6 +269,20 @@
 
         <script src="js/jsgrupos.js"></script>
         <script src="firebase/module.js" type="module"></script>
+
+        <!-- Assistente Libras -->
+	  
+		<div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+      <!-- Fim assistente libras -->
 
     </body>
     </html>

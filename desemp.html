@@ -56,9 +56,9 @@
 
         <section class="sec-acessibilidade">
             <div>
-                <img src="temp-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+                <img src="temp-img/config.png" id="btnConfig" class="navIcones1" title="Configurações">
 
-                <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+                <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones1" title="Ajuda">
             </div>
         </section>
     </nav>
@@ -198,9 +198,9 @@
 
             <section class="sec-acessibilidade" id="sec-acessibilidade-mq" style="align-self: center;">
                 <div>
-                    <img src="temp-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+                    <img src="temp-img/config.png" id="btnConfig" class="navIcones1" title="Configurações">
     
-                    <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+                    <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones1" title="Ajuda">
                 </div>
             </section>
         </nav>
@@ -499,5 +499,19 @@
     <script src="js/temp-js.js"></script>
     <script src="firebase/module.js" type="module"></script>
     <script src="js/desempenho.js"></script>
+
+    <!-- Assistente Libras -->
+	  
+		<div vw class="enabled">
+		  <div vw-access-button class="active"></div>
+		  <div vw-plugin-wrapper>
+			<div class="vw-plugin-top-wrapper"></div>
+		  </div>
+		</div>
+		<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+		<script>
+		  new window.VLibras.Widget('https://vlibras.gov.br/app');
+		</script>
+	<!-- Fim assistente libras -->
 </body>
 </html>
