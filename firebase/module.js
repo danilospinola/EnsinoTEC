@@ -236,12 +236,14 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
              document.getElementById("email").innerHTML = email    
              document.getElementById("emailUsuario").innerHTML = email    
                 });
+             
+             console.log(document.getElementById("inputUpload").value)   
             } else {
                 alert("Realize o Login")
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
-        }else if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
+        }else if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
 
 
         onAuthStateChanged(auth, async (user) => {
