@@ -449,12 +449,27 @@
         </section>
         <!--[!] Conteúdo-->
 
+          <!-- Assistente Libras -->
+	  
+		<div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+      <!-- Fim assistente libras -->
+
     </main>
 
     <script src="perfil-js/temp-js.js"></script>
     <script src="perfil-js/gerarUsername.js"></script>
     <script src="perfil-js/filtroAtividades.js"></script>
     <script src="firebase/module.js" type="module"></script>
+
     <script>
                 function perfil(input) {
   if (input.files && input.files[0]) {

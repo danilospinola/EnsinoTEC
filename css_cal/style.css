@@ -436,3 +436,18 @@ button:hover .button-text {
  border: 2px solid #ed145c;
  border-radius: 10px;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ed145c96;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ed145c;
+}

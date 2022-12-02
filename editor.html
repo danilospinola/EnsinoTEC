@@ -66,7 +66,7 @@
           );
       }
     </script>
-  </body>
+  
 
   <!-- Syntax Highligher -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
@@ -116,5 +116,21 @@
       greeting = "Boa Noite";
     }
     document.getElementById("time-based-welcome").innerHTML = greeting;
+
   </script>
+
+  <!-- Assistente Libras -->
+	  
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+<!-- Fim assistente libras -->
+  </body>
 </html>
