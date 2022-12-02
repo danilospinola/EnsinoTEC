@@ -218,6 +218,10 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
 }) 
 if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
 
+        function perfil(){
+            console.log(document.getElementById("inputUpload").value)   
+        }
+
         onAuthStateChanged(auth, async (user) => {
             if (user) {
               // User is signed in, see docs for a list of available properties
@@ -241,7 +245,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
-        }else if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
+        }else if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
 
 
         onAuthStateChanged(auth, async (user) => {
