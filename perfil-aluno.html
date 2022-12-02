@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="perfil-css/temp-css.css" type="text/css">
     <link rel="stylesheet" href="perfil-css/perfil-aluno.css" type="text/css">
     <link rel="shortcut icon" href="perfil-img/e-logo-icon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <title>Você | ENSINOTEC</title>
 </head>
 <body>
@@ -210,9 +211,9 @@
 
                 <div class="sec-tabela-esq" id="areaInfoUsuario">
 
-                    <label for="inputUpload" id="alterarFotoPerfil" title="Alterar Foto" onclick="perfil()">
+                    <label for="inputUpload" id="alterarFotoPerfil" title="Alterar Foto">
                         <img for="alterarFotoPerfil" src="perfil-img/icone-camera.png">
-                        <input type="file" accept="image/*" id="inputUpload">
+                        <input type="file" accept="image/*" id="inputUpload" onchange="perfil(this)">
                     </label>
 
                     <img src="perfil-img/perfil.png" id="imagemPerfil">
@@ -455,9 +456,18 @@
     <script src="perfil-js/filtroAtividades.js"></script>
     <script src="firebase/module.js" type="module"></script>
     <script>
-                function perfil(){
-            console.log(document.getElementById("inputUpload").value)   
-        }
+                function perfil(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#imagemPerfil')
+        .attr('src', e.target.result)
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+  console.log(input.files[0])
+  console.log( reader.readAsDataURL(input.files[0]))
+}
     </script>
 </body>
 </html>
