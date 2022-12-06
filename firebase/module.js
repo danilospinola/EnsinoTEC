@@ -253,7 +253,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
 
-              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
+              const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
 
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
@@ -280,7 +280,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
 
-              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
+              const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
 
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
@@ -324,7 +324,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
 
-              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
+              const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
 
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
@@ -346,7 +346,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
 
-              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
+              const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
 
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
@@ -368,7 +368,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
 
-              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
+              const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
 
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
@@ -390,7 +390,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
 
-              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
+              const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
 
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
@@ -412,7 +412,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
               // https://firebase.google.com/docs/reference/js/firebase.User
               const uid = user.uid;
 
-              const q = query(collection(db, "aluno"), where("idUsuario", "==", user.uid));
+              const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
 
               const querySnapshot = await getDocs(q);
               querySnapshot.forEach((doc) => {
