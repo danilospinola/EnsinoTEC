@@ -14,7 +14,7 @@
     <nav id="menuLateral">
         <section>
             <div>
-                <a href="#" style="background-color:#ed145c9d;">
+                <a href="#">
                 <img src="temp-img/agenda.png" class="navIcones">
 
                 <label>Agenda</label>
@@ -30,7 +30,7 @@
             </div>
 
             <div>
-                <a href="#">
+                <a href="grupos.html" class="active">
                 <img src="temp-img/turma.png" class="navIcones">
 
                 <label>Grupos</label>
@@ -72,6 +72,8 @@
                 <img src="temp-img/e-logo.png" id="imgLogoMq">
             </div>
             <div id="divUsuario">
+                <i class="fa-sharp fa-solid fa-pen"></i>
+
                 <img src="temp-img/entrarNaSala.png" id="btnEntrarNaSala" title="Entrar em um grupo">
 
                 <img src="temp-img/notif.png" id="btnNotificacao" title="Notificações">
@@ -137,9 +139,9 @@
                         <img src="temp-img/perfil.png" id="imgPerfilJanelaPerfil">
                     </div>
                     <div>
-                        <label id="nomeUsuario"></label>
+                        <label id="nomeUsuario">Usuário</label>
 
-                        <label id="emailUsuario"></label>
+                        <label id="emailUsuario">email@ensinotec.com</label>
                     </div>
                     <div>
                         <a href="#" id="verPerfil">Acessar Perfil</a>
@@ -172,7 +174,7 @@
                 </div>
     
                 <div>
-                    <a href="#">
+                    <a  href="#" >
                     <img src="temp-img/turma.png" class="navIcones">
     
                     <label>Grupos</label>
@@ -462,8 +464,7 @@
     </script>
     
     </main>
-    <script src="firebase/module.js" type="module"></script>
-    <script src="js/temp-js.js"></script>
+    
 
     <!-- Assistente Libras -->
 	  
@@ -478,5 +479,8 @@
             new window.VLibras.Widget('https://vlibras.gov.br/app');
           </script>
       <!-- Fim assistente libras -->
+
+      <script src="firebase/module.js" type="module"></script>
+          <script src="temp-js/temp-js.js"></script>
 </body>
 </html>

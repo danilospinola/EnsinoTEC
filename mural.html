@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/mural.css">
     <link rel="stylesheet" href="temp-css/temp-css.css">
     <link rel="shortcut icon" href="temp-img/e-logo-icon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     
     <title>Mural</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -73,7 +74,7 @@
                 <img src="temp-img/e-logo.png" id="imgLogoMq">
             </div>
             <div id="divUsuario">
-                <i class="fa-sharp fa-solid fa-pen"></i>
+                <i id="escrever" class="fa-sharp fa-solid fa-pen" onclick="handlePopup(open)"></i>
 
                 <img src="temp-img/entrarNaSala.png" id="btnEntrarNaSala" title="Entrar em um grupo">
 
@@ -221,7 +222,9 @@
                 
                 
                 </div>
-                <div class="tudo">
+                <div class="tudo" id="chat">
+                   
+
                 <div class="mural">
                     <i class="fa-solid fa-circle-user"></i>
                     <h1 class="aluno">Mayara de Paula</h1>
@@ -258,7 +261,7 @@
                     <p class="mensagem">Bom dia</p>
                     <p class="tempo"> 1 semana atrás</p>
                 </div>
-                <div class="mural">
+                <div class="mural2">
                     <i class="fa-solid fa-circle-user"></i>
                     <h1 class="aluno">Mayara de Paula</h1>
                     <p class="mensagem">Bom dia</p>
@@ -267,9 +270,59 @@
             </div>
         </div>
 
+
+        <div class="popup" id="popup">
+        
+            <h2 class="title">EnsinoTec</h2>
+
+            <label for="fname">Escreva para todos verem</label>
+            <textarea class="txtarea" name="" id="mensagem" cols="30" rows="10"></textarea>
+            
+
+
+            <button class="close-popup-button" type="submit" onclick="handlePopup(false),adicionar() ">
+                Fechar
+            </button>
+        </div>
+
+
         <script src="js/jsgrupos.js"></script>
         <script src="firebase/module.js" type="module"></script>
 
+        <script>
+                
+            const popup = document.getElementById('popup');
+            
+            function handlePopup(open) {
+                popup.classList[open ? 'add' : 'remove']('opened');
+            }
+    
+            function adicionar(){
+                let dia = document.getElementById('DiaEvent').value
+                let nome = document.getElementById('NomeEvent').value
+    
+                let diaMarcado =  document.getElementById(dia)
+    
+                $(diaMarcado).append(` <div class="event1"> <div class="event-desc">  ${nome}  </div> </div>`);
+    
+    
+            }
+        </script>
+
+<script>
+    function adicionar(){
+        let conversa = document.getElementById('chat')
+        let mensagem = document.getElementById('mensagem').value
+
+        $(conversa).prepend(`                 <div class="mural">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <h1 class="aluno">Mayara de Paula</h1>
+                    <p class="mensagem">${mensagem}</p>
+                    <p class="tempo">Agora</p>
+            </div>`);
+    }
+</script>
+        
         <!-- Assistente Libras -->
 	  
 		<div vw class="enabled">
