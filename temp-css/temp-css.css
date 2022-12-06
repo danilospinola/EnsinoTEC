@@ -286,7 +286,7 @@ main #navMenuHamburguer{
     font-weight: 100;
 }
 
-#janelaPerfil #imgPerfilJanelaPerfil{
+#janelaPerfil #imgPerfilJanelaPerfil {
     cursor: default;
 
     width: 75px;
@@ -336,6 +336,7 @@ main #navMenuHamburguer{
     background-color: rgb(234, 234, 234);
     box-shadow: 0px 3px 50px rgba(0, 0, 0, 0.112);
 }
+
 
 /**/
 

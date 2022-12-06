@@ -61,6 +61,13 @@ hr{
     width: 97%;
 }
 
+.comentar{
+    font-size: 15px;
+    color: #ed145c;
+    margin-left: 580px;
+    margin-top: 10px;
+    font-weight: bold;
+}
 
 .comentarios{
     border: 2px solid rgb(100, 100, 100);
@@ -129,3 +136,72 @@ hr{
     background-color: white;
     margin-bottom: 30px;
 }
+
+
+.popup-button,
+.popup .close-popup-button {
+    background-color: #ed145c;
+    border: none;
+    padding: 8px 30px;
+    border-radius: 16px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .4s;
+    margin: 12px 0;
+}
+
+.popup-button:hover,
+.popup .close-popup-button:hover {
+    opacity: .8;
+}
+
+.popup-button:active,
+.popup .close-popup-button:active {
+    transform: scale(.8);
+}
+
+.popup {
+
+    background-color: rgb(255, 255, 255);
+    border-width: 1px; 
+    border-style: solid; 
+    border-color:  #ed145c; 
+    padding: 30px 50px;
+    border-radius: 8px;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    box-sizing: border-box;
+    transition: all .4s;
+    z-index: -1;
+    transform: scale(.0);
+    opacity: 0;
+   
+}
+
+.popup.opened {
+    z-index: 999;
+    transform: scale(1);
+    opacity: 1;
+    margin: 0 auto;
+    margin-top: -1000px;
+    
+}
+
+
+.popup h2.title {
+    color: #ed145c;
+}
+
+
+
+
+.txtarea{
+  width: 400px;
+  height: 130px;
+
+}
+
