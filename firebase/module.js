@@ -422,7 +422,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
              document.getElementById("nomeUsuario").innerHTML = nome    
              document.getElementById("emailUsuario").innerHTML = email  
              document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-aluno.html"  
-            })
+            });
                      
             const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
         
