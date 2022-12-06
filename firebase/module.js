@@ -260,6 +260,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
               // doc.data() is never undefined for query doc snapshots
              let nome = doc.data().inputNomeCompleto //Pegando o nome do Aluno e colocando na variavel nome
              let email = doc.data().inputEmail
+             console.log(email,nome)
              document.getElementById("nomeCompleto").innerHTML = nome    
              document.getElementById("nomeUsuario").innerHTML = nome    
              document.getElementById("email").innerHTML = email    
