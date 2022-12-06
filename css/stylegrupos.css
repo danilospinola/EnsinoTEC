@@ -7,7 +7,7 @@ body{
 }
 
 hr{
-    width: 980%;
+    width: 97%;
     margin-top: 30px;
     color: rgb(116, 113, 113);
 }
@@ -45,6 +45,7 @@ hr{
   margin-top: 8px;
   text-align: center;
   color: #fff;
+  text-transform: uppercase;
 
 }
 
@@ -95,17 +96,18 @@ hr{
     width: 19rem;
     height: 11rem;
     border-radius: 15px 15px 0px 0px;
-    opacity: 0.7;
+    
 }
 
-.titulocardinativo{
-  font-size: 17px;
-  height: 0px; 
-  margin-top: 8px;
-  text-align: center;
-  color: #fff;
-
+.titulosgruposinativo{
+    text-align: center;
+    height: 0px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+    text-transform: uppercase;
 }
+
 
 .btninativo{
 
@@ -129,13 +131,6 @@ hr{
     
 }
 
-.titulosgruposinativo{
-    text-align: center;
-    height: 0px;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    margin-top: 15px;
-}
 
 /* width */
 ::-webkit-scrollbar {

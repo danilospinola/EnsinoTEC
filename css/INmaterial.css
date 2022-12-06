@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins';
+}
+
+body{
+    margin: 0 ;
+    padding: 0;
+}
+
+hr{
+    width: 97%;
+    margin: 0 auto;
+}
+
+.titulo{
+    margin: 20px;
+    color: grey;
+}
+
+.container{
+    display: flex;
+}
+.thumb{
+    margin: 20px;
+    width: 500px;
+    
+}
+
+.btn{
+    margin: 0;
+    width: 200px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color:#ed145c;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    
+    
+    
+}
+
+button:hover {
+    background-color: #ed1455b7;
+    transition: all 1s;
+    color: black;
+  } 
+
+.tituloaula{
+    margin: 0;
+    height: 35px;
+    font-size: 30px;
+    
+}
+
+.infos{
+    display: inline-block;
+    margin-top: 245px;
+}
+
+.time{
+    color: grey;
+    margin-left: 1px;
+    margin-top: 2px;
+}
+
+.voltar{
+    margin: 20px;
+    color: #ed145c;
+}

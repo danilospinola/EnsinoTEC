@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+hr{
+    margin:  0 auto;
+    width: 97%;
+    height: 1px;
+    
+}
+
+.voltar{
+    color: #ed145c;
+    margin: 20px;
+    font-size: 1.1rem;
+}
+
+
+.container{
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.video{
+    margin: 0 auto;
+    width: 750px;
+}
+
+.infosvideo{
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 750px;
+    border: 2px solid #ed145c;
+    height: auto;
+    border-radius: 10px;
+
+}
+.titulovideo{
+    margin-top: 5px;
+    margin-left: 10px;
+    
+}
+
+.time{
+    color: grey;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.hr2{
+    margin-top: 30px;
+    width: 97%;
+}
+
+
+.comentarios{
+    border: 2px solid rgb(100, 100, 100);
+    border-radius: 15px;
+    width: 40rem;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-top: 0;
+    background-color: white;
+ 
+}
+
+.fa-solid {
+    font-size:25px;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #ed145c; 
+    display: inline-flex;
+    
+}
+
+.aluno{
+    display: inline-flex;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 3px; 
+    color: #000; 
+}
+
+.mensagem{
+    color: rgb(0, 0, 0);
+    margin-top: 15px;
+    margin-left: 20px;
+    
+}
+
+.tempo{
+    margin-top: 5px;
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.tudo{
+    border: 2px solid #ed145c;
+    margin: 0 auto;
+    width: 750px;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.comentarios2{
+    border: 2px solid rgb(100, 100, 100);
+    border-radius: 15px;
+    width: 40rem;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-top: 0;
+    background-color: white;
+    margin-bottom: 30px;
+}
