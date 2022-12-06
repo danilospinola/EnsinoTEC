@@ -425,6 +425,26 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 alert("Realize o Login")
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
+
+            const user = userCredential.user
+
+            const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
+        
+            const querySnapshot = await getDocs(q);
+            querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-aluno.html"
+            });
+        
+            const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
+        
+            const querySnapshot2 = await getDocs(qy);
+            querySnapshot2.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-prof.html"
+
+            
+            })
           });
     }else if(htmlAtual == "/EnsinoTEC/conversas-prof.html"){
         onAuthStateChanged(auth, async (user) => {
@@ -448,7 +468,4 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-prof.html"
             }
           });
-    }
-
-
-
+    } 
