@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/INmaterial.css">
+    <link rel="stylesheet" href="temp-css/temp-css.css">
+    <title>Materiais</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  </head>
+  <body>
+    <nav id="menuLateral">
+        <section>
+            <div>
+                <a href="#">
+                <img src="temp-img/agenda.png" class="navIcones">
+
+                <label>Agenda</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/desempenho.png" class="navIcones">
+
+                <label>Desempenho</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#" class="active">
+                <img src="temp-img/turma.png" class="navIcones">
+
+                <label>Grupos</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/atividades.png" class="navIcones">
+
+                <label>Atividades</label>
+                </a>
+            </div>
+
+            <div>
+                <a href="#">
+                <img src="temp-img/chat.png" class="navIcones">
+
+                <label>Conversas</label>
+                </a>
+            </div>
+        </section>
+
+        <section class="sec-acessibilidade">
+            <div>
+                <img src="temp-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+
+                <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+            </div>
+        </section>
+    </nav>
+
+    <main>
+    
+        <header>
+            <div id="divLogo">
+                <img src="temp-img/menu.png" id="menuHamburguer">
+                <img src="temp-img/ensinotec-logo.png" id="imgLogo">
+                <img src="temp-img/e-logo.png" id="imgLogoMq">
+            </div>
+            <div id="divUsuario">
+                <img src="temp-img/entrarNaSala.png" id="btnEntrarNaSala" title="Entrar em um grupo">
+
+                <img src="temp-img/notif.png" id="btnNotificacao" title="Notificações">
+
+                <img src="temp-img/perfil.png" id="imgPerfilUsuario" title="Você">
+
+                <!-- Janelas -->
+
+                <div id="janelaEntrarGrupo" class="janelaHeader">
+                    <label id="secaoEntrarGrupo">Entrar em um Grupo</label>
+
+                    <label id="secaoInsiraOCodigo">Insira o código do grupo:</label>
+
+                    <input type="text" maxlength="8" id="inputCodigoGrupo">
+
+                    <button id="btnEntrarGrupo">Entrar no Grupo</button>
+                </div>
+
+                <div id="janelaNotif" class="janelaHeader">
+                    <label id="secaoNotif">Notificações</label>
+
+                    <label id="secaoNotifNovas">Novas</label>
+                    <div class="divNotificacoes">
+                        <img src="temp-img/img-notif-5.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Mayara Ferreira atribuiu uma nova atividade</h4>
+
+                            <p id="descricaoNotificacao">Disponível em <b>Desenvolvimento de Sistemas &gt; PWFE</b>.</p>
+                        </div>
+                    </div>
+
+                    <div class="divNotificacoes">
+                        <img src="temp-img/img-notif-3.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Matheus te mencionou em um comentário</h4>
+
+                            <p id="descricaoNotificacao">Em uma postagem iniciada em <b>Microsoft DP900</b>.</p>
+                        </div>
+                    </div>
+
+                    <div class="divNotificacoes">
+                        <img src="temp-img/img-notif-4.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Projeto Final, @Usuario1616 e outras pessoas...</h4>
+
+                            <p id="descricaoNotificacao">Estão respondendo suas mensagens.</p>
+                        </div>
+                    </div>
+
+                    <label id="secaoNotifAntigas">Antigas</label>
+                    <div class="divNotificacoes">
+                        <img src="temp-img/img-notif.png" class="imgNotif">
+                        <div>
+                            <h4 class="tituloNotificacao">Bem vindo(a) ao EnsinoTEC!</h4>
+
+                            <p id="descricaoNotificacao">Nós da equipe EnsinoTEC desejamos boas-vindas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="janelaPerfil" class="janelaHeader">
+                    <div>
+                        <img src="temp-img/perfil.png" id="imgPerfilJanelaPerfil">
+                    </div>
+                    <div>
+                        <label id="nomeUsuario">Usuário</label>
+
+                        <label id="emailUsuario">email@ensinotec.com</label>
+                    </div>
+                    <div>
+                        <a href="#" id="verPerfil">Acessar Perfil</a>
+                    </div>
+                    <div>
+                        <button id="btnEncerrarSessao">Encerrar Sessão</a>
+                    </div>
+                </div>
+
+                <!-- Janelas -->
+            </div>
+        </header>
+
+        <nav id="menuLateralMq">
+            <section>
+                <div>
+                    <a href="#">
+                    <img src="temp-img/agenda.png" class="navIcones">
+    
+                    <label>Agenda</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="temp-img/desempenho.png" class="navIcones">
+    
+                    <label>Desempenho</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a  href="#" >
+                    <img src="temp-img/turma.png" class="navIcones">
+    
+                    <label>Grupos</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="temp-img/atividades.png" class="navIcones">
+    
+                    <label>Atividades</label>
+                    </a>
+                </div>
+    
+                <div>
+                    <a href="#">
+                    <img src="temp-img/chat.png" class="navIcones">
+    
+                    <label>Conversas</label>
+                    </a>
+                </div>
+            </section>
+
+            <section class="sec-acessibilidade" id="sec-acessibilidade-mq" style="align-self: center;">
+                <div>
+                    <img src="temp-img/config.png" id="btnConfig" class="navIcones" title="Configurações">
+    
+                    <img src="temp-img/ajuda.png" id="btnAjuda" class="navIcones" title="Ajuda">
+                </div>
+            </section>
+        </nav>
+        <a style="text-decoration: none;" href="materiais.html"><h5 class="voltar"><i class="fa-solid fa-rotate-left"></i> Voltar aos materiais</h5></a>
+        <h1 class="titulo">HTML</h1>
+        <hr>
+        <div class="container">
+            <div class="img">
+            <img class="thumb" src="imgsINmaterial/thumb-1.png" alt="Atividade">
+            </div>
+            <div class="infos">
+        <h3 class="tituloaula">Aula HTML5 - Tabela</h3>
+        <h5 class="time">19/09/2022</h5>
+     <a href="watch-video.html"><button class="btn">Assista agora!</button></a> 
+    </div>
+    
+        </div>
+
+        <div class="container">
+            <div class="img">
+            <img class="thumb" src="imgsINmaterial/thumb-1.png" alt="Atividade">
+            </div>
+            <div class="infos">
+        <h3 class="tituloaula">Aula HTML5 - Conceitos básicos</h3>
+        <h5 class="time">12/09/2022</h5>
+        <button class="btn">Assista agora!</button>
+    </div>
+    
+        </div>
+
+
+
+
+
+     <script src="js/jsgrupos.js"></script>
+     <script src="firebase/module.js" type="module"></script>
+
+</body>
+</html>

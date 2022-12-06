@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root{
-   --main-color:#8e44ad;
+   --main-color:#ed145c;
    --red:#e74c3c;
    --orange:#f39c12;
    --light-color:#888;
@@ -506,6 +506,13 @@ section{
    flex-wrap: wrap;
    background-color: var(--white);
    padding: 2rem;
+   justify-content: center;
+   align-items: center;
+}
+
+.playlist-details{
+   display: flex;
+   flex-direction: column;
 }
 
 .playlist-details .row .column{
@@ -532,6 +539,7 @@ section{
 .playlist-details .row .column .save-playlist button span{
    font-size: 1.8rem;
    color:var(--light-color);
+
 }
 
 .playlist-details .row .column .save-playlist button:hover{
@@ -558,13 +566,17 @@ section{
    position: absolute;
    top: 1rem; left: 1rem;
    padding: .5rem 1.5rem;
+   margin-left: 30%;
 }
 
 .playlist-details .row .column .thumb img{
    height: 30rem;
-   width: 100%;
+   width: 50%;
    object-fit: cover;
    border-radius: .5rem;
+   
+   
+   
 }
 
 .playlist-details .row .column .tutor{
@@ -1186,6 +1198,14 @@ section{
    margin: 1rem 0;
 }
 
+.navIcones1{
+   user-select: none;
+   -webkit-user-select: none;
+   -webkit-user-drag: none;
+   margin-right: 15px;
+   width: 50px;
+   height: 50px;
+}
 
 
 
@@ -1287,3 +1307,110 @@ section{
    }
 
 }
+
+/**/
+
+#MarcarComoEntregue{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+#marcarComoEntregue{
+   width: 30px;
+   height: 30px;
+   accent-color: #ed145c;
+   margin-right: 10px;
+   
+}
+
+#FonteEntregue{
+   font-size: 18px;
+}
+
+#Pontos{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-end;
+   margin-top: 20px;
+}
+
+#Pontos div{
+   display: flex;
+   flex-direction: column;
+}
+
+#Descricao{
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   width: 800px;
+   justify-self: center;
+   margin-top: 20px;
+}
+
+.infoDesc{
+   align-self: flex-start;
+   justify-self: flex-start;
+   font-size: 20px;
+}
+
+.imagemAtividade{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.imagemAtividade img{
+   width: 800px;
+   height: 400px;
+   object-fit: cover;
+   margin-top: -150px;
+
+}
+
+.data{
+   font-size: 14px;
+   margin-top: 4px;
+   margin-bottom: 4px;
+   padding: 8px;
+   border-radius: 10px;
+   background-color:rgb(156, 233, 224);
+}
+
+#AnexarAtividade, #AnexarAtividade div{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   align-items: center;
+   margin-top: 30px;
+}
+
+#AnexarAtividade div{
+   cursor: pointer;
+   font-size: 14px;
+   margin-top: 4px;
+   margin-bottom: 4px;
+   padding: 8px;
+   border-radius: 20px;
+   background-color:rgb(238, 241, 241);
+   padding-left: 20px;
+   padding-right: 20px;
+   transition: 0.3s;
+}
+
+#AnexarAtividade div:hover{
+   background-color: rgb(170, 170, 170);
+}
+
+#AnexarAtividade img{
+   width: 30px;
+   height: 30px;
+}
+
+#AnexarAtividade span{
+   font-size: 16px;
+}
+
