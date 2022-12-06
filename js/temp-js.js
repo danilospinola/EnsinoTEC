@@ -41,8 +41,6 @@ document.getElementById('imgPerfilUsuario').addEventListener('click', function()
     }
 })
 
-/**/
-
 
 
 
