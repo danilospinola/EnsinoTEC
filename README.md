@@ -8,7 +8,7 @@ Trabalho realizado para projeto final de semestre, no ano de 2022 na instituiç�
 <h2><a href="https://danilospinola.github.io/EnsinoTEC/index.html">Home</a></h2>
 <h2><a href="https://danilospinola.github.io/EnsinoTEC/grupos.html">Grupos</a></h2>
 <h2><a href="https://danilospinola.github.io/EnsinoTEC/perfil-aluno.html">Perfil Aluno</a></h2>
-
+<h2><a href="https://danilospinola.github.io/EnsinoTEC/Atividades.html">Calendário</a></h2>
 <br><br>
 
 <h2><a href="https://danilospinola.github.io/EnsinoTEC/calendar.html">Calendário</a></h2>
