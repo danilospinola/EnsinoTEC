@@ -426,8 +426,6 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
 
-            const user = userCredential.user
-
             const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
         
             const querySnapshot = await getDocs(q);
@@ -443,7 +441,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
             // doc.data() is never undefined for query doc snapshots
             document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-prof.html"
 
-            
+
             })
           });
     }else if(htmlAtual == "/EnsinoTEC/conversas-prof.html"){
