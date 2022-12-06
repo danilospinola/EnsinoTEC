@@ -420,51 +420,24 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
              let nome = doc.data().inputNomeCompleto //Pegando o nome do Aluno e colocando na variavel nome
              let email = doc.data().inputEmail
              document.getElementById("nomeUsuario").innerHTML = nome    
-             document.getElementById("emailUsuario").innerHTML = email    
+             document.getElementById("emailUsuario").innerHTML = email  
+             document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-aluno.html"  
+
+                     
+            const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
+        
+            const querySnapshot = getDocs(qy);
+            querySnapshot.forEach((doc) => {
+            let nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome
+            let email = doc.data().inputEmailProf 
+            document.getElementById("nomeUsuario").innerHTML = nome    
+            document.getElementById("emailUsuario").innerHTML = email  
+            document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-prof.html"
+            })
                 });
             } else {
                 alert("Realize o Login")
                 window.location.href = "/EnsinoTEC/login-aluno.html"
-            }
-
-            const q = query(collection(db, "Aluno"), where("idUsuario", "==", user.uid));
-        
-            const querySnapshot = await getDocs(q);
-            querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-aluno.html"
-            });
-        
-            const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
-        
-            const querySnapshot2 = await getDocs(qy);
-            querySnapshot2.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-prof.html"
-
-
-            })
-          });
-    }else if(htmlAtual == "/EnsinoTEC/conversas-prof.html"){
-        onAuthStateChanged(auth, async (user) => {
-            if (user) {
-              // User is signed in, see docs for a list of available properties
-              // https://firebase.google.com/docs/reference/js/firebase.User
-              const uid = user.uid;
-
-              const q = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
-
-              const querySnapshot = await getDocs(q);
-              querySnapshot.forEach((doc) => {
-              // doc.data() is never undefined for query doc snapshots
-             let nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome
-             let email = doc.data().inputEmailProf 
-             document.getElementById("nomeUsuario").innerHTML = nome    
-             document.getElementById("emailUsuario").innerHTML = email    
-                });
-            } else {
-                alert("Realize o Login")
-                window.location.href = "/EnsinoTEC/login-prof.html"
             }
           });
     } 
