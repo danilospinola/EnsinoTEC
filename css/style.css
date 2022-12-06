@@ -727,7 +727,9 @@ header{
 }
 
 #contact{
-    padding: 8vw;
+    padding-left: 4vw;
+    margin-top: 4vw;
+    margin-bottom: 6vw;
     justify-content: space-between;
     align-items: flex-start;
     
