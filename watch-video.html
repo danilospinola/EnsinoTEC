@@ -5,6 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="shortcut icon" href="img_forms/e-logo-icon.ico" type="image/x-icon">
+   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
    <title>Aula</title>
 
    <!-- font awesome cdn link  -->
@@ -31,8 +32,8 @@
 </div>
 
 <hr class="hr2">
-
-<div class="tudo">
+<p class="comentar" onclick="handlePopup(open)">Comentar</p>
+<div class="tudo" id="chat">
 
 <div class="comentarios">
    <i class="fa-solid fa-circle-user"> <h1 class="aluno">Kaique Santana</h1></i> 
@@ -68,8 +69,57 @@
 </div>
    </div>
 
+   
+   <div class="popup" id="popup">
+        
+      <h2 class="title">EnsinoTec</h2>
+
+      <label for="fname">Escreva um comentário:</label>
+      <textarea class="txtarea" name="" id="mensagem" cols="30" rows="10"></textarea>
+      
+
+
+      <button class="close-popup-button" type="submit" onclick="handlePopup(false),adicionar() ">
+          Fechar
+      </button>
+  </div>
+
+
 
 <script src="js/script.js"></script>
    
+<script>
+                
+   const popup = document.getElementById('popup');
+   
+   function handlePopup(open) {
+       popup.classList[open ? 'add' : 'remove']('opened');
+   }
+
+   function adicionar(){
+       let dia = document.getElementById('DiaEvent').value
+       let nome = document.getElementById('NomeEvent').value
+
+       let diaMarcado =  document.getElementById(dia)
+
+       $(diaMarcado).append(` <div class="event1"> <div class="event-desc">  ${nome}  </div> </div>`);
+
+
+   }
+</script>
+
+<script>
+function adicionar(){
+let conversa = document.getElementById('chat')
+let mensagem = document.getElementById('mensagem').value
+
+$(conversa).prepend(`                 <div class="comentarios">
+   <i class="fa-solid fa-circle-user"> <h1 class="aluno">Kaique Santana</h1></i> 
+   <p class="mensagem">${mensagem}</p>
+   <p class="tempo">Agora</p>
+</div>`);
+}
+</script>
+
 </body>
 </html>
