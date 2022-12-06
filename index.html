@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/header-e-footer-mq.css">
 	<link rel="stylesheet" href="css/header-e-footer.css">
+	<link rel="stylesheet" href="css_forms/header-e-footer-cad-login.css">
+	<link rel="stylesheet" href="css_forms/header-e-footer-login.css">
+	<link rel="stylesheet" href="css_forms/header-e-footer-mq-cad-login.css">
+	<link rel="stylesheet" href="css_forms/">
 	<link rel="shortcut icon" href="img_forms/e-logo-icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
 	<link rel="stylesheet" href="css/style-mq.css" type="text/css">
@@ -19,7 +23,7 @@
 <body>
 	<nav>
         <div>
-            <img id="imgLogoNav" src="temp-img/ensinotec-logo.png">
+            <img id="imgLogoNav" src="img_forms/ensinotec-logo-branco-transparente.png">
             <span id="btnFecharMenu">×</span>
         </div>
         <div id="divNavLinks">
@@ -30,21 +34,18 @@
      
         </div>
 
-        <div id="divNavLoginCadastro">
-            <a href="#" id="btnNavLogin">
-                Login <br>
-                <span><em>Inicie sua sessão como aluno ou professor.</em></span>
-            </a>
+		<div id="divNavLoginCadastro">
+            <div class="caixaLinksHover">
+                <span class="linksTituloNav">Fazer Login</span>
+                <a href="login-aluno.html" class="linkComoAluno">Como Aluno</a>
+                <a href="login-prof.html" class="linkComoProf">Como Professor</a>
+            </div>
 
-            <a href="#" id="btnNavCadastro">
-                Cadastre-se
-                <br>
-                <span><em>Crie uma conta. Simples, fácil e rápido.</em></span>
-            </a>
-        </div>
-
-        <div id="divAcessibilidade">
-            <img id="btnModoEscuroClaro" src="img/solIcone.png" title="Ativar modo escuro">
+            <div class="caixaLinksHover">
+                <span class="linksTituloNav">Cadastre-se</span>
+                <a href="cad-aluno.html" class="linkComoAluno">Como Aluno</a>
+                <a href="cad-prof.html" class="linkComoProf">Como Professor</a>
+            </div>
         </div>
     </nav>
     <header>
