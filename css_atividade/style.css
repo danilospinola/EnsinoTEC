@@ -7,7 +7,7 @@
    --light-color:#888;
    --light-bg:#eee;
    --black:#2c3e50;
-   --white:#fff;
+   --white:rgb(240, 239, 239);
    --border:.1rem solid rgba(0,0,0,.2);
 }
 
@@ -59,6 +59,8 @@ body.active{
 section{
    padding:2rem;
    max-width: 1500px;
+   justify-self: center;
+   padding-left: 10%;
 }
 
 .heading{
