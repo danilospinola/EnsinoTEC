@@ -437,7 +437,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
         
             const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
         
-            const querySnapshot2 = await getDocs(qy);
+            const querySnapshot2 = await getDocs(q);
             querySnapshot2.forEach((doc) => {
             // doc.data() is never undefined for query doc snapshots
             document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-prof.html"
