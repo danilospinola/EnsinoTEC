@@ -264,18 +264,13 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
              document.getElementById("nomeUsuario").innerHTML = nome    
              document.getElementById("email").innerHTML = email    
              document.getElementById("emailUsuario").innerHTML = email    
-                });
+                });     
             } else {
                 alert("Realize o Login")
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
 
-          const storageRef = ref(storage, 'img/');
-          
-        uploadBytes(storageRef, file).then((snapshot) => {
-            console.log('Uploaded a blob or file!');
-        });
           
         }else if(htmlAtual == "/EnsinoTEC/calendar_aluno.html"){
         onAuthStateChanged(auth, async (user) => {
