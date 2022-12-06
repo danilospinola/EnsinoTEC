@@ -426,8 +426,8 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                      
             const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
         
-            const querySnapshot2 = getDocs(qy);
-            querySnapshot2.forEach((doc) => {
+            const querySnapshot = getDocs(qy);
+            querySnapshot.forEach((doc) => {
             let nome = doc.data().inputNomeCompletoProf //Pegando o nome do professor e colocando na variavel nome
             let email = doc.data().inputEmailProf 
             document.getElementById("nomeUsuario").innerHTML = nome    
