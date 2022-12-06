@@ -1369,7 +1369,7 @@ section{
    width: 800px;
    height: 400px;
    object-fit: cover;
-   margin-top: -150px;
+   margin-top: -250px;
 
 }
 
@@ -1442,5 +1442,11 @@ section{
 
  .active2{
    color: #ed145c;
+   
+ }
+
+ .teste{
+   position: absolute;
+   margin-left: 1120px;
    
  }
