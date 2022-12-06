@@ -1414,5 +1414,33 @@ section{
 
 #AnexarAtividade span{
    font-size: 16px;
+   
+   
 }
+.segundoHeader{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(219, 217, 217); 
+   padding: 20px;
+ }
 
+ a{
+   text-decoration: none;
+ }
+
+ .txtsegundoheader{
+   font-weight: bold;
+   text-transform: uppercase;
+   color: black;
+   font-size: 16px;
+   font-family: "poppins";
+   
+ }
+
+
+ .active2{
+   color: #ed145c;
+   
+ }
