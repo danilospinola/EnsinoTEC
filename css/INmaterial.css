@@ -28,6 +28,18 @@ hr{
     
 }
 
+.thumb2{
+    margin: 20px;
+    width: 500px;
+    height: 335px;
+    
+   }
+
+   .infos2{
+    display: inline-block;
+    margin-top: 245px;
+}
+
 .btn{
     margin: 0;
     width: 200px;
@@ -70,4 +82,219 @@ button:hover {
 .voltar{
     margin: 20px;
     color: #ed145c;
+}
+
+
+@media (max-width: 1300px)
+{
+
+  .titulo{
+    margin: 0 auto;
+  }
+  .container
+   {
+    display: inline-block;
+    margin: 0 auto;
+    align-content: center;
+    
+   }
+
+   .thumb{
+    
+    align-content: center;
+    width: 600px;
+    
+   }
+
+   
+
+   .tituloaula{
+    height: 35px;
+    font-size: 20px; 
+}
+
+    .infos{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 600px;
+    margin-left: 20px;
+    
+    }
+.thumb2{
+    margin: 20px;
+    width: 600px;
+    height: 300px;
+        
+}
+    
+.infos2{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 600px;
+}
+
+}
+
+
+@media (max-width: 900px)
+{
+
+  .titulo{
+    margin: 0 auto;
+  }
+  .container
+   {
+    display: inline-block;
+    margin: 0 auto;
+    align-content: center;
+    
+   }
+
+   .thumb{
+    
+    align-content: center;
+    width: 400px;
+    
+   }
+
+   .tituloaula{
+    height: 35px;
+    font-size: 20px; 
+}
+
+    .infos{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 400px;
+    margin-left: 20px;
+    
+    }
+
+.thumb2{
+    margin: 20px;
+    width: 400px;
+    height: 250px;
+        
+}
+    
+.infos2{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 400px;
+}
+
+}
+
+
+
+@media (max-width: 600px)
+{
+
+  .titulo{
+    margin: 0 auto;
+  }
+  .container
+   {
+    display: inline-block;
+    margin: 0 auto;
+    align-content: center;
+    
+   }
+
+   .thumb{
+    
+    align-content: center;
+    width: 400px;
+    
+   }
+
+
+   .tituloaula{
+    height: 35px;
+    font-size: 20px; 
+}
+
+    .infos{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 400px;
+    margin-left: 20px;
+    
+    }
+
+.thumb2{
+    margin: 20px;
+    width: 400px;
+    height: 250px;
+        
+}
+    
+.infos2{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 450px;
+}
+
+}
+
+@media (max-width: 375px)
+{
+
+  .titulo{
+    margin: 0 auto;
+    font-size: 25px;
+  }
+  .container
+   {
+    display: inline-block;
+    margin: 0 auto;
+    left: 15px;
+    
+   }
+
+   .thumb{
+    
+    align-content: center;
+    width: 300px;
+    
+   }
+
+   .tituloaula{
+    margin: 0 auto;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+    .infos{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 350px;
+    
+    }
+
+
+.thumb2{
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+        
+}
+    
+.infos2{
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 350px;
+}
+    
+
 }
