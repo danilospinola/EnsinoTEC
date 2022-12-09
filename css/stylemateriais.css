@@ -19,29 +19,34 @@ hr{
 }
 
 .material{
-height: 2.5rem;
-width: 15rem;
+height: 4rem;
+width: 60rem;
 border: 2px solid grey;
-margin: 10px;
+margin: 0 auto;
 margin-top: 20px;
 text-decoration: none;
+color: #ed145c;
+
 
 
 }
+
+.material:hover{
+  background-color: #ed145c;
+  transition: 0.8s;
+  color: white;
+  
+}
+
 .nome{
-    margin: 0;
-    margin-top: 6px;
-    margin-left: 5px;
+    text-align: center;
     text-transform: uppercase;
-    font-size: 18px;
-    display: inline-block;
+    font-size: 30px;
+    margin-top: 10px;
+    
 }
 
-.fa-solid{
-    margin-left: 5px;
-    color: #ed145c;
-    font-size: 20px;
-}
+
 
 .segundoHeader{
     display: flex;
@@ -84,4 +89,91 @@ text-decoration: none;
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #ed145c;
+}
+
+
+
+@media (max-width: 1360px)
+{
+  .material
+   {
+    width: 40rem;
+   }
+
+   .titulo{
+    text-align: center;
+    margin: 0 auto;
+   }
+
+}
+
+@media (max-width: 900px)
+{
+  .material
+   {
+    width: 20rem;
+   }
+
+   .titulo{
+    text-align: center;
+    margin: 0 auto;
+   }
+
+}
+
+
+
+
+@media (max-width: 700px)
+{
+  .material
+   {
+    width: 30rem;
+   }
+
+   .titulo{
+    text-align: center;
+    margin: 0 auto;
+    
+   }
+
+}
+
+
+
+@media (max-width: 500px)
+{
+  .material
+   {
+    width: 20rem;
+   }
+
+   .titulo{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    
+   }
+
+}
+
+
+@media (max-width: 375px)
+{
+  .material
+   {
+    width: 15rem;
+   }
+
+   .titulo{
+    text-align: center;
+    margin-top: 20px;
+   }
+
+   .nome{
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 18px;
+   }
+
 }
