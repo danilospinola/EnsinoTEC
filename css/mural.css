@@ -256,15 +256,16 @@ body{
     
 }
 
-@media (max-width: 350px)
+@media (max-width: 336px)
 {
     .banner{
-      width: 330px;
+      width: 310px;
       height: 150px;
+      
     }
 
     .tudo{
-      width: 320px;
+      width: 300px;
 
     }
     .mural{
@@ -287,6 +288,3 @@ body{
     
     
 }
-
-
-
