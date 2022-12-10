@@ -256,3 +256,37 @@ body{
     
 }
 
+@media (max-width: 350px)
+{
+    .banner{
+      width: 330px;
+      height: 150px;
+    }
+
+    .tudo{
+      width: 320px;
+
+    }
+    .mural{
+      width: 280px;
+    }
+    
+    .mural2{
+      width: 280px;
+    }
+    
+    .popup{
+      width: 300px;
+    }
+
+    .txtarea{
+      width: 180px;
+      height: 80px;
+    
+    }
+    
+    
+}
+
+
+
