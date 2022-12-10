@@ -256,7 +256,7 @@ body{
     
 }
 
-@media (max-width: 336px)
+@media (max-width: 340px)
 {
     .banner{
       width: 310px;
