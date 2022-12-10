@@ -30,6 +30,11 @@ html{
    display: flex;
 }
 
+label{
+   font-size: large;
+}
+
+
 html::-webkit-scrollbar{
    width: 1rem;
    height: .5rem;
