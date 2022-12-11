@@ -514,7 +514,8 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
              document.getElementById("nomeUsuario").innerHTML = nome    
              document.getElementById("emailUsuario").innerHTML = email  
              document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-aluno.html"  
-             document.getElementById("calendario").href = "https://danilospinola.github.io/EnsinoTEC/calendar_aluno.html"  
+             document.getElementById("calendario").href = "https://danilospinola.github.io/EnsinoTEC/calendar_aluno.html" 
+             document.getElementById("desemp").href = "https://danilospinola.github.io/EnsinoTEC/desemp.html" 
             });
                      
             const qy = query(collection(db, "Professor"), where("idUsuario", "==", user.uid));
@@ -527,7 +528,7 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
             document.getElementById("emailUsuario").innerHTML = email  
             document.getElementById("verPerfil").href = "https://danilospinola.github.io/EnsinoTEC/perfil-prof.html"
             document.getElementById("calendario").href = "https://danilospinola.github.io/EnsinoTEC/calendar.html"  
-
+            document.getElementById("desemp").href = "https://danilospinola.github.io/EnsinoTEC/perfil-prof.html" 
             })
     }else {
                 alert("Realize o Login")
