@@ -76,6 +76,8 @@ document.getElementsByTagName("button")[0].addEventListener('click', function(){
                     alert(errorCode)
                 }
             });
+
+
         }
 
     /* [!] CADASTRO USUÁRIO Professor */ 
@@ -246,6 +248,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
         }else if (htmlAtual == "/EnsinoTEC/perfil-aluno.html"){
 
 
@@ -277,6 +288,14 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
             }
           });
 
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
           
         }else if(htmlAtual == "/EnsinoTEC/calendar_aluno.html"){        onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -315,6 +334,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };    
     }else if(htmlAtual == "/EnsinoTEC/calendar.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -353,6 +381,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };   
     }else if(htmlAtual == "/EnsinoTEC/atvidades.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -391,6 +428,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };   
     }else if(htmlAtual == "/EnsinoTEC/desemp.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -429,6 +475,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };  
     }else if(htmlAtual == "/EnsinoTEC/grupos.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -467,6 +522,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };  
     }else if(htmlAtual == "/EnsinoTEC/mural.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -505,6 +569,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };  
     }else if(htmlAtual == "/EnsinoTEC/conversas.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -543,6 +616,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/Atividades.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -581,6 +663,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/AtvdJava.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -619,6 +710,16 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/Atvdjava2.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -657,6 +758,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/AtvdScript.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -695,6 +805,16 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/AtvdScript2.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -733,6 +853,16 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/AtvdHTML.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -771,6 +901,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/AtvdCSS.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -809,6 +948,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/AtvdSQL.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -847,6 +995,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/INbackend.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -885,6 +1042,16 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/INbd.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -923,6 +1090,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/INcss.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -961,6 +1137,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/INhtml.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -999,6 +1184,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/materiais.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -1037,6 +1231,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/Atvdjava.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -1075,6 +1278,15 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }else if(htmlAtual == "/EnsinoTEC/DescAtvd.html"){
         onAuthStateChanged(auth, async (user) => {
             if (user) {
@@ -1113,4 +1325,13 @@ if (htmlAtual == "/EnsinoTEC/perfil-prof.html"){
                 window.location.href = "/EnsinoTEC/login-aluno.html"
             }
           });
+
+          document.getElementById("btnEncerrarSessao").onclick = function() {
+
+            signOut(auth).then(() => {
+                window.location.href = "/EnsinoTEC/login-prof.html"
+              }).catch((error) => {
+                // An error happened.
+              });
+        };
     }
