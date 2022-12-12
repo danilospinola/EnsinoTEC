@@ -95,3 +95,15 @@ Output
   width: -webkit-fill-available;
   height: 70vh;
 }
+
+
+.voltar{
+  color: #ed145c;
+  display: inline-flex;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fa-solid{
+  color: #ed145c;
+}
