@@ -465,7 +465,20 @@
     <script src="perfil-js/temp-js.js"></script>
     <script src="perfil-js/gerarUsername.js"></script>
     <script src="firebase/module.js" type="module"></script>
-
+    <script>
+        function perfil(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function (e) {
+$('#imagemPerfil')
+.attr('src', e.target.result)
+};
+reader.readAsDataURL(input.files[0]);
+}
+console.log(input.files[0])
+console.log( reader.readAsDataURL(input.files[0]))
+}
+</script>
     <!-- Assistente Libras -->
 	  
 		<div vw class="enabled">
