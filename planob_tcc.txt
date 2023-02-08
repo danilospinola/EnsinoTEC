@@ -1,0 +1,12 @@
+Plano B: Implementação da Indústria 4.0
+
+- Transmitir imagens de propaganda para todos os computadores da rede do SENAI.
+- AAPM
+
+Problemas da AAPM: Gerenciar a Chave dos Armários; Preencher os dados dos Alunos; Gerenciar os itens da AAPM (processo de retirada e controle desses patrimônios)
+
+A aplicação se dividiria em dois âmbitos diferentes: aplicativo mobile pros alunos e o aplicativo web para quem está responsável por fazer o papel de gerenciamento dessas informações.
+
+Aplicativo: o login do aplicativo será feito apenas para os associados a AAPM. Isso significa que o cadastro será feito por quem gerencia as informações cadastrais dentro da AAPM. Uma vez logado, o aluno terá acesso a carteirinha digital.
+
+ai ui aui uiuiuiu aiaiai uiuiuiui xD '-'
